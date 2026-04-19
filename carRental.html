@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>City Skyline Car Rentals</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Poppins',sans-serif;
+            background: linear-gradient(rgba(11,29,47,0.9),rgba(11,29,47,0.95)),
+                        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");    
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* header */
+        header{
+            text-align:center;
+            padding:40px 20px;
+        }
+
+        .heading{
+            font-size: 55px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow:
+                0 0 10px #000,
+                0 0 20px #071a54;
+        }
+
+        /* main container */
+        .car-container{
+            width: 80%;
+            margin: auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        }
+
+        /* grid */
+        .car-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 25px;
+        }
+
+        /* car card */
+        .car-card{
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            transition: 0.3s;
+        }
+
+        .car-card:hover{
+            transform: translateY(-5px);
+        }
+
+        .car-card img{
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* info */
+        .car-info{
+            padding: 15px;
+            text-align: center;
+            color: #e8f0ff;
+        }
+
+        .car-info h3{
+            margin: 10px 0;
+            color: #ffd27a;
+        }
+
+        .car-info p{
+            margin: 5px 0;
+            font-size: 15px;
+        }
+
+        /* button */
+        .car-info button{
+            margin-top: 10px;
+            padding: 10px 18px;
+            background: #ffd27a;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .car-info button:hover{
+            background: #ffb84d;
+        }
+
+        /* popup */
+        .popup{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup-content{
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 340px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .close-btn{
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /*form */
+        .popup-content input,
+        .popup-content select{
+            width: 92%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .popup-content label{
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+            text-align: left;
+            margin-left: 10px;
+        }
+
+        .popup-content button{
+            margin-top: 12px;
+            padding: 10px;
+            width: 100%;
+            background: #ffd27a;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .popup-content button:hover{
+            background: #ffb84d;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:900px){
+            .heading{
+                font-size: 40px;
+            }
+            .car-container{
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="heading">🚗 Car Rentals</h1>
+    </header>
+
+    <div class="car-container">
+
+        <div class="car-grid">
+
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+                <div class="car-info">
+                    <h3>Toyota Innova</h3>
+                    <p>👥 Seats: 7</p>
+                    <p>💰 ₹3500 / day</p>
+                    <button onclick="openPopup('Toyota Innova')">Rent Now</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
+                <div class="car-info">
+                    <h3>Hyundai Creta</h3>
+                    <p>👥 Seats: 5</p>
+                    <p>💰 ₹2500 / day</p>
+                    <button onclick="openPopup('Hyundai Creta')">Rent Now</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1542362567-b07e54358753">
+                <div class="car-info">
+                    <h3>BMW X5</h3>
+                    <p>👥 Seats: 5</p>
+                    <p>💰 ₹8000 / day</p>
+                    <button onclick="openPopup('BMW X5')">Rent Now</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+                <div class="car-info">
+                    <h3>Swift Dzire</h3>
+                    <p>👥 Seats: 5</p>
+                    <p>💰 ₹1800 / day</p>
+                    <button onclick="openPopup('Swift Dzire')">Rent Now</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- popuop booking form -->
+    <div id="bookingPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">✖</span>
+            <h2>🚗 Add Car Rental to Your Stay</h2>
+            <form onsubmit="bookCar(event)">
+                <input type="email" name="email" placeholder="ankitagoyal123@gmial.com" required>
+                <input type="text" name="booking_id" placeholder="Enter booking_id" required>
+
+                <select name="pickup" required>
+                    <option value="">Pickup Location</option>
+                    <option>Hotel Entrance</option>
+                    <option>Airport</option>
+                    <option>Railway Station</option>
+                </select>
+
+                <label>Pickup Time</label>
+                <input type="time" name="pickup_time" required>
+                <button type="submit">Confirm Car Booking</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        let selectedCar = "";
+
+        function openPopup(car){
+            selectedCar = car;
+            document.getElementById("bookingPopup").style.display = "flex";
+        }
+
+        function closePopup(){
+            document.getElementById("bookingPopup").style.display = "none";
+        }
+
+        function bookCar(e){
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            formData.append("car_name", selectedCar);
+
+            fetch("car_booking.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(res => res.text())   
+            .then(data => {
+
+                console.log("SERVER RESPONSE:", data); 
+
+                try {
+                    const json = JSON.parse(data); 
+
+                    if(json.status === "success"){
+                        showCarPopup(json);
+                        closePopup();
+                    } else {
+                        alert("❌ " + json.message);
+                    }
+
+                } catch(err) {
+                    alert("⚠️ Server returned invalid response. Check console.");
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Server error");
+            });
+        }
+    </script>
+
+    <script>
+        function showCarPopup(data){
+            const popup = document.createElement("div");
+
+            popup.innerHTML = `
+            <div style="
+                position:fixed;
+                top:0;left:0;
+                width:100%;height:100%;
+                background:rgba(0,0,0,0.7);
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                z-index:9999;
+            ">
+                <div style="
+                    background:#fff;
+                    padding:20px;
+                    border-radius:10px;
+                    width:320px;
+                    text-align:center;
+                ">
+                    <h2>🚗 Car Booked</h2>
+                    <p><b>Car:</b> ${data.car_name}</p>
+                    <p><b>Booking ID:</b> ${data.booking_id}</p>
+                    <p><b>Email:</b> ${data.email}</p>
+                    <p><b>Driver:</b> ${data.driver_name}</p>
+                    <p><b>Driver No:</b> ${data.driver_phone}</p>
+
+                    <button onclick="this.closest('div').parentElement.remove()"
+                    style="
+                    padding:20px;
+                    color:white;
+                    background:yellow;
+                    border: 1px solid white;">OK</button>
+                </div>
+            </div>
+            `;
+
+            document.body.appendChild(popup);
+        }
+    </script>
+
+</body>
+</html>

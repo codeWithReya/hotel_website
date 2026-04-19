@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_15.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Mountain View</title>
+</head>
+<body>
+    <header>
+        <img src="https://imgcdn.stablediffusionweb.com/2024/3/6/a5fee918-0b78-4391-b3b6-a8432cc1092d.jpg" class="headerImg">
+        <h1 class="heading">Explore MountainView</h1>
+    </header>
+
+    <section class="first" id="svmSection">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/c7/aa/a1/caption.jpg?w=700&h=-1&s=1">
+        <p class="firstText">
+            <h3>SkyVista Mountain Hotel - Manali, H.P.</h3>
+            <h5>A premium mountain-view stay offering wooden rooms, balcony views of the Himalayas, and peaceful <br>surroundings. Perfect for couples and scenic lovers🔸<br>
+                Price Range: ₹4,500 - ₹12,000 per night<br>
+                Ideal For: Couples • Scenic travellers • Winter lovers<br>
+                <b>🔍Balcony mountain views🔍Wooden interiors🔍Bonfire nights🔍Valley-view café</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="second">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e5/5e/6a/img-20171003-wa0007-largejpg.jpg?w=1100&h=-1&s=1">
+        <p class="firstText">
+            <h3>Himalayan Peakside Retreat - Shimla, H.P.</h3>
+            <h5>A scenic escape featuring panoramic hill views, glass-view rooms, and peaceful forest air. Ideal for <br>romantic and slow travel stays🔸<br>
+                Price Range: ₹5,000 - ₹14,000 per night<br>
+                Ideal For: Couples • Families • Photography lovers<br>
+                <b>🔍Glass-view rooms🔍Forest balconies🔍Rooftop breakfast🔍Sunset points</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="third" id="mussoorieSection">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.BxPZujYFsxtDjyNGbAuhSwHaE8?cb=ucfimg2&pid=ImgDet&ucfimg=1&w=474&h=316&rs=1&o=7&rm=3">
+        <p class="firstText">
+            <h3>MountainMist Eco Hotel - Mussoorie, Uttarakhand</h3>
+            <h5>A calm eco-hotel offering fog-covered mornings, nature sitting areas, and peaceful hillside views. Great for <br>guests wanting a quiet, refreshing stay🔸<br>
+                Price Range: ₹3,200 - ₹8,500 per night<br>
+                Ideal For: Nature lovers • Chill vacations<br>
+                <b>🔍Fog viewpoints🔍Eco-friendly build🔍Nature pathways🔍Wooden décor</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+    <script>
+        window.addEventListener("load", function(){
+            if(window.location.hash === "#mussoorieSection"){
+                const section = document.getElementById("mussoorieSection");
+                section.classList.add("highlight");
+                section.scrollIntoView({
+                    behavior:"smooth"
+                });
+            }
+        });
+    </script>
+
+    <section class="fourth">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.g5FiOyQiFimjUXlZoE_ixAHaEx?cb=ucfimg2&ucfimg=1&w=1010&h=650&rs=1&pid=ImgDetMain&o=7&rm=3">
+        <p class="firstText">
+            <h3>CloudNine Hill Hotel - Nainital, Uttarakhand</h3>
+            <h5>A nature-stay featuring peaceful mountain scenery, lake-side distance, and balcony sittings. Perfect for <br>families and calm nature trips🔸<br>
+                Price Range: ₹3,800 - ₹10,500 per night<br>
+                Ideal For: Families • Nature lovers<br>
+                <b>🔍Valley-view rooms🔍Balcony sitting🔍Café with panoramic view🔍Cozy interiors</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="fifth">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/497330117.jpg?k=9781b74044a23170a4a70050625e63e9e9264b7aec17c9aee69aef5f84f6f500&o=&hp=1">
+        <p class="firstText">
+            <h3>Everest Viewpoint Stay - Sikkim, Gangtok</h3>
+            <h5>A scenic Himalayan hotel offering clear sunrise views, peaceful weather, and a calm hilltop atmosphere. <br>Perfect for mountain lovers🔸<br>
+                Price Range: ₹6,000 - ₹16,000 per night<br>
+                Ideal For: Scenic seekers • Couples<br>
+                <b>🔍Snow-peak balcony views🔍Sunrise deck🔍Quiet location🔍Warm rooms</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="sixth">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.Gh3XKtoejUKp8I4yqNlx3gHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3">
+        <p class="firstText">
+            <h3>CedarHill Mountain Hotel - Dalhousie, H.P.</h3>
+            <h5>A greenery-filled stay with peaceful nature surroundings, tall trees, and hillside views. Ideal for stress-free, <br>slow, comforting trips🔸<br>
+                Price Range: ₹4,000 - ₹11,000 per night<br>
+                Ideal For: Peace seekers • Nature travellers<br>
+                <b>🔍Cedar forest view🔍Mountain-top dining🔍Warm interiors🔍Nature sitting area</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="seventh">
+        <img src="https://www.wondersholidayandresorts.com/img/location/inner%20page/cliff-top-club-auli3.jpg">
+        <p class="firstText">
+            <h3>AlpineSnow View Hotel - Auli, Uttarakhand</h3>
+            <h5>A winter paradise stay offering snow views, cable-car access, and crisp fresh air. Perfect for winter <br>vacations and snow lovers🔸<br>
+                Price Range: ₹5,500 - ₹18,000 per night<br>
+                Ideal For: Winter travellers • Adventure lovers<br>
+                <b>🔍Snow-covered views🔍Ski access🔍Cozy wooden cottages🔍Mountain sunrise point</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="eirth">
+        <img src="https://www.munnar.com/ayurcountyresorts/img/big/q4.jpg">
+        <p class="firstText">
+            <h3>Highland Horizon Hotel - Munnar, Kerala</h3>
+            <h5>A peaceful retreat offering hilltop balcony views, foggy mornings, and lush green tea mountains. Perfect for <br>calm, romantic getaways🔸<br>
+                Price Range: ₹3,200 - ₹9,200 per night<br>
+                Ideal For: Couples • Scenic lovers<br>
+                <b>🔍Fog valley view🔍Balcony rooms🔍Tea garden trails🔍Scenic café</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="ninth">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.KdwmFMf2Sa0_SRawckTh8gHaE8?cb=ucfimg2&pid=ImgDet&ucfimg=1&w=474&h=316&rs=1&o=7&rm=3">
+        <p class="firstText">
+            <h3>MistyPeak Panorama Hotel - Darjeeling, West Bengal</h3>
+            <h5>A scenic hotel offering sunrise mountain views, peaceful hill surroundings, and warm Himalayan <br>hospitality🔸<br>
+                Price Range: ₹4,000 - ₹13,000 per night<br>
+                Ideal For: Couples • Scenic travellers<br>
+                <b>🔍Kanchenjunga-view rooms🔍Sunrise deck🔍Cozy lounge🔍Tea garden access</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="tenth">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.U1H6CG7zpRPipRhsnFdsYAHaE8?cb=ucfimg2&ucfimg=1&w=1200&h=800&rs=1&pid=ImgDetMain&o=7&rm=3">
+        <p class="firstText">
+            <h3>ValleyWind Mountain Lodge - Kodaikanal, Tamil Nadu</h3>
+            <h5>A nature-rich lodge offering peaceful rooms, valley scenery, fresh air, and quiet vibe. Ideal for family <br>vacations and nature chill trips🔸<br>
+                Price Range: ₹2,800 - ₹7,500 per night<br>
+                Ideal For: Families • Peace seekers • Nature lovers<br>
+                <b>🔍Misty valley views🔍Nature walk areas🔍Calm surroundings🔍Warm wooden interiors</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <div class="bookingPage" id="bookingForm" style="display: none;">
+        <form method="get" action="booking.php" id="bookingnow">
+            <h3>Book Now</h3>
+            <label>Name:</label>
+            <input type="text" name="name" required placeholder="Anajli Goninka">
+            <label>Phone Number:</label>
+            <input type="tel" name="phone" required>
+            <label>E-mail:</label>
+            <input type="email" name="email" required placeholder="abc@gmail.com">
+            <label>Special Request:</label>
+            <input type="text" name="request" placeholder="e.g., extra bed, late check-in, food preferences.">
+            <label>Check-in/Check-out Date:</label>
+            <input type="date" name="checkin" class="date" id="bookingCheckIn" required>
+            <input type="date" name="checkout" class="date2" id="bookingCheckOut" required>
+            <input type="hidden" name="accommodation" value="Mountain-View">
+            <label class="country">Country:</label>
+            <input type="text" name="country" required placeholder="e.g., India, Nepal, America, etc...">
+            <label>State:</label>
+            <input type="text" name="state" required placeholder="based on country...">
+            <button type="submit" id="submit">Book Now</button>
+        </form>
+    </div>
+
+    <div class="confirmPage">
+        <div class="successTick"></div>
+        <h2>Your Booking is Confirmed</h2>
+    </div>
+
+    <script>
+        document.getElementById("bookingnow").addEventListener("submit", function(e){
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            // 🔍 DEBUG
+            for (let pair of formData.entries()) {
+                console.log(pair[0] + ": " + pair[1]);
+            }
+
+            fetch("booking.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log("SERVER RESPONSE:", data);
+
+                if (data.status === "success") {
+                    setTimeout(() => {
+                        showInvoicePopup(data); // ✅ direct data pass karo
+                    }, 2700);
+                } else if (data.status === "empty") {
+                    alert("Please fill all fields ❌");
+                } else {
+                    alert("Booking failed ❌");
+                }
+
+
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Server error ⚠️");
+            });
+        });
+    </script>
+    <script>
+        function showInvoicePopup(details) {
+
+            const popup = document.createElement("div");
+
+            popup.style.position = "fixed";
+            popup.style.top = "0";
+            popup.style.left = "0";
+            popup.style.width = "100%";
+            popup.style.height = "100%";
+            popup.style.background = "rgba(0,0,0,0.7)";
+            popup.style.display = "flex";
+            popup.style.justifyContent = "center";
+            popup.style.alignItems = "center";
+            popup.style.zIndex = "999";
+
+            popup.innerHTML = `
+                <div id="invoiceContent" style="
+                    background:white;
+                    padding:25px;
+                    border-radius:12px;
+                    width:400px;
+                    font-family:Arial;
+                ">
+                    <h2 style="text-align:center;">Booking Confirmed 🎉</h2>
+                    <hr>
+
+                    <p><b>Booking ID:</b> ${details.booking_id}</p>
+                    <p><b>Name:</b> ${details.name}</p>
+                    <p><b>Phone:</b> ${details.phone}</p>
+                    <p><b>Email:</b> ${details.email}</p>
+
+                    <p><b>Accommodation:</b> Mountain-View</p>
+
+                    <p><b>Check-in:</b> ${details.checkin}</p>
+                    <p><b>Check-out:</b> ${details.checkout}</p>
+
+                    <p><b>Country:</b> ${details.country}</p>
+                    <p><b>State:</b> ${details.state}</p>
+
+                    <p><b>Request:</b> ${details.request || "None"}</p>
+
+                    <hr>
+                    <p style="text-align:center;">Thank you for booking 💙</p>
+
+                    <button onclick="printInvoice()" style="
+                        width:100%;
+                        padding:10px;
+                        margin-top:10px;
+                        background:#4CAF50;
+                        color:white;
+                        border:none;
+                        border-radius:8px;
+                        cursor:pointer;">
+                        Download / Print
+                    </button>
+
+                    <button onclick="this.closest('div').parentElement.remove()" style="
+                        width:100%;
+                        padding:10px;
+                        margin-top:10px;
+                        background:#ccc;
+                        border:none;
+                        border-radius:8px;
+                        cursor:pointer;">
+                        Close
+                    </button>
+                </div>
+            `;
+
+            document.body.appendChild(popup);
+        }
+        </script>
+        <script>
+            function printInvoice() {
+
+                const content = document.getElementById("invoiceContent").innerHTML;
+
+                const newWindow = window.open("", "", "width=800,height=600");
+
+                newWindow.document.write(`
+                    <html>
+                    <head>
+                        <title>Booking Invoice</title>
+                    </head>
+                    <body>
+                        ${content}
+                    </body>
+                    </html>
+                `);
+
+                newWindow.document.close();
+                newWindow.print();
+            }
+    </script>
+
+    
+
+    <script>
+        function initSlider(sectionSelector, images) {
+            const section = document.querySelector(sectionSelector);
+            const img = section.querySelector("img");
+
+            img.style.objectFit = "cover";
+            img.style.width = "350px";
+            img.style.height = "230px";
+
+            let index = 0;
+
+            const leftArrow = document.createElement("div");
+            leftArrow.innerHTML = "&#10094;";
+            leftArrow.className = "slider-arrow left";
+
+            const rightArrow = document.createElement("div");
+            rightArrow.innerHTML = "&#10095;";
+            rightArrow.className = "slider-arrow right";
+
+            section.appendChild(leftArrow);
+            section.appendChild(rightArrow);
+
+            // 🔹 initial state
+            leftArrow.style.display = "none";
+            rightArrow.style.display = "block";
+
+            function updateArrows() {
+                if (index === 0) {
+                    leftArrow.style.display = "none";
+                    rightArrow.style.display = "block";
+                } 
+                else if (index === images.length - 1) {
+                    rightArrow.style.display = "none";
+                    leftArrow.style.display = "block";
+                } 
+                else {
+                    leftArrow.style.display = "block";
+                    rightArrow.style.display = "block";
+                }
+            }
+
+            rightArrow.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (index < images.length - 1) {
+                    index++;
+                    img.src = images[index];
+                    updateArrows();
+                }
+            });
+
+            leftArrow.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (index > 0) {
+                    index--;
+                    img.src = images[index];
+                    updateArrows();
+                }
+            });
+        }
+
+        initSlider(".first",[
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/c7/aa/a1/caption.jpg?w=700&h=-1&s=1",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487321757.jpg?k=a7435b86cfb74106f498b7e0d61f28e0c70e39215b42aa84600e118ebd2eed1a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487323563.jpg?k=f433f2ccd4281c4f84a5e7e50d2bcf56a70ef9b35bf52d64eb18fe20f2fe2c85&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487323563.jpg?k=f433f2ccd4281c4f84a5e7e50d2bcf56a70ef9b35bf52d64eb18fe20f2fe2c85&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487323656.jpg?k=002185ebbe3f477b23c5153f091e5f2684771dc327c6289c6a028b46597003b9&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487323656.jpg?k=002185ebbe3f477b23c5153f091e5f2684771dc327c6289c6a028b46597003b9&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/541857988.jpg?k=bc39d1c0136b8e07d1508c53fe6bdd630ef21aeaecd3039d9e499e99d354e5df&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487324174.jpg?k=0206f80fb90d8d851ca1dac071f4a2d3e03a889a7c8b8a3c5a9f68017366354e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487324174.jpg?k=0206f80fb90d8d851ca1dac071f4a2d3e03a889a7c8b8a3c5a9f68017366354e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487324174.jpg?k=0206f80fb90d8d851ca1dac071f4a2d3e03a889a7c8b8a3c5a9f68017366354e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487324174.jpg?k=0206f80fb90d8d851ca1dac071f4a2d3e03a889a7c8b8a3c5a9f68017366354e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487324174.jpg?k=0206f80fb90d8d851ca1dac071f4a2d3e03a889a7c8b8a3c5a9f68017366354e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/531323246.jpg?k=0aeb1f9b9af0ac264d9347d9f78754a22de99c9abd0b176c952b101e2b6a5826&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487323631.jpg?k=c82eace2a411c5174c330840a445f4b01b53d546eb7d467df569664e30467c9e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487323695.jpg?k=00cf6349499081393822920ac16a7de4fe3bc5d58f0ad54d60f9ba6d41e1c0b7&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487321776.jpg?k=5efcd086566d3c84ea4a0ea664f5732aa9b9e40a905fd18d2cba284c03bc93a8&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487323635.jpg?k=d6116161181d51172f4c56880053af959c1710742ac808ead78cfba1534fb243&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/464670815.jpg?k=2fc6e0e615ee61faa1e2aa58a5c592b11ced8a441960557e31b6f31c563f1a33&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/464670815.jpg?k=2fc6e0e615ee61faa1e2aa58a5c592b11ced8a441960557e31b6f31c563f1a33&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487322622.jpg?k=54d651b8dc94a3849a50ae6b8c6d69fb08862dd0c0aecd41c7b7b72f2b2369e8&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487323596.jpg?k=3ed99ed63530713a92d9d107feaf505fb436c64413791f2fad8bc5ef853e9539&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487323698.jpg?k=b6cb063564a944f3ccdb24a58705c03c2e68391181e990adfd9604f6e03c92cb&o="
+        ])
+
+        initSlider(".second",[
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e5/5e/6a/img-20171003-wa0007-largejpg.jpg?w=1100&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/60/fd/21/2017.jpg?w=1600&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/61/08/46/photo0jpg.jpg?w=1600&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/4f/ac/f5/himalayan-chalet.jpg?w=1100&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/4f/ac/c2/himalayan-chalet.jpg?w=1100&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/4f/aa/52/himalayan-chalet.jpg?w=1100&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/60/fd/1f/2017.jpg?w=1600&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e5/5e/6d/img-20171003-wa0013-largejpg.jpg?w=1000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/60/fd/23/2017.jpg?w=1600&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/61/08/46/photo0jpg.jpg?w=1600&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/60/fd/20/2017.jpg?w=1600&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e5/5e/6e/img-20171003-wa0014-largejpg.jpg?w=1100&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/42/f8/c3/himalayan-chalet-a-swiss.jpg?w=1400&h=-1&s=1"
+        ])
+
+        initSlider(".third",[
+            "https://tse4.mm.bing.net/th/id/OIP.BxPZujYFsxtDjyNGbAuhSwHaE8?cb=ucfimg2&pid=ImgDet&ucfimg=1&w=474&h=316&rs=1&o=7&rm=3",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/9d0c8094185e871d6773dbc7df57a49c.jpg?ce=0&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/508953451.jpg?k=0682702e878cfb8de93d0a466dfcbe60e23fd205689e73aeb0e655574b7aba74&o=&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/935ff42e9bfcbc9dedb5b7588fa05137.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/935ff42e9bfcbc9dedb5b7588fa05137.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/979fe286135d7e0a121050e6a7a1f633.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/d5cc521046452089fad3ede38ab3b44c.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/69f649f59a1493c6a195edb2f05bccfb.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/27b86cf9f6c031ef0ac85cbc6bf8b2e8.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/e3f0fd9bdb1df855e7a1e6bc9ac8fd32.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/73d21afca9602b708f8c89d7f3b6b1fa.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/e3ae02c50d0ffb7ec8ac2ff1c5ab4c92.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/7e1587e17919bed714d18bc636f4ad63.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/d5552e9470800ea9c1f1106931f3968d.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/bee99d55eb3ec4ccd33af1ffa29cfa39.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/47504410/-1/3b7cb3c64107b8d06ade140e00e3562e.jpg?ce=0&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/508953534.jpg?k=b30455e4d1885b7cdcbbcc538b8be288f8d5f6125b6f3680385fdd6765dfe3a7&o=&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/508953582.jpg?k=6aaa937423c112e3b6e013ca0989117feaae73e899903577ac4a951399ba2320&o=&s=1024x"
+        ])
+
+        initSlider(".fourth",[
+            "https://tse4.mm.bing.net/th/id/OIP.g5FiOyQiFimjUXlZoE_ixAHaEx?cb=ucfimg2&ucfimg=1&w=1010&h=650&rs=1&pid=ImgDetMain&o=7&rm=3",
+            "https://pix8.agoda.net/hotelImages/60579660/913186072/5648eb6bb3d347a2eb37c45b4bfa2e71.jpg?ce=2&s=1024x",
+            "https://pix8.agoda.net/hotelImages/60579660/0/6615d254971037657e549dc7550f4f91.jpg?ce=2&s=1024x",
+            "https://pix8.agoda.net/hotelImages/60579660/0/314b09a9a3347c586142dd61000cebdf.jpg?ce=2&s=1024x",
+            "https://pix8.agoda.net/hotelImages/60579660/0/b2883f71e123ad4c07da17fa5c313074.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/60579660/913186070/2feabe32308009e07153713cc8f74c39.jpg?ce=2&s=1024x",
+            "https://pix8.agoda.net/hotelImages/60579660/0/761e896328d4bb85a8cd58fb1e5dd2d5.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/60579660/913186071/c09b6bbddb87c48b5a5f57f1be7e9b7d.jpg?ce=2&s=1024x",
+            "https://pix8.agoda.net/hotelImages/60579660/913186071/3c74e041dc1ed16da20de33c44edbaeb.jpg?ce=2&s=1024x",
+            "https://pix8.agoda.net/hotelImages/60579660/913186070/7c105000f08e9fa1d23264c47a58cadd.jpg?ce=2&s=1024x"
+        ])
+
+        initSlider(".fifth",[
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/497330117.jpg?k=9781b74044a23170a4a70050625e63e9e9264b7aec17c9aee69aef5f84f6f500&o=&hp=1",
+            "https://pix8.agoda.net/hotelImages/162/1624066/1624066_17061022300053592579.jpg?ca=6&ce=1&s=1024x",
+            "https://pix8.agoda.net/hotelImages/1624066/-1/ea8915879190ba889f736bfe4330f761.jpg?ca=13&ce=1&s=1024x",
+            "https://pix8.agoda.net/hotelImages/162/1624066/1624066_17053113090053348297.jpg?ca=6&ce=1&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/86586036.jpg?k=dd71dc04eabaa8a5eb168458e0f792d00921ec4a980d57f33ea5ed0fd11deca4&o=&s=1024x",
+            "https://pix8.agoda.net/hotelImages/162/1624066/1624066_17012414530050517246.jpg?ca=6&ce=1&s=1024x",
+            "https://pix8.agoda.net/hotelImages/162/1624066/1624066_16120515210049444629.jpg?ca=6&ce=1&s=1024x",
+            "https://pix8.agoda.net/hotelImages/1624066/-1/9d1e9241a365e43a366722393bc3acec.jpg?ca=0&ce=1&s=1024x",
+            "https://pix8.agoda.net/property/75972341/0/d6bf17f65c17fef5ce7bb14646230e34.jpeg?ce=2&s=1024x",
+            "https://pix8.agoda.net/hotelImages/162/1624066/1624066_17061022300053592580.jpg?ca=6&ce=1&s=1024x",
+            "https://pix8.agoda.net/hotelImages/1624066/-1/6fe789cac7ce9382a2e41e645ac6fe0c.jpg?ca=13&ce=1&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/156291882.jpg?k=7a9dac6a392d9200e1d7ad1af55805e57f9169eb37b79f74b95f87baee960b5e&o=&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/156291882.jpg?k=7a9dac6a392d9200e1d7ad1af55805e57f9169eb37b79f74b95f87baee960b5e&o=&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/84821399.jpg?k=2213225f7c31f1e18ade2ccd63389516710aa7f1f8d68927ac5d4270c188d34c&o=&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/86527341.jpg?k=150b442cd74fb30468c2f1aa4a76920b74f7a6128b3502f7f5d800685a6dd7cc&o=&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/86527341.jpg?k=150b442cd74fb30468c2f1aa4a76920b74f7a6128b3502f7f5d800685a6dd7cc&o=&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/86527341.jpg?k=150b442cd74fb30468c2f1aa4a76920b74f7a6128b3502f7f5d800685a6dd7cc&o=&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/86527341.jpg?k=150b442cd74fb30468c2f1aa4a76920b74f7a6128b3502f7f5d800685a6dd7cc&o=&s=1024x"
+        ])
+
+        initSlider(".sixth",[
+            "https://tse3.mm.bing.net/th/id/OIP.Gh3XKtoejUKp8I4yqNlx3gHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/74/66/upgraded-washrooms.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/74/3b/royal-double-room.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/c2/01/84/nahar-s-retreat-and-wellness.jpg?w=1000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/74/25/our-new-upgraded-bedrooms.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/74/66/upgraded-washrooms.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/74/66/upgraded-washrooms.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/74/47/suite-room.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/c2/01/ce/nahar-s-retreat-and-wellness.jpg?w=1000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/74/2e/presidential-suite.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/c2/01/e9/nahar-s-retreat-and-wellness.jpg?w=1000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/8a/06/d0/front-view.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/8a/06/d0/front-view.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/74/1b/views-from-our-regal.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/74/01/views-from-the-rooms.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/c2/01/aa/nahar-s-retreat-and-wellness.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/74/56/lobby-area.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/99/d5/34/nahar-stone-house-retreat.jpg?w=1800&h=-1&s=1"
+        ])
+
+        initSlider(".seventh",[
+            "https://www.wondersholidayandresorts.com/img/location/inner%20page/cliff-top-club-auli3.jpg",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/61/95/77/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/52/f9/55/caption.jpg?w=1100&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/b5/28/94/caption.jpg?w=800&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/b5/28/93/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/63/6c/17/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/63/6c/16/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/63/6c/16/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/63/6c/16/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/63/6c/16/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/63/6c/16/caption.jpg?w=1400&h=-1&s=1"
+        ])
+
+        initSlider(".eirth",[
+            "https://www.munnar.com/ayurcountyresorts/img/big/q4.jpg",
+            "http://www.thewindmunnar.com/images/theWind/resort/bed-view.jpg",
+            "http://www.thewindmunnar.com/images/theWind/resort/restaurant.jpg",
+            "http://www.thewindmunnar.com/images/theWind/resort/balconey-view.jpg",
+            "http://www.thewindmunnar.com/images/theWind/resort/bed.jpg",
+            "http://www.thewindmunnar.com/images/theWind/resort/bathroom.jpg",
+            "http://www.thewindmunnar.com/images/theWind/resort/grass-with-tile.jpg",
+            "http://www.thewindmunnar.com/images/theWind/resort/cottage.jpg"
+        ])
+
+        initSlider(".ninth",[
+            "https://tse2.mm.bing.net/th/id/OIP.KdwmFMf2Sa0_SRawckTh8gHaE8?cb=ucfimg2&pid=ImgDet&ucfimg=1&w=474&h=316&rs=1&o=7&rm=3",
+            "https://www.sherbengal.com/wp-content/uploads/2025/12/sherbengal-darjeeling-room.webp",
+            "https://www.sherbengal.com/wp-content/uploads/2025/12/sherbengal-hotel-darjeeling-facilities.webp",
+            "https://www.sherbengal.com/wp-content/uploads/2025/12/darjeeling-room-view-sherbengal.webp",
+            "https://www.sherbengal.com/wp-content/uploads/2025/12/sher-bengal-darjeeling-restaurant.webp",
+            "https://tse2.mm.bing.net/th/id/OIP._sXHT9CspEcKEbIOtpXTYwHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+            "https://tse3.mm.bing.net/th/id/OIP.lrE6Jki2qym7f8xlWkZS1wHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+            "https://tse3.mm.bing.net/th/id/OIP.lrE6Jki2qym7f8xlWkZS1wHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+            "https://tse3.mm.bing.net/th/id/OIP.lrE6Jki2qym7f8xlWkZS1wHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+            "https://tse2.mm.bing.net/th/id/OIP._sXHT9CspEcKEbIOtpXTYwHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+            "https://tse2.mm.bing.net/th/id/OIP._sXHT9CspEcKEbIOtpXTYwHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3"
+        ])
+
+        initSlider(".tenth",[
+            "https://tse1.mm.bing.net/th/id/OIP.U1H6CG7zpRPipRhsnFdsYAHaE8?cb=ucfimg2&ucfimg=1&w=1200&h=800&rs=1&pid=ImgDetMain&o=7&rm=3",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/221b6e5a.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/0878c6ba.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/0878c6ba.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/e491338a.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/554baf2e.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/554baf2e.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/0a8f82be.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/85c97bf2.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/c98b2b48.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/c98b2b48.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/c98b2b48.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/7938cc24.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/584ff615.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/adaca8b0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/adaca8b0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/adaca8b0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/adaca8b0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/adaca8b0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/4e26f89a.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+            "https://images.trvl-media.com/lodging/96000000/95660000/95659400/95659381/4e26f89a.jpg?impolicy=resizecrop&rw=1200&ra=fit"
+        ])
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const guestInputs = document.querySelectorAll("#guest-input");
+            let activePriceInput = null;
+
+            // checkin and checkout popup
+            const stayPopup = document.createElement("div");
+            stayPopup.style.position = "fixed";
+            stayPopup.style.inset = "0";
+            stayPopup.style.background = "rgba(0,0,0,0.6)";
+            stayPopup.style.backdropFilter = "blur(4px)";
+            stayPopup.style.display = "none";
+            stayPopup.style.zIndex = "100000";
+            stayPopup.style.alignItems = "center";
+            stayPopup.style.justifyContent = "center";
+
+            stayPopup.innerHTML = `
+                <div style="background:#0b2a3a;color:#fff;padding:20px;border-radius:12px;width:400px;height:550px;border:2px solid #f5b301;">
+                    <h2 style="text-align:center;font-size:40px;font-weight:bold;text-decoration:underline">Stay Details</h2>
+
+                    <h3 style="text-align:center;padding:20px;font-size:30px;">How many nights do you want to stay ❗</h3>
+
+                    <label style="font-size:25px">Check-in</label>
+                    <input type="date" id="checkIn" style="width:100%;margin-bottom:10px;height:45px;font-size:17px;border-radius:6px;border:none;font-weight:bold;">
+
+                    <label style="font-size:25px">Check-out</label>
+                    <input type="date" id="checkOut" style="width:100%;margin-bottom:12px;height:45px;font-size:17px;border-radius:6px;border:none;font-weight:bold;">
+
+                    <div id="nightCount" style="margin-bottom:12px;font-weight:bold;font-size:27px;"></div>
+
+                    <button id="stayOk"
+                        style="width:100%;padding:14px;border:none;border-radius:6px;background:#f5b301;color:#0b2a3a;font-size:26px;font-weight:bold;cursor:pointer;">
+                        OK
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(stayPopup);
+
+            const checkInInput  = stayPopup.querySelector("#checkIn");
+            const checkOutInput = stayPopup.querySelector("#checkOut");
+            const nightCount    = stayPopup.querySelector("#nightCount");
+
+            const today = new Date().toISOString().split("T")[0];
+            checkInInput.min  = today;
+            checkOutInput.min = today;
+
+            function calculateNights() {
+                if (!checkInInput.value || !checkOutInput.value) return 0;
+                const d1 = new Date(checkInInput.value);
+                const d2 = new Date(checkOutInput.value);
+                const nights = (d2 - d1) / (1000 * 60 * 60 * 24);
+                return nights > 0 ? nights : 0;
+            }
+
+            checkInInput.addEventListener("change", () => {
+                if (checkInInput.value < today) {
+                    alert("⚠ Please choose an upcoming date!");
+                    checkInInput.value = "";
+                    checkInInput.showPicker();
+                    return;
+                }
+                checkOutInput.min = checkInInput.value;
+            });
+
+            checkOutInput.addEventListener("change", () => {
+                if (checkOutInput.value <= checkInInput.value) {
+                    alert("⚠ Check-out must be after check-in!");
+                    checkOutInput.value = "";
+                    checkOutInput.showPicker();
+                    return;
+                }
+                nightCount.textContent = `${calculateNights()} night(s)`;
+            });
+
+            stayPopup.querySelector("#stayOk").addEventListener("click", () => {
+                const nights = calculateNights();
+
+                if (!nights) {
+                    alert("Please select valid dates");
+                    checkInInput.showPicker();
+                    return;
+                }
+
+                const perNight = Number(activePriceInput.dataset.perNight || 0);
+                activePriceInput.value = `₹ ${perNight * nights} (${nights} nights)`;
+
+                // 🔥 IMPORTANT PART (data transfer)
+                if (bookingCheckIn && bookingCheckOut) {
+                    bookingCheckIn.value  = checkInInput.value;
+                    bookingCheckOut.value = checkOutInput.value;
+                }
+
+                stayPopup.style.display = "none";
+            });
+
+            // guest dropdown
+            guestInputs.forEach(guestInput => {
+
+                        const section = guestInput.closest(".search-box").parentNode;
+                        const priceInput = section.querySelector(".price-input");
+
+                        let adults = 2, children = 0, rooms = 1;
+
+                        const guestDrop = document.createElement("div");
+                        guestDrop.style.position = "absolute";
+                        guestDrop.style.background = "#0b2a3a";
+                        guestDrop.style.border = "2px solid #f5b301";
+                        guestDrop.style.borderRadius = "10px";
+                        guestDrop.style.color = "#fff";
+                        guestDrop.style.zIndex = "99999";
+                        guestDrop.style.display = "none";
+                        guestDrop.style.boxShadow = "0 8px 25px rgba(0,0,0,.45)";
+                        document.body.appendChild(guestDrop);
+
+                        function renderGuest() {
+                            guestDrop.innerHTML = `
+                                ${row("Adults", adults, "a")}
+                                ${row("Children", children, "c")}
+                                ${row("Rooms", rooms, "r")}
+                                <div style="text-align:right;padding:10px">
+                                    <button class="doneBtn">Done</button>
+                                </div>
+                            `;
+
+                            guestDrop.querySelectorAll("button").forEach(b => {
+                                b.style.background = "#102f42";
+                                b.style.border = "1px solid #f5b301";
+                                b.style.color = "#fff";
+                                b.style.width = "28px";
+                                b.style.height = "28px";
+                                b.style.cursor = "pointer";
+                            });
+
+                            guestDrop.querySelector(".doneBtn").style.background = "#f5b301";
+                            guestDrop.querySelector(".doneBtn").style.color = "#0b2a3a";
+                            guestDrop.querySelector(".doneBtn").style.width = "auto";
+                            guestDrop.querySelector(".doneBtn").style.padding = "6px 14px";
+                        }
+
+                function row(label, val, key) {
+                    return `
+                    <div style="display:flex;justify-content:space-between;padding:10px">
+                        ${label}
+                        <div>
+                            <button data-t="${key}-">−</button>
+                            <span style="margin:0 8px">${val}</span>
+                            <button data-t="${key}+">+</button>
+                        </div>
+                    </div>`;
+                }
+
+                function calculatePrice() {
+                    let adultPrice = 2000, childPrice = 1000, roomPrice = 3000;
+
+                    if (priceInput.id === "001") adultPrice = 2000;
+                    if (priceInput.id === "002") adultPrice = 2100;
+                    if (priceInput.id === "003") adultPrice = 1800;
+
+                    const perNight =
+                        adults * adultPrice +
+                        children * childPrice +
+                        rooms * roomPrice;
+
+                    priceInput.dataset.perNight = perNight;
+                    priceInput.value = `₹ ${perNight} / night`;
+                }
+
+                guestDrop.addEventListener("click", e => {
+                    e.stopPropagation();
+                    const t = e.target.dataset.t;
+
+                    if (t === "a+") adults++;
+                    if (t === "a-" && adults > 1) adults--;
+                    if (t === "c+") children++;
+                    if (t === "c-" && children > 0) children--;
+                    if (t === "r+") rooms++;
+                    if (t === "r-" && rooms > 1) rooms--;
+
+                    if (e.target.classList.contains("doneBtn")) {
+                        guestDrop.style.display = "none";
+                        guestInput.value = `${adults} adults · ${children} children · ${rooms} room`;
+                        calculatePrice();
+                        activePriceInput = priceInput;
+                        stayPopup.style.display = "flex";
+                        return;
+                    }
+                    renderGuest();
+                });
+
+                guestInput.addEventListener("click", e => {
+                    e.stopPropagation();
+                    const r = guestInput.getBoundingClientRect();
+                    guestDrop.style.top = r.bottom + window.scrollY + "px";
+                    guestDrop.style.left = r.left + window.scrollX + "px";
+                    guestDrop.style.width = r.width + "px";
+                    guestDrop.style.display = "block";
+                    renderGuest();
+                });
+
+                document.addEventListener("click", () => guestDrop.style.display = "none");
+            });
+
+        });
+    </script>
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const bookButtons = document.querySelectorAll('.bookingBtn'); 
+            const bookingPage = document.querySelector('.bookingPage');
+            const confirmPage = document.querySelector('.confirmPage');
+            const form = document.getElementById('bookingnow');
+
+            if (!bookingPage || !confirmPage || !form) {
+                console.error("Required elements not found");
+                return;
+            }
+
+            const style = document.createElement("style");
+            style.innerHTML = `
+                .confirmPage::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border: 3px solid #222;
+                    border-radius: 20px;
+                    opacity: 0; 
+                }
+                .confirmPage.active::before {
+                    animation: drawSquare 0.6s forwards;
+                }
+                @keyframes drawSquare {
+                    0% { opacity: 1; clip-path: inset(50% 50% 50% 50%); }
+                    50% { clip-path: inset(0% 50% 0% 50%); }
+                    100% { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
+                }
+
+                .successTick {
+                    width: 80px;
+                    height: 80px;
+                    background: #4CAF50;
+                    border-radius: 50%;
+                    position: relative;
+                    transform: scale(0);
+                }
+                .successTick.showCircle {
+                    animation: popCircle 0.4s forwards;
+                }
+                @keyframes popCircle {
+                    from { transform: scale(0); }
+                    to { transform: scale(1); }
+                }
+
+                .successTick::after {
+                    content: "";
+                    position: absolute;
+                    left: 24px;
+                    top: 8.5px;
+                    width: 16px;
+                    height: 28px;
+                    border-right: 4px solid white;
+                    border-bottom: 4px solid white;
+                    transform-origin: bottom left;
+                }
+                .successTick.showTick::after {
+                    animation: drawTick 0.3s forwards;
+                }
+                @keyframes drawTick {
+                    from { transform: rotate(45deg) scale(0); }
+                    to { transform: rotate(45deg) scale(1); }
+                }
+
+                .confirmPage h2 {
+                    margin-top: 15px;
+                    font-size: 18px;
+                }
+
+                input::placeholder {
+                    font-weight: 400;
+                    color: #888;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // BOOKING PAGE STYLING
+            Object.assign(bookingPage.style, {
+                display: "none",
+                position: "fixed",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+                background: "rgba(0,0,0,0.7)",
+                justifyContent: "center",
+                alignItems: "center",
+                zIndex: "9999"
+            });
+
+            const formBox = form;
+            Object.assign(formBox.style, {
+                width: "90%",
+                maxWidth: "700px",
+                padding: "25px",
+                borderRadius: "12px",
+                background: "linear-gradient(135deg, #ffffff 25%, #dcdcdc 40%, #d6d6d6 100% )",
+                border:  "10px solid white",
+                backdropFilter: "blur(15px)",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+            });
+
+            const h3 = form.querySelector("h3");
+            Object.assign(h3.style, {
+                textAlign:"center", 
+                marginBottom:"20px", 
+                fontSize:"40px", 
+                fontWeight:"bolder",
+                color:"black",
+                textShadow:"0px 1px 2px rgba(255,255,255,0.6), 0px 2px 6px rgba(0,0,0,0.35)",
+                letterSpacing: "2px",
+                textDecoration:"underline"
+            });
+
+            const labels = form.querySelectorAll("label");
+            labels.forEach(label => {
+                Object.assign(label.style, {
+                    color:"black",
+                    fontSize:"20px",
+                    fontWeight:"bold"
+                });
+            });
+
+            const inputs = form.querySelectorAll("input");
+            inputs.forEach(input => {
+                Object.assign(input.style, {
+                    width: "97%",
+                    padding: "10px",
+                    marginBottom: "15px",
+                    background: "white",
+                    border: "2px solid black",
+                    boxShadow: "0 6px 15px rgba(0,0,0,0.15)", 
+                    outline: "none",
+                    fontWeight: "400",
+                    fontSize: "17px"
+                });
+            });
+
+            const button = form.querySelector("button");
+            Object.assign(button.style, {
+                width: "100%",
+                padding: "12px",
+                border: "none",
+                borderRadius: "8px",
+                background: "linear-gradient(135deg,#1d6fdc,#0a3c8b)",
+                color: "white",
+                cursor: "pointer",
+                fontWeight: "600"
+            });
+
+            // CONFIRM PAGE
+            Object.assign(confirmPage.style, {
+                display: "none",
+                position: "fixed",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%) scale(0.5)",
+                width: "260px",         
+                height: "260px",        
+                padding: "20px",
+                background: "skyblue",
+                color: "#222",
+                borderRadius: "20px",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                boxShadow: "0 20px 60px rgba(0,0,0,0.25)",
+                zIndex: "10000",
+                opacity: "0"
+            });
+
+            // open booking
+            bookButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    bookingPage.style.display = "flex";
+                });
+            });
+
+            // outside click close
+            bookingPage.addEventListener('click', (e) => {
+                if (e.target === bookingPage) {
+                    bookingPage.style.display = "none";
+                }
+            });
+
+            // ESC close
+            document.addEventListener('keydown', (e) => {
+                if (e.key === "Escape") {
+                    bookingPage.style.display = "none";
+                    confirmPage.style.display = "none";
+                }
+            });
+
+            // CONFIRM FUNCTION
+            function showConfirm() {
+                const confirmPage = document.querySelector(".confirmPage");
+                const tick = document.querySelector(".successTick");
+
+                tick.classList.remove("showCircle","showTick");
+
+                confirmPage.style.display = "flex";
+                confirmPage.style.flexDirection = "column";
+                confirmPage.style.justifyContent = "center";
+                confirmPage.style.alignItems = "center";
+
+                void confirmPage.offsetWidth; // force reflow
+
+                confirmPage.style.opacity = "1";
+                confirmPage.style.transform = "translate(-50%, -50%) scale(1)";
+                confirmPage.classList.add("active");
+
+                setTimeout(() => { tick.classList.add("showCircle"); }, 500);
+                setTimeout(() => { tick.classList.add("showTick"); }, 800);
+
+                setTimeout(() => {
+                    confirmPage.style.opacity = "0";
+                    confirmPage.style.transform = "translate(-50%, -50%) scale(0.7)";
+                    setTimeout(() => { confirmPage.style.display = "none"; }, 400);
+                }, 2500);
+            }
+
+            // SUBMIT
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                bookingPage.style.display = "none";
+                showConfirm(); 
+            });
+
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const bookButtons = document.querySelectorAll('.bookingBtn');
+            const bookingPage = document.querySelector('.bookingPage');
+
+            bookButtons.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation(); // stop other handlers
+
+                    // Find the guest input that belongs to the same section as this button
+                    const section = btn.closest('section'); // or use a more specific container if needed
+                    const guestInput = section.querySelector("#guest-input");
+
+                    if (!guestInput || guestInput.value.trim() === "") {
+                        alert("⚠️ Please select guests before booking");
+
+                        // After alert closes, focus on the correct guest input
+                        setTimeout(() => {
+                            guestInput.focus();
+                            guestInput.click(); // useful for mobile/custom selectors
+                        }, 0);
+
+                        return; // booking page will not open
+                    }
+                    
+                    // Everything is fine
+                    bookingPage.style.display = 'flex';
+                }, true);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            background: #dcd9d9;
+        }
+
+        /* header */
+        .header{
+            text-align:center;
+            padding:30px 0;
+            background:#0f2b46;
+            color:white;
+            letter-spacing:3px;
+        }
+
+        .header h1{
+            font-size:38px;
+        }
+
+        /* image grid */
+        .img-div{
+            display:flex;
+            flex-wrap:wrap;
+            gap:18px;
+            justify-content:center;  /* center last row */
+            padding:30px;
+        }
+
+        .img-div img{
+            width:20%;
+            height:200px;
+            object-fit:cover;
+            border-radius:16px;
+        }
+
+        /* hover effect */
+        .img-div img:hover{
+            transform:scale(1.06);
+            box-shadow:0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        /* FIRST IMAGE (FEATURED LOOK) */
+        .img-div img:first-child{
+            grid-column: span 2;
+            height:200px;
+        }
+
+        /* OPTIONAL: MAKE LAST ROW CENTERED */
+        .img-div::after{
+            content:"";
+        }
+
+        /* description section */
+        .manali-pg{
+            display:flex;
+            align-items:flex-start;
+            padding:40px;
+            gap:30px;
+            text-align: center;
+            color: #333;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .manali-pg p{
+            line-height:1.7;
+            font-size:16px;
+            font-weight: bold;
+            color:#444;
+        }
+
+        /* side card */
+        .previous-page,
+        .next-page{
+            flex:1;
+            text-align:center;
+            background:#f9f9f9;
+            padding:15px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+            transition:0.3s;
+            margin-top:70px;
+        }
+
+        .previous-page:hover,
+        .next-page:hover{
+            transform:translateY(-5px);
+        }
+
+        .pp-img,
+        .np-img{
+            border: 1px solid #000;
+            width:100%;
+            height:300px;
+            object-fit:cover;
+            border-radius:10px;
+            margin:10px 0;
+        }
+
+        .pp-button,
+        .np-button{
+            padding:8px 18px;
+            border:none;
+            background:#0071c2;
+            color:white;
+            border-radius:6px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .pp-button:hover,
+        .np-button:hover{
+            background:#005b99;
+        }
+
+        /* destination card */
+        .first-destination,
+        .second-destination,
+        .third-destination,
+        .fourth-destination{
+            width:22%;
+            display:inline-block;
+            margin:20px 1%;
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 5px 20px rgba(0,0,0,0.15);
+            transition:0.3s;
+        }
+
+        .first-destination:hover,
+        .second-destination:hover,
+        .third-destination:hover,
+        .fourth-destination:hover{
+            transform:translateY(-10px);
+        }
+
+        /* image */
+        .fd-img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+        }
+
+        /* title */
+        .fd-h2{
+            text-align:center;
+            padding:10px;
+            font-size:18px;
+        }
+
+        /* button */
+        .desti-button-1,
+        .desti-button-2,
+        .desti-button-3,
+        .desti-button-4{
+            display:block;
+            margin:10px auto 20px;
+            padding:8px 18px;
+            border:none;
+            background:#0f2b46;
+            color:white;
+            border-radius:6px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .desti-button-1:hover,
+        .desti-button-2:hover,
+        .desti-button-3:hover,
+        .desti-button-4:hover{
+            background:#0071c2;
+        }
+
+        /* respnsive */
+        @media(max-width:900px){
+            .manali-pg{
+                flex-direction:column;
+            }
+
+            .first-destination,
+            .second-destination,
+            .third-destination,
+            .fourth-destination{
+                width:90%;
+                margin:auto;
+                display:block;
+            }
+        }
+    </style>
+    <title>adnaman & nicobar exploration</title>
+</head>
+<body>
+    <div class="header">
+        <h1>ADAMAN & NICOBAR EXPLORATION</h1>
+    </div>
+
+    <div class="img-div">
+        <img src="https://onlinetourandtravel.com/wp-content/uploads/2020/06/Andaman-blog.jpg" class="img-1">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.0QI95veYzI_8H3cxXmshPAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-2">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.ucDIZZSQJGcyFd21DqecxgAAAA?w=452&h=254&rs=1&pid=ImgDetMain&o=7&rm=3" class="img-3">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.GAFzLfxhwNHVYre9kJAx5AHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-4">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.qbSjymtU65SONx7Gdf6RlgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-5">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.7MaLyMVG733x5i4HtDl7-wHaEK?pid=ImgDet&w=474&h=266&rs=1&o=7&rm=3" class="img-6">
+        <img src="https://alchetron.com/cdn/cellular-jail-15fc867b-3e40-4ff2-8df6-97796e474db-resize-750.jpg" class="img-7">
+        <img src="https://www.theindia.co.in/blog/wp-content/uploads/2019/08/cellular-jail-andaman-nicobar-island-768x512.jpg" class="img-8">
+    </div>
+
+    <!-- above image zoom and scroll -->
+    <script>
+        const images = document.querySelectorAll(".img-div img");
+        let currentIndex = 0;
+        let overlay;
+
+        images.forEach((img, index) => {
+            img.addEventListener("click", function() {
+                currentIndex = index;
+                openGallery();
+            });
+        });
+
+        function openGallery() {
+
+            overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.9)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.zIndex = "100000";
+
+            overlay.innerHTML = `
+                <div style="position:relative; text-align:center;">
+                    
+                    <span id="closeBtn" style="
+                        position:absolute;
+                        top:-50px;
+                        right:0;
+                        font-size:30px;
+                        color:white;
+                        cursor:pointer;
+                    ">✖</span>
+
+                    <span id="prevBtn" style="
+                        position:absolute;
+                        left:-60px;
+                        top:50%;
+                        transform:translateY(-50%);
+                        font-size:40px;
+                        color:white;
+                        cursor:pointer;
+                    ">⟪</span>
+
+                    <img id="galleryImage"
+                        src="${images[currentIndex].src}"
+                        style="max-width:80vw; max-height:80vh; border-radius:10px;">
+
+                    <span id="nextBtn" style="
+                        position:absolute;
+                        right:-60px;
+                        top:50%;
+                        transform:translateY(-50%);
+                        font-size:40px;
+                        color:white;
+                        cursor:pointer;
+                    ">⟫</span>
+
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            const galleryImage = document.getElementById("galleryImage");
+
+            function showImage() {
+                galleryImage.src = images[currentIndex].src;
+            }
+
+            function nextImage() {
+                currentIndex++;
+                if (currentIndex >= images.length) currentIndex = 0;
+                showImage();
+            }
+
+            function prevImage() {
+                currentIndex--;
+                if (currentIndex < 0) currentIndex = images.length - 1;
+                showImage();
+            }
+
+            document.getElementById("nextBtn").onclick = nextImage;
+            document.getElementById("prevBtn").onclick = prevImage;
+
+            document.getElementById("closeBtn").onclick = closeGallery;
+
+            overlay.addEventListener("click", function(e) {
+                if (e.target === overlay) {
+                    closeGallery();
+                }
+            });
+
+            // KEYBOARD SUPPORT
+            document.addEventListener("keydown", function(e) {
+                if (!overlay) return;
+
+                if (e.key === "ArrowRight") {
+                    nextImage();
+                }
+                else if (e.key === "ArrowLeft") {
+                    prevImage();
+                }
+                else if (e.key === "Escape") {
+                    closeGallery();
+                }
+            });
+
+            function closeGallery() {
+                document.body.removeChild(overlay);
+                overlay = null;
+            }
+        }
+    </script>
+
+
+    <div class="manali-pg">
+        <div class="previous-page">
+            <h2 class="mp-h2">Kerala, India</h2>
+            <img src="https://assets.thehansindia.com/h-upload/2023/04/12/1346371-kerala.webp" class="pp-img">
+            <a href="kerala.html" target="_self">
+                <button class="pp-button">⟪ PREVIOUS</button>
+            </a>
+        </div>
+
+        <p> The Andaman & Nicobar Islands are a breathtaking tropical destination located in the Bay of Bengal 🌊✨.<br>
+            Known for their crystal-clear turquoise waters, white sandy beaches, and lush green forests 🌴, these islands<br>
+            offer a perfect escape into nature's untouched beauty. The peaceful surroundings and exotic landscapes<br>
+            make it an ideal choice for honeymooners, families, and adventure lovers seeking a refreshing getaway.<br><br>
+
+            From the famous Radhanagar Beach 🏖️ in Havelock Island to the historic Cellular Jail in Port Blair 🏛️, the<br>
+            islands offer a beautiful mix of natural charm and historical significance. Visitors can explore vibrant coral<br>
+            reefs, serene coastlines, and picturesque sunsets 🌅 that create unforgettable memories. The calm<br>
+            environment and clean beaches provide the perfect setting to relax and unwind away from city life.<br><br>
+
+            The islands are also rich in marine biodiversity 🐠✨, making them a paradise for underwater exploration.<br>
+            Activities such as scuba diving 🤿, snorkeling 🐟, sea walking 🚶‍♂️, and glass-bottom boat rides allow<br>
+            travelers to witness colorful coral reefs and exotic sea creatures up close. For nature enthusiasts, trekking<br>
+            trails 🌿 and boat rides through mangrove forests offer unique and peaceful experiences.<br><br>
+
+            Whether you seek adventure, romance, or relaxation, the Andaman & Nicobar Islands provide the perfect<br>
+            blend of comfort and natural beauty. Enjoy luxurious beachside stays 🏨, indulge in fresh seafood 🍤, and<br>
+            experience the serene rhythm of island life. Book your stay now ✨ and immerse yourself in the tropical<br>
+            the Arabian Sea 🌅 to refreshing mornings in the hills, Kerala promises the perfect blend<br>
+            of nature, culture, and comfort. Book your stay now 🏨 and experience the serene magic<br>
+            magic of this island paradise. 🌴🌊<br><br><br>
+        </p>
+
+        <div class="next-page">
+            <h2 class="mp-h2">Goa, India</h2>
+            <img src="https://static.bankbazaar.com/images/india/infographic/goa.webp" class="np-img">
+            <a href="goa.html" target="_self">
+                <button class="np-button">NEXT⟫</button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="first-destination">
+        <img src="https://assets3.thrillist.com/v1/image/1136316/size/tl-horizontal_main/the-world-s-most-incredible-underwater-hotel-rooms" class="fd-img">
+        <h2 class="fd-h2">Coral Glass Underwater Pod</h2>
+        <button class="desti-button-1">Vist More</button>
+    </div>
+
+    <div  class="second-destination">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/84/46/2e/img-20190514-214155929.jpg?w=1000&h=-1&s=1" class="fd-img">
+        <h2 class="fd-h2">Bayline Crystal Resort</h2>
+        <button class="desti-button-2">Visit More</button>
+    </div>
+
+    <div class="third-destination">
+        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/156251837.jpg?k=83174525b8f6374307a17851a1e571b21f210e6f05fddeae3e6d405db67648f0&o=" class="fd-img">
+        <h2 class="fd-h2">Coral Bay Island Resort</h2>
+        <button class="desti-button-3">Visit More</button>
+    </div>
+
+    <div class="fourth-destination">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.BprZNElJCjKhwufA_xHkZQHaFC?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="fd-img">
+        <h2 class="fd-h2">Nature Bay Eco Resort</h2>
+        <button class="desti-button-4">Visit More</button>
+    </div>
+
+
+    <!-- booking form popup -->
+    <div id="bookingPopup" style="
+        display:none; 
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.5); 
+        z-index:999;
+        justify-content:center;
+        align-items:center;
+    ">
+        <div class="booking-container" style="
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            background:linear-gradient(
+                135deg,
+                #ffffff 25%,
+                #f0f0f0 50%,
+                #d6d6d6 100%   
+            );
+            border: 10px solid white;
+            color: white;
+            overflow: hidden;
+        ">
+
+            <span id="closeFormPopup" style="
+                position:absolute;
+                top:15px;
+                right:20px;
+                cursor:pointer;
+                font-size:20px;
+                font-weight:bold;
+                color:black;
+                z-index:2;
+            ">✖</span>
+
+            <h2 style="
+                text-align:center; 
+                margin-bottom:20px; 
+                font-size:40px; 
+                font-weight:bolder;
+                color:black;
+                text-shadow: 
+                    0px 1px 2px rgba(255, 255, 255, 0.6),  
+                    0px 2px 6px rgba(0, 0, 0, 0.35); 
+                letter-spacing: 2px;
+                position: relative;
+                z-index: 1;
+                text-decoration:underline;
+            ">
+                Booking Form
+            </h2>
+
+            <form id="bookingForm" style="text-align:left; position:relative; z-index:1; font-size:20px; color:black; font-weight:bolder;">
+                <label>Name:</label><br>
+                <input type="text" name="name" placeholder="Your Name" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;outline:none;" required><br>
+
+                <label>Phone Number:</label><br>
+                <input type="tel" name="phone" placeholder="Your Phone Number" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Email:</label><br>
+                <input type="email" name="email" placeholder="Your Email" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Special Request:</label><br>
+                <textarea name="request" placeholder="e.g., extra bed, late check-in..." style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;"></textarea><br>
+
+                <label>Check-in Date:</label><br>
+                <input type="date" name="checkin" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Check-out Date:</label><br>
+                <input type="date" name="checkout" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>State:</label><br>
+                <input type="text" name="state" placeholder="Your State" style="width:100%; padding:7px; margin-bottom:20px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>City:</label><br>
+                <input type="text" name="city" placeholder="Your City" style="width:100%; padding:7px; margin-bottom:20px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <button type="submit" style="
+                    width:100%;
+                    padding:12px;
+                    background:#0f2b46;
+                    color:white;
+                    border:none;
+                    border-radius:6px;
+                    font-size:18px;
+                    cursor:pointer;
+                ">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- confirmation popup -->
+    <div id="confirmationPopup" style="
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.7);
+        z-index:9999;
+        justify-content:center;
+        align-items:center;
+    ">
+        <div id="confirmationContent" style="
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            width:800px;
+            max-width:90%;
+            text-align:left;
+            position:relative;
+        ">
+            <span id="closeConfirmPopup" style="
+                position:absolute;
+                top:10px;
+                right:15px;
+                cursor:pointer;
+                font-size:20px;
+            ">✖</span>
+
+            <h2 style="text-align:center;">Booking Confirmation</h2>
+
+            <div id="confirmDetails" style="margin-top:20px;"></div>
+
+            <button onclick="printConfirmation()" style="
+                margin-top:20px;
+                width:100%;
+                padding:10px;
+                background:#0f2b46;
+                color:white;
+                border:none;
+                cursor:pointer;
+            ">Print</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.querySelector(".desti-button-1").addEventListener("click", function() {
+
+            // Create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // Popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>Coral Glass Under Pod - Andaman</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Coral Glass Underwater Pod offers a unique and luxurious stay beneath the beautiful waters of Andaman.
+                        Enjoy breathtaking marine views through panoramic glass walls and modern comfort.
+                        Experience an unforgettable underwater escape surrounded by vibrant ocean life.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // Close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            };
+
+            // Image slider images
+            const images = [
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/84/46/2e/img-20190514-214155929.jpg?w=1000&h=-1&s=1",
+                "https://pix8.agoda.net/property/1273689/0/52f42e476fb60c8e4141448afaf63776.jpeg?ce=2&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/a4d74a7f6e7ba9918163550748c2b675.jpeg?ce=0&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/141013811.jpg?k=7d7919825fdecf639fa1222e01faf01b32a5fd79a30c880d414675cc8b417aa6&o=&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/141013811.jpg?k=7d7919825fdecf639fa1222e01faf01b32a5fd79a30c880d414675cc8b417aa6&o=&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/141013811.jpg?k=7d7919825fdecf639fa1222e01faf01b32a5fd79a30c880d414675cc8b417aa6&o=&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/4cc37b29380d2dfb9a555494f13f1adc.jpeg?s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/4cc37b29380d2dfb9a555494f13f1adc.jpeg?s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/4cc37b29380d2dfb9a555494f13f1adc.jpeg?s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/4cc37b29380d2dfb9a555494f13f1adc.jpeg?s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/6d615f2505e47796da42468919e387b5.jpeg?ce=0&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/6d615f2505e47796da42468919e387b5.jpeg?ce=0&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/0b3c2b3027f1ec282a27497856068bbd.jpeg?ce=2&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/0b3c2b3027f1ec282a27497856068bbd.jpeg?ce=2&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/141013839.jpg?k=d049bf79476b37845e65e37145391fe3ea670bad00a6d4cbbf9e6f6ab3e99f42&o=&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/141013839.jpg?k=d049bf79476b37845e65e37145391fe3ea670bad00a6d4cbbf9e6f6ab3e99f42&o=&s=1024x",
+                "https://pix8.agoda.net/hotelImages/127/1273689/1273689_16092011020046649623.jpg?ca=13&ce=1&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/142008945.jpg?k=7c0fbdddff37f6e60c56c5b90ec5aed17bb3fac124aa5eb9c05e1aba0608ff66&o=&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/a223b0d8110f9a8b8673a582b75c1237.jpeg?ce=2&s=1024x"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-2").addEventListener("click", function() {
+
+            // Create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // Popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>Bayline Crystal Resort - Andaman Islands</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Bayline Crystal Resort offers a serene and luxurious stay in the stunning Andaman Islands.
+                        Enjoy crystal-clear beaches, tropical surroundings, and modern ocean-view rooms.
+                        Experience peaceful island vibes, warm hospitality, and a refreshing seaside escape.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // Close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            };
+
+            // Image slider images
+            const images = [
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/84/46/2e/img-20190514-214155929.jpg?w=1000&h=-1&s=1",
+                "https://pix8.agoda.net/property/1273689/0/52f42e476fb60c8e4141448afaf63776.jpeg?ce=2&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/a4d74a7f6e7ba9918163550748c2b675.jpeg?ce=0&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/141013811.jpg?k=7d7919825fdecf639fa1222e01faf01b32a5fd79a30c880d414675cc8b417aa6&o=&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/141013811.jpg?k=7d7919825fdecf639fa1222e01faf01b32a5fd79a30c880d414675cc8b417aa6&o=&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/141013811.jpg?k=7d7919825fdecf639fa1222e01faf01b32a5fd79a30c880d414675cc8b417aa6&o=&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/4cc37b29380d2dfb9a555494f13f1adc.jpeg?s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/4cc37b29380d2dfb9a555494f13f1adc.jpeg?s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/4cc37b29380d2dfb9a555494f13f1adc.jpeg?s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/4cc37b29380d2dfb9a555494f13f1adc.jpeg?s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/6d615f2505e47796da42468919e387b5.jpeg?ce=0&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/6d615f2505e47796da42468919e387b5.jpeg?ce=0&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/0b3c2b3027f1ec282a27497856068bbd.jpeg?ce=2&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/0b3c2b3027f1ec282a27497856068bbd.jpeg?ce=2&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/141013839.jpg?k=d049bf79476b37845e65e37145391fe3ea670bad00a6d4cbbf9e6f6ab3e99f42&o=&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/141013839.jpg?k=d049bf79476b37845e65e37145391fe3ea670bad00a6d4cbbf9e6f6ab3e99f42&o=&s=1024x",
+                "https://pix8.agoda.net/hotelImages/127/1273689/1273689_16092011020046649623.jpg?ca=13&ce=1&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/142008945.jpg?k=7c0fbdddff37f6e60c56c5b90ec5aed17bb3fac124aa5eb9c05e1aba0608ff66&o=&s=1024x",
+                "https://pix8.agoda.net/property/1273689/0/a223b0d8110f9a8b8673a582b75c1237.jpeg?ce=2&s=1024x"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-3").addEventListener("click", function() {
+
+            // Create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // Popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>CoralBay Island Resort - Andaman</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        CoralBay Island Resort offers a beautiful seaside escape near the vibrant coral reefs of the Andaman Islands.
+                        Enjoy turquoise waters, tropical surroundings, and comfortable island-style accommodations.
+                        Experience adventure, relaxation, and breathtaking ocean views in one unforgettable getaway.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // Close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            };
+
+            // Image slider images
+            const images = [
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/156251837.jpg?k=83174525b8f6374307a17851a1e571b21f210e6f05fddeae3e6d405db67648f0&o=",
+                "https://tse3.mm.bing.net/th/id/OIP.kc_15AhECR7pNLeVNqFHlQHaE0?pid=ImgDet&w=474&h=308&rs=1&o=7&rm=3",
+                "https://tse4.mm.bing.net/th/id/OIP.pREuxs-lFqW16ISQdBho9gHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+                "https://tse2.mm.bing.net/th/id/OIP.PAs8AlZ6JgXzfC93CieXrwHaEz?pid=ImgDet&w=474&h=307&rs=1&o=7&rm=3",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/30581843.jpg?k=025e4d7a69a17c0a2377440d85ba5effb9404413afc03aecfe37a58f0d126315&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/403045154.jpg?k=604e483b57b454b8a70a1fdaae668099e562b7022f259ce7a13eeda820b9a54f&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/463240400.jpg?k=69799c8e11bf557a73515e04f6e80084390af71b43fa0be981b06290700a20dd&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/463240403.jpg?k=7ff394e1c12953a38bbe03c16470ffcc4c59e0645b3447e9e0a32b9d98e08500&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/30581843.jpg?k=025e4d7a69a17c0a2377440d85ba5effb9404413afc03aecfe37a58f0d126315&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/30581884.jpg?k=9c2036f01de7376059cd1627c5d91fff3f6295bd66e918fd5fc28ac22771994a&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/156249076.jpg?k=c1112b4e9878f42549ac105367fe33a28e21ec9ff0fed8e59b6152bcc438589a&o="
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-4").addEventListener("click", function() {
+
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.zIndex = "9999";
+
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>NatureBay Eco Resort - Andaman Islands</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        NatureBay Eco Resort offers a peaceful and eco-friendly stay in the beautiful Andaman Islands.
+                        Surrounded by lush greenery and clear blue waters, it provides a refreshing natural escape.
+                        Experience sustainable comfort, island tranquility, and a relaxing tropical getaway.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            };
+
+            // image slider
+            const images = [
+                "https://tse2.mm.bing.net/th/id/OIP.BprZNElJCjKhwufA_xHkZQHaFC?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/03/0b/4e/all-rooms-are-pool-facing.jpg?w=1400&h=-1&s=1",
+                "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225045918-newroomphotos5.webp",
+                "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225045921-washroom1.webp",
+                "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225045920-newroomphotos4.webp",
+                "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225045918-newroompicture2.webp",
+                "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225050933-01-copy-2-1.webp",
+                "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225050932-dsc07575copy.webp",
+                "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225050732-deluxe16-1.webp",
+                "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225050714-washroom.webp",
+                "https://www.andamanisland.in/storage/accommodation_rooms/thumb/5f9767fb35c4b146_luxury_suite_sea_facing_cottage_hibr.jpg",
+                "https://www.andamanisland.in/storage/accommodation_rooms/thumb/5f976877dd9c899_family-suite-room-at-havelock-island-beach-resort-01-818x460_-_copy.jpg"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+
+            // opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // close form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const bookingForm = document.getElementById("bookingForm");
+            const bookingPopup = document.getElementById("bookingPopup");
+            const confirmationPopup = document.getElementById("confirmationPopup");
+
+            // form submit
+            bookingForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const formData = new FormData(bookingForm);
+
+                fetch("goa_booking.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(data => {
+
+                    console.log("SERVER RESPONSE:", data); // debugging
+
+                    if (data.status === "success") {
+
+                        // close booking form
+                        bookingPopup.style.display = "none";
+
+                        // fill confirmation details
+                        document.getElementById("confirmDetails").innerHTML = `
+                            <p><b>Booking ID:</b> ${data.booking_id}</p>
+                            <p><b>Name:</b> ${data.name}</p>
+                            <p><b>Phone:</b> ${data.phone}</p>
+                            <p><b>Email:</b> ${data.email}</p>
+                            <p><b>Check-in:</b> ${data.checkin}</p>
+                            <p><b>Check-out:</b> ${data.checkout}</p>
+                            <p><b>State:</b> ${data.state}</p>
+                            <p><b>City:</b> ${data.city}</p>
+                            <p><b>Request:</b> ${data.request}</p>
+                        `;
+
+                        // show confirmation popup
+                        confirmationPopup.style.display = "flex";
+
+                        // reset form
+                        bookingForm.reset();
+
+                    } else {
+                        alert("❌ Error: " + data.message);
+                    }
+                })
+                .catch(err => {
+                    console.error("Fetch Error:", err);
+                    alert("⚠️ Something went wrong");
+                });
+            });
+
+            // close booking popup
+            document.getElementById("closeFormPopup").onclick = function () {
+                bookingPopup.style.display = "none";
+            };
+
+            // close confirmation popup
+            document.getElementById("closeConfirmPopup").onclick = function () {
+                confirmationPopup.style.display = "none";
+            };
+
+        });
+
+        // print function
+        function printConfirmation() {
+            const content = document.getElementById("confirmationContent").innerHTML;
+
+            const printWindow = window.open('', '', 'width=800,height=600');
+
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>Booking Receipt</title>
+                </head>
+                <body>
+                    ${content}
+                </body>
+                </html>
+            `);
+
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

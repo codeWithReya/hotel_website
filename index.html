@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <img src="https://images.squarespace-cdn.com/content/v1/53e1e525e4b091ac3336f302/1576654668827-H4Z3IC7DB1DV0KHVZOGX/Pool+Evening.jpg" class="bg-img">
+    <img src="https://cache.marriott.com/marriottassets/marriott/NANWI/nanwi-pool-7599-hor-feat.jpg" class="bg-img">
+    <img src="https://i.pinimg.com/originals/3d/65/98/3d6598f418272467bfe4d184adeb399d.jpg" class="bg-img">
+    <img src="https://cdn.wallpapersafari.com/3/11/TEiaHr.jpg" class="bg-img">
+    
+    <header>
+        <img src="34736028081_524bd9ecac (1).jpg" alt="image" id="logo">
+
+        <div class="title-nav">
+            <h1 class="heading">CITY SKYLINE</h1>
+            <nav>  
+                <ul>
+                    <li><a href="aboutPage.html">About</a></li>
+                    <li><a href="detailsPage.html">Details</a></li>
+                    <li><a href="show_booking.html">Booking</a></li>
+                    <li><a href="carRental.html">Car Rentals</a></li>
+                    <li><a href="#view">Accommodations</a></li>
+                </ul> 
+            </nav>
+        </div>
+
+        <a href="https://wa.me/919410436440" class="social-icons whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/yourpage" class="social-icons instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/yourpage" class="social-icons twitter" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://youtube.com/@bhaktikiraha-dm" class="social-icons youtube" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <div>
+            <a target="_self" class="reg-button">Register</a>
+            <div class="settings-menu">
+                <img src="https://cdn-icons-png.flaticon.com/512/713/713718.png" alt="Settings" id="settings-icon">
+                <div class="dropdown" id="dropdown-menu">
+                    <ul>
+                        <li><a href="#" id="profile-link">Profile</a></li>
+                        <li>
+                            <div class="dropdown-item settings-parent" onclick="toggleSettingsSubmenu()">
+                                Settings ▼
+                                <div class="settings-submenu" id="settings-submenu">
+                                    <div class="dropdown-subitem" id="ds">Login</div>
+                                    <div class="dropdown-subitem">Sign Up</div>
+                                    <div class="dropdown-subitem">Theme Color</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#" id="logout-link">Logout</a></li>
+                        <!-- logout -->
+                        <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+
+                            const logoutLink = document.getElementById("logout-link");
+
+                            if(!logoutLink){
+                                console.error("Logout link not found");
+                                return;
+                            }
+
+                            logoutLink.addEventListener("click", function(e) {
+                                e.preventDefault();
+
+                                fetch("logout.php")
+                                .then(res => res.json())
+                                .then(data => {
+
+                                    if (data.status === "logged_out") {
+
+                                        document.getElementById("user-name").innerText = "";
+                                        document.getElementById("user-email").innerText = "";
+                                        document.getElementById("user-dob").innerText = "";
+
+                                        document.getElementById("profile-popup").style.display = "none";
+
+                                        alert("Logged out successfully 👋");
+
+                                        window.location.href = "index.html";
+                                    }
+
+                                })
+                                .catch(err => {
+                                    console.error(err);
+                                    alert("Logout error ❌");
+                                });
+                            });
+
+                        });
+                    </script>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </header>
+
+    <div id="profile-popup">
+        <div class="popup-card">
+            <span id="close-profile">&times;</span>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Icon" width="40" height="40" style="border-radius: 50%;">
+                <h2 style="margin: 0;">User Profile</h2>
+            </div>
+            <p><strong>Name:</strong> <span id="user-name"></span></p>
+            <p><strong>Email:</strong> <span id="user-email"></span></p>
+            <p><strong>D.O.B.:</strong> <span id="user-dob"></span></p>
+        </div>
+    </div>
+
+    <div class="mainArea">
+        <p id="#about">Hey 🖐️ traveller!<br>Welcome to <b>"City Skyline"</b> your gateway to the best Hotel stays across the city.</br>Book with ease, stay with comfort.</p>
+    </div>
+
+
+
+    <section class="whereBox">
+        <img src="wp4069456.jpg" alt="image" class="bg"><p class="iText">Where to next!🤷‍♀️</p>
+        <div class="search-container">
+            <!-- Location -->
+            <div class="search-box">
+                <i class="fa fa-bed"></i>
+                <input type="text" placeholder="Where are you going?">
+            </div>
+
+            <!-- Date -->
+            <div class="search-box" id="dateBox">
+                <i class="fa fa-calendar"></i>
+                <input type="text" id="dateDisplay" placeholder="Check-in date — Check-out date" readonly>
+                <input type="date" id="dateInput" style="opacity:0; position:absolute; left:0; width:1px; height:1px;">
+            </div>
+
+            <!-- Guests -->
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room">
+            </div>
+
+            <!-- Button -->
+            <button class="search-btn" id="searchBtn">Search</button>
+            <div id="hotelResults"></div>
+        </div>
+    </section>
+
+
+
+    <!-- explorations of stays and city/country -->
+    <section class="discovering" id="view" class="D1">
+        <h2 class="h2">Discover your new favourite stay</h2>
+
+        <!-- types of stays (i.e., villa, apartment, etc...) -->
+         <div class="resort">
+            <img src="https://wallpaperaccess.com/full/902493.jpg">
+            <div class="options">
+                <a href="resortPage.html" target="_self" class="Dlink"><button>Resort</button></a>
+            </div>
+        </div>
+
+         <div class="apartment">
+            <img src="https://wallpaperaccess.com/full/3569762.jpg">
+            <div class="options">
+                <a href="apraPage.html" target="_self" class="Dlink"><button>Apratmenet</button></a>
+            </div>
+        </div>
+
+        <div class="villa">
+            <img src="https://villascroatia.com/wp-content/uploads/2020/08/modern-luxury-villa-pool-medulin-croatia-13-1.jpg">
+            <div class="options">
+                <a href="villaPage.html" target="_self" class="Dlink"><button>Villa</button></a>
+            </div>
+        </div>
+
+        <div class="Houseboat">
+            <img src="https://as2.ftcdn.net/jpg/08/37/76/79/1000_F_837767994_JJAKzpcDmBuNog792Otq6mY7AVcY7eiA.jpg">
+            <div class="options">
+                <a href="hbPage.html" target="_self" class="Dlink"><button>HouseBoat</button></a>
+            </div>
+        </div>
+
+        <div class="hotel">
+            <img src="https://wallpaperaccess.com/full/2690784.jpg">
+            <div class="options">
+                <a href="hotelPage.html" target="_self" class="Dlink"><button>Hotel</button></a>
+            </div>
+        </div>
+
+        <div class="petfriendly">
+            <img src="https://th.bing.com/th/id/R.155be59cfc8497e415d9dd981080f7ac?rik=dshyP0D0q%2bMyEw&riu=http%3a%2f%2fluxurylaunches.com%2fwp-content%2fuploads%2f2018%2f04%2fpet-friendly-hotels.jpg&ehk=q5XuQLOTOSdKGbKFltvFqUg32RaueRiVmmfqeczgtV0%3d&risl=&pid=ImgRaw&r=0">
+            <div class="options">
+                <a href="pfPage.html" target="_self" class="Dlink"><button>PetFriendly</button></a>
+            </div>
+        </div>
+
+        <div class="sea">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.49M357N6kXZuKcRaZijDSQHaEo?cb=12&w=1920&h=1200&rs=1&pid=ImgDetMain&o=7&rm=3">
+            <div class="options">
+                <a href="svPage.html" target="_self" class="Dlink"><button>SeaView</button></a>
+            </div>
+        </div>
+
+        <div class="greenery">
+            <img src="https://as2.ftcdn.net/v2/jpg/06/79/77/71/1000_F_679777151_8bOxM4Kmy7DRwzHar8EtGs93rjcoIZsg.jpg">
+            <div class="options">
+                <a href="nfPage.html" target="_self" class="Dlink"><button>NatureFriendly</button></a>
+            </div>
+        </div>
+
+        <div class="moutain">
+            <img src="https://imgcdn.stablediffusionweb.com/2024/3/6/a5fee918-0b78-4391-b3b6-a8432cc1092d.jpg">
+            <div class="options">
+                <a href="mvPage.html" target="_self" class="Dlink"><button>MountainView</button></a>
+            </div>
+        </div>
+
+        <div class="underground">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/e2/63/60/caption.jpg?w=2400&h=-1&s=1&cx=1920&cy=1080&chk=v1_d956fe14067c580a5892">
+            <div class="options">
+                <a href="ugPage.html" target="_self" class="Dlink"><button>underGround</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="discovering" id="view" class="D2">
+        <!-- country-city options(only India, Japan, Nepal) -->
+        <h2 class="h2">Explore stays in popular "5" destinations</h2>
+        <div>
+            <a href="hp.html" target="_self" class="D2link"> 
+                <img src="https://www.ntraveladvisor.com/wp-content/uploads/2022/08/Religious-Places-in-Himachal.jpg">
+                <p>Himachal Pradesh<br>India</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="rajasthan.html" target="_self" class="D2link"> 
+                <img src="https://cdn1.goibibo.com/voy_ing/t_fs/rajasthan-jaipur-148046447735o.jpeg">
+                <p>Rajasthan<br>India</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="kerala.html" target="_self" class="D2link"> 
+                <img src="https://assets.thehansindia.com/h-upload/2023/04/12/1346371-kerala.webp">
+                <p>Kerala<br>India</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="anIsland.html" target="_self" class="D2link"> 
+                <img src="https://www.noblehousetours.com/wp-content/uploads/2017/08/andaman-and-nicobar-islands-india.jpg">
+                <p>Andaman & Nicobar Islands<br>India</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="goa.html" target="_self" class="D2link"> 
+                <img src="https://static.bankbazaar.com/images/india/infographic/goa.webp">
+                <p>Goa<br>India</p>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- feedback section-->
+    <section class="feedback" id="feedShifting">
+        <img src="https://www.mountainphotography.com/images/xl/20100923-Capitol-Sunset.jpg" class="fbimg" alt="feedbackbgimg">
+
+        <!-- Add Feedback button -->
+        <button class="FButtoN">Add Feedback</button>
+    </section>
+
+
+
+    <!-- subscribe section -->
+    <section class="sub" id="subshifting">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" class="subig">
+        <h1 class="subHeading">Stay in the loop!</h1>
+        <p>Get exclusive deals & travel tips straight to your inbox!</p>
+        <input type="email" name="userEmail" placeholder="Enter your email" required>
+        <select name="subscription" style=" padding: 12px 22px;
+                                            height: 21.5%;
+                                            border: none;
+                                            border-radius: 8px;
+                                            background: #1e66c5;
+                                            color: white;
+                                            font-weight: 600;
+                                            font-size: 18px;
+                                            margin-left: 10px;
+                                            cursor: pointer;
+                                            margin-top: 90px;">
+            <option value="basic">Basic (Free)</option>
+            <option value="premium">Premium</option>
+            <option value="vip">VIP</option>
+        </select>
+        <button class="subButton">Subscribe</button> 
+    </section>
+
+
+
+    <!-- querry center -->
+    <section class="suggetion">
+        <img src="https://media.istockphoto.com/id/1226743157/photo/blurred-background-summer-vacation-relaxing-concept.jpg?s=612x612&w=0&k=20&c=BKcRDM0v0cbbsTWPbvfgMzaTDCJ85TvFUK0dFTqmoPo=" class="suggimg" alt="suggetionbgimg">
+        <h1>Querry Section</h1>
+        <input type="search" placeholder="Search destinations..." required>
+        <button class="sugg-btn">Search</button>
+        <ul>
+            <li>How do I cancle my booking?</li>
+            <li>Can I change my travek date after booking?</li>
+            <li>Is payment secure on your website?</li>
+            <li>Do I need to create a account to book hotel?</li>
+            <li>What if I don't receive a booking confirmation email?</li>
+            <li>Can I get a refund if I cancel my reservation late?</li>
+            <li>How can I update my personal details after booking?</li>
+            <li>What should I do if my payment fails during booking?</li>
+        </ul>
+    </section>
+
+
+
+    <!-- about section -->
+    <footer id="about" class="About">
+        <h2 class="aboutH2">Learn more...</h2>
+        <div class="footerContent">
+            <div class="col">
+                <h3>Top destination :</h3>
+                <ul>
+                    <li><a href="resortPage.html#keralaSection">Kerala</a></li>
+                    <li><a href="nfPage.html#girSection">Gir</a></li>
+                    <li><a href="mvPage.html#mussoorieSection">Mussoorie</a></li>
+                    <li><a href="svPage.html#dddSection">Diu, Daman & Diu (UT)</a></li>
+                    <li><a href="svPage.html#andamanSection">Andaman & Nicobar</a></li>
+                    <li><a href="resortPage.html#coorgSection">Coorg</a></li>
+                    <li><a href="pfPage.html#lonavalaSection">Lonavala</a></li>
+                    <li><a href="villaPage.html#alleppeySection">Alleppey</a></li>
+                    <li><a href="villaPage.html#rishikeshSection">Rishikesh</a></li>
+                    <li><a href="svPage.html#verkalaSection">Varkala</a></li>
+                    <li><a href="nfPage.html#munnarSection">Munnar</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>Top Cities :</h3>
+                <ul>
+                    <li><a href="exploreGoa.html">Explore Goa</a></li>
+                    <li><a href="exploreJaipur.html">Explore Jaipur</a></li>
+                    <li><a href="exploreManali.html">Explore Manali</a></li>
+                    <li><a href="exploreKerala.html">Explore Kerala</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>Support & FAQs :</h3>
+                <ul>
+                    <li>Your booking</li>
+                    <li><a href="faqsPage.html">FAQs</a></li>
+                    <li><a href="detailsPage.html">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>Other information :</h3>
+                <ul>
+                    <li><a href="aboutPage.html">About us</a></li>
+                    <li><a href="travelGuidePage.html">Travel Guide</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- register page popup -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const regButton = document.querySelector(".reg-button");
+
+            regButton.addEventListener("click", function () {
+
+                // Overlay
+                const overlay = document.createElement("div");
+                overlay.style.position = "fixed";
+                overlay.style.top = "0";
+                overlay.style.left = "0";
+                overlay.style.width = "100%";
+                overlay.style.height = "100%";
+                overlay.style.background = "rgba(0,0,0,0.5)";
+                overlay.style.backdropFilter = "blur(5px)";
+                overlay.style.display = "flex";
+                overlay.style.justifyContent = "center";
+                overlay.style.alignItems = "center";
+                overlay.style.zIndex = "1";
+
+                // Popup
+                const popup = document.createElement("div");
+                popup.style.width = "360px";
+                popup.style.padding = "36px";
+                popup.style.borderRadius = "20px";
+                popup.style.background = "rgba(255, 255, 255, 0.1)";
+                popup.style.backdropFilter = "blur(20px)";
+                popup.style.boxShadow = "0 30px 60px rgba(0,0,0,0.75)";
+                popup.style.position = "relative";
+                popup.style.textAlign = "center";
+                popup.style.fontFamily = "Arial";
+                popup.style.border= "1px solid rgba(255,255,255,0.4)";
+
+                popup.innerHTML = `
+                    <span id="closeBtn" 
+                        style="position:absolute; top:15px; right:20px; color:white;
+                        font-size:22px; cursor:pointer;">✖</span>
+
+                    <h1 style="
+                        margin: 0 0 20px 0;
+                        font-weight:700;
+                        font-size:80px;
+                        color:white;
+                        text-shadow: 0 0 5px #071a54, 0 0 10px #071a54;">
+                        Welcome
+                    </h1>
+
+                    <h3 style="
+                        margin: 0 0 20px 0;
+                        font-weight:500;
+                        font-size:50px;
+                        color:#E9FF1F;">
+                        Register
+                    </h3>
+
+                    <input type="text" id="fullName" placeholder="Full Name"
+                        style="width:100%; padding:12px; margin-top:15px;
+                        border-radius:8px; border:1px solid #ccc;"><br>
+
+                    <input type="email" id="email" placeholder="Email"
+                        style="width:100%; padding:12px; margin-top:15px;
+                        border-radius:8px; border:1px solid #ccc;"><br>
+
+                    <input type="password" id="password" placeholder="Password"
+                        style="width:100%; padding:12px; margin-top:15px;
+                        border-radius:8px; border:1px solid #ccc;"><br>
+
+                    <input type="date" id="date"
+                        style="width:100%; padding:12px; margin-top:15px;
+                        border-radius:8px; border:1px solid #ccc;"><br>
+
+                    <button id="loginBtn"
+                        style="width:100%; padding:12px; margin-top:20px;
+                        border:none; border-radius:8px;
+                        background:#7db9d3; cursor:pointer;
+                        font-size:18px; font-weight:bold;">
+                        Login
+                    </button>
+
+                    <div style="margin-top:15px;">
+                        <input type="checkbox" id="robot">
+                        <label>I am not a robot</label>
+                    </div>
+
+                    <button id="cancelBtn"
+                        style="width:100%; padding:12px; margin-top:20px;
+                        border:none; border-radius:8px;
+                        background:#7db9d3; cursor:pointer;
+                        font-size:18px; font-weight:bold;">
+                        Cancel
+                    </button>
+                `;
+
+                overlay.appendChild(popup);
+                document.body.appendChild(overlay);
+
+                // Select elements
+                const closeBtn = popup.querySelector("#closeBtn");
+                const loginBtn = popup.querySelector("#loginBtn");
+                const cancelBtn = popup.querySelector("#cancelBtn");
+
+                function closePopup() {
+                    overlay.remove();
+                }
+
+                closeBtn.addEventListener("click", closePopup);
+                cancelBtn.addEventListener("click", closePopup);
+
+                loginBtn.addEventListener("click", function () {
+
+                    const name = popup.querySelector("#fullName").value.trim();
+                    const email = popup.querySelector("#email").value.trim();
+                    const password = popup.querySelector("#password").value.trim();
+                    const dob = popup.querySelector("#date").value.trim();
+                    const robot = popup.querySelector("#robot").checked;
+
+                    if (!name || !email || !password || !dob) {
+                        alert("Please fill all fields.");
+                        return;
+                    }
+
+                    if (!robot) {
+                        alert("Please confirm you are not a robot.");
+                        return;
+                    }
+
+                    // REGISTER API CALL
+                    fetch("register.php", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded"
+                        },
+                        body: `name=${name}&email=${email}&password=${password}&dob=${dob}`
+                    })
+                    .then(res => res.text())
+                    .then(data => {
+
+                        if (data === "success") {
+                            alert("Registered Successfully 🎉");
+                            closePopup();
+                            location.reload();
+                        }
+                        else if (data === "exists") {
+                            alert("Email already exists");
+                        }
+                        else {
+                            alert("Error");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+
+
+    <!-- setting icon drop down -->
+     <script>
+        // elements
+        const settingsIcon = document.getElementById("settings-icon");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+        const settingsSubmenu = document.getElementById("settings-submenu");
+
+        const submenuItems = document.querySelectorAll(".dropdown-subitem");
+
+
+        // setting dropdown
+        settingsIcon.addEventListener("click", function(e){
+            e.stopPropagation();
+
+            dropdownMenu.style.display =
+                dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+
+
+        // setting submenu
+        function toggleSettingsSubmenu(){
+            settingsSubmenu.style.display =
+                settingsSubmenu.style.display === "block" ? "none" : "block";
+        }
+
+
+        // close menu when click outside
+        document.addEventListener("click", function(e){
+            if(!dropdownMenu.contains(e.target) && e.target !== settingsIcon){
+                dropdownMenu.style.display = "none";
+                settingsSubmenu.style.display = "none";
+            }
+        });
+
+
+        // create popup function
+        function createPopup(title, fields){
+
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.6)";
+            overlay.style.display = "flex";
+            overlay.style.alignItems = "center";
+            overlay.style.justifyContent = "center";
+            overlay.style.zIndex = "999";
+
+            const formBox = document.createElement("div");
+            formBox.style.background = "white";
+            formBox.style.padding = "30px";
+            formBox.style.borderRadius = "10px";
+            formBox.style.width = "320px";
+            formBox.style.textAlign = "center";
+
+            let inputs = "";
+
+            fields.forEach(field=>{
+                inputs += `<input type="${field.type}" placeholder="${field.placeholder}" style="width:100%;padding:8px;margin:8px 0;">`;
+            });
+
+            formBox.innerHTML = `
+                <h3>${title}</h3>
+                ${inputs}
+                <button style="margin-top:10px;padding:8px 20px;background:#071a54;color:white;border:none;">Submit</button>
+                <br><br>
+                <button id="closePopup" style="padding:6px 15px;">Close</button>
+            `;
+
+            overlay.appendChild(formBox);
+            document.body.appendChild(overlay);
+
+            document.getElementById("closePopup").onclick = () => overlay.remove();
+
+            overlay.addEventListener("click", function(e){
+                if(e.target === overlay) overlay.remove();
+            });
+
+        }
+
+
+        // login popup
+        submenuItems.forEach(function(item){
+
+            if(item.innerText === "Login"){
+                item.addEventListener("click", function(){
+
+                    createPopup("Login",[
+                        {type:"email", placeholder:"Email"},
+                        {type:"password", placeholder:"Password"}
+                    ]);
+
+                });
+            }
+
+        });
+
+        // styling login popup
+        function createPopup(title, fields){
+
+            // overlay
+            let overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.5)";
+            overlay.style.display = "flex";
+            overlay.style.alignItems = "center";
+            overlay.style.justifyContent = "center";
+            overlay.style.zIndex = "1000";
+
+            // popup
+            let popup = document.createElement("div");
+            popup.style.background = "#fff";
+            popup.style.padding = "30px";
+            popup.style.borderRadius = "12px";
+            popup.style.width = "320px";
+            popup.style.position = "relative";
+            popup.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
+            popup.style.textAlign = "center";
+
+            // close button
+            let closeBtn = document.createElement("span");
+            closeBtn.innerHTML = "✖";
+            closeBtn.style.position = "absolute";
+            closeBtn.style.top = "10px";
+            closeBtn.style.right = "15px";
+            closeBtn.style.cursor = "pointer";
+            closeBtn.style.fontSize = "18px";
+
+            closeBtn.onclick = function(){
+                overlay.remove();
+            };
+            popup.appendChild(closeBtn);
+
+            // title
+            let heading = document.createElement("h2");
+            heading.innerText = title;
+            heading.style.marginBottom = "20px";
+            heading.style.color = "#0b2a3a";
+            heading.style.fontSize = "26px";
+            heading.style.fontWeight = "600";
+            heading.style.fontFamily = "Segoe UI, sans-serif";
+            heading.style.textAlign = "center";
+            heading.style.letterSpacing = "1px";
+            heading.style.borderBottom = "2px solid #ff5a5f";
+            heading.style.paddingBottom = "8px";
+            heading.style.display = "inline-block";
+            popup.appendChild(heading);
+
+            // inputs
+            let inputs = [];
+            fields.forEach(function(field){
+                let input = document.createElement("input");
+                input.type = field.type;
+                input.placeholder = field.placeholder;
+                input.style.width = "100%";
+                input.style.padding = "10px";
+                input.style.margin = "10px 0";
+                input.style.border = "1px solid #ccc";
+                input.style.borderRadius = "6px";
+
+                popup.appendChild(input);
+                inputs.push(input);
+            });
+
+            // login button
+            let button = document.createElement("button");
+            button.innerText = "Login";
+            button.style.width = "100%";
+            button.style.padding = "10px";
+            button.style.marginTop = "10px";
+            button.style.background = "#0071c2";
+            button.style.color = "white";
+            button.style.fontSize = "20px"
+            button.style.color = "white";
+            button.style.border = "none";
+            button.style.borderRadius = "6px";
+            button.style.cursor = "pointer";
+
+            button.onclick = function(){
+                let email = inputs[0].value;
+                let password = inputs[1].value;
+
+                if(email === "" || password === ""){
+                    alert("Please fill all fields");
+                }
+                else{
+                    alert("Login successful");
+                    overlay.remove();
+                }
+            };
+            popup.appendChild(button);
+
+            // outside click close
+            overlay.addEventListener("click", function(e){
+                if(e.target === overlay){
+                    overlay.remove();
+                }
+            });
+            overlay.appendChild(popup);
+            document.body.appendChild(overlay);
+        }
+
+
+        // signup popup
+        submenuItems.forEach(function(item){
+
+            if(item.innerText === "Sign Up"){
+                item.addEventListener("click", function(){
+
+                    createPopup("Sign Up",[
+                        {type:"text", placeholder:"Full Name"},
+                        {type:"email", placeholder:"Email"},
+                        {type:"password", placeholder:"Password"}
+                    ]);
+
+                });
+            }
+        });
+
+        // styling signup popup
+        function createPopup(title, fields){
+
+            // overlay
+            let overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.5)";
+            overlay.style.display = "flex";
+            overlay.style.alignItems = "center";
+            overlay.style.justifyContent = "center";
+            overlay.style.zIndex = "1000";
+
+            // popup
+            let popup = document.createElement("div");
+            popup.style.background = "#fff";
+            popup.style.padding = "30px";
+            popup.style.borderRadius = "12px";
+            popup.style.width = "320px";
+            popup.style.position = "relative";
+            popup.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
+            popup.style.textAlign = "center";
+
+            // close button
+            let closeBtn = document.createElement("span");
+            closeBtn.innerHTML = "✖";
+            closeBtn.style.position = "absolute";
+            closeBtn.style.top = "10px";
+            closeBtn.style.right = "15px";
+            closeBtn.style.cursor = "pointer";
+            closeBtn.style.fontSize = "18px";
+
+            closeBtn.onclick = function(){
+                overlay.remove();
+            };
+            popup.appendChild(closeBtn);
+
+            // title
+            let heading = document.createElement("h2");
+            heading.innerText = title;
+            heading.style.marginBottom = "20px";
+            heading.style.color = "#0b2a3a";
+            heading.style.fontSize = "26px";
+            heading.style.fontWeight = "600";
+            heading.style.fontFamily = "Segoe UI, sans-serif";
+            heading.style.textAlign = "center";
+            heading.style.letterSpacing = "1px";
+            heading.style.borderBottom = "2px solid #ff5a5f";
+            heading.style.paddingBottom = "8px";
+            heading.style.display = "inline-block";
+            popup.appendChild(heading);
+
+            // inputs
+            let inputs = [];
+            fields.forEach(function(field){
+                let input = document.createElement("input");
+                input.type = field.type;
+                input.placeholder = field.placeholder;
+                input.style.width = "100%";
+                input.style.padding = "10px";
+                input.style.margin = "10px 0";
+                input.style.border = "1px solid #000";
+                input.style.borderRadius = "6px";
+
+                popup.appendChild(input);
+                inputs.push(input);
+            });
+
+            // signup button
+            let button = document.createElement("button");
+            button.innerText = "Sign-Up";
+            button.style.width = "100%";
+            button.style.padding = "10px";
+            button.style.marginTop = "10px";
+            button.style.background = "#0071c2";
+            button.style.color = "white";
+            button.style.fontSize = "20px"
+            button.style.border = "none";
+            button.style.borderRadius = "6px";
+            button.style.cursor = "pointer";
+
+            button.onclick = function(){
+                let email = inputs[0].value;
+                let password = inputs[1].value;
+
+                if(email === "" || password === ""){
+                    alert("Please fill all fields");
+                }
+                else{
+                    alert("sign-up successful");
+                    overlay.remove();
+                }
+            };
+            popup.appendChild(button);
+
+            //  outside click close
+            overlay.addEventListener("click", function(e){
+                if(e.target === overlay){
+                    overlay.remove();
+                }
+            });
+            overlay.appendChild(popup);
+            document.body.appendChild(overlay);
+        }
+     </script>
+
+
+
+
+    <!-- profile popup -->
+    <script>
+        const profileLink = document.getElementById('profile-link');
+        const profilePopup = document.getElementById('profile-popup');
+        const closeButton= document.getElementById('close-profile');
+
+        profileLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            profilePopup.style.display = 'block';
+        });
+
+        closeButton.addEventListener('click', () => {
+            profilePopup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === profilePopup) {
+                profilePopup.style.display = 'none';
+            }
+        });
+    </script>
+
+
+
+    <!-- user profile  -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("getUser.php")
+            .then(res => res.text())
+            .then(data => {
+                if(data !== "noUser"){
+                    const user = JSON.parse(data);
+                    document.getElementById("user-name").innerText  = user.name;
+                    document.getElementById("user-email").innerText = user.email;
+                    document.getElementById("user-dob").innerText   = user.dob;
+                } else {
+                    document.getElementById("user-name").innerText  = "Guest";
+                    document.getElementById("user-email").innerText = "";
+                    document.getElementById("user-dob").innerText   = "";
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <!-- arrow shifting placement -->
+    <script>
+        const sections = document.querySelectorAll('.discovering');
+
+        sections.forEach(section => {
+
+            // wrapper create
+            const wrapper = document.createElement('div');
+            wrapper.className = 'discover-wrapper';
+
+            section.parentNode.insertBefore(wrapper, section);
+            wrapper.appendChild(section);
+
+            const leftArrow = document.createElement('button');
+            const rightArrow = document.createElement('button');
+
+            leftArrow.className = 'arrow left';
+            rightArrow.className = 'arrow right';
+            leftArrow.innerHTML = '&#10094;';
+            rightArrow.innerHTML = '&#10095;';
+
+            wrapper.appendChild(leftArrow);
+            wrapper.appendChild(rightArrow);
+
+            leftArrow.style.display = 'none';
+            rightArrow.style.display = 'none';
+
+            leftArrow.onclick = () => {
+                section.scrollBy({ left: -400, behavior: 'smooth' });
+            };
+
+            rightArrow.onclick = () => {
+                section.scrollBy({ left: 380, behavior: 'smooth' });
+            };
+
+            const toggleArrows = () => {
+                const max = section.scrollWidth - section.clientWidth;
+                leftArrow.style.display = section.scrollLeft > 0 ? 'block' : 'none';
+                rightArrow.style.display = section.scrollLeft < max - 5 ? 'block' : 'none';
+            };
+
+            section.addEventListener('scroll', toggleArrows);
+
+            wrapper.addEventListener('mouseenter', toggleArrows);
+            wrapper.addEventListener('mouseleave', () => {
+                leftArrow.style.display = 'none';
+                rightArrow.style.display = 'none';
+            });
+        });
+    </script>
+
+
+
+    <!--wherebox search box  -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const searchBoxes = document.querySelectorAll(".search-box");
+            const cityInput  = searchBoxes[0].querySelector("input");
+            const dateInput  = searchBoxes[1].querySelector("input");
+            const guestInput = searchBoxes[2].querySelector("input");
+
+            const searchBtn = document.getElementById("searchBtn");
+            const resultsBox = document.getElementById("hotelResults");
+
+            /* ---------------- CITY DROPDOWN ---------------- */
+
+            const cities = ["Manali","Jaipur","Goa","Ooty","Lonavala"];
+
+            const cityDrop = document.createElement("div");
+            cityDrop.style.position="absolute";
+            cityDrop.style.background="#0b2a3a";
+            cityDrop.style.border="2px solid #f5b301";
+            cityDrop.style.borderRadius="8px";
+            cityDrop.style.color="#fff";
+            cityDrop.style.display="none";
+            cityDrop.style.zIndex="999";
+
+            document.body.appendChild(cityDrop);
+
+            cities.forEach(city => {
+
+                const item = document.createElement("div");
+                item.textContent = city;
+                item.style.padding = "10px";
+                item.style.cursor = "pointer";
+
+                item.onclick = () => {
+                    cityInput.value = city;
+                    cityDrop.style.display = "none";
+                }
+
+                cityDrop.appendChild(item);
+
+            });
+
+            cityInput.addEventListener("focus", () => {
+
+                const rect = cityInput.getBoundingClientRect();
+
+                cityDrop.style.top = rect.bottom + window.scrollY + "px";
+                cityDrop.style.left = rect.left + window.scrollX + "px";
+                cityDrop.style.width = rect.width + "px";
+
+                cityDrop.style.display = "block";
+
+            });
+
+            /* ---------------- GUEST DROPDOWN ---------------- */
+
+            let adults = 2;
+            let children = 0;
+            let rooms = 1;
+
+            const guestDrop = document.createElement("div");
+
+            guestDrop.style.position="absolute";
+            guestDrop.style.background="#0b2a3a";
+            guestDrop.style.border="2px solid #f5b301";
+            guestDrop.style.borderRadius="8px";
+            guestDrop.style.color="#fff";
+            guestDrop.style.display="none";
+            guestDrop.style.zIndex="999";
+
+            document.body.appendChild(guestDrop);
+
+            function renderGuest(){
+
+                guestDrop.innerHTML = `
+                <div style="padding:10px">Adults
+                <button id="aMinus">-</button>
+                ${adults}
+                <button id="aPlus">+</button>
+                </div>
+
+                <div style="padding:10px">Children
+                <button id="cMinus">-</button>
+                ${children}
+                <button id="cPlus">+</button>
+                </div>
+
+                <div style="padding:10px">Rooms
+                <button id="rMinus">-</button>
+                ${rooms}
+                <button id="rPlus">+</button>
+                </div>
+
+                <div style="padding:10px;text-align:right">
+                <button id="doneBtn">Done</button>
+                </div>
+                `;
+
+                guestDrop.onclick = e => {
+
+                    if(e.target.id==="aPlus") adults++;
+                    if(e.target.id==="aMinus" && adults>1) adults--;
+
+                    if(e.target.id==="cPlus") children++;
+                    if(e.target.id==="cMinus" && children>0) children--;
+
+                    if(e.target.id==="rPlus") rooms++;
+                    if(e.target.id==="rMinus" && rooms>1) rooms--;
+
+                    if(e.target.id==="doneBtn")
+                    guestDrop.style.display="none";
+
+                    guestInput.value =
+                    adults+" adults · "+
+                    children+" children · "+
+                    rooms+" room";
+
+                    renderGuest();
+
+                }
+
+            }
+
+            guestInput.addEventListener("focus", () => {
+
+                const rect = guestInput.getBoundingClientRect();
+
+                guestDrop.style.top = rect.bottom + window.scrollY + "px";
+                guestDrop.style.left = rect.left + window.scrollX + "px";
+                guestDrop.style.width = rect.width + "px";
+
+                guestDrop.style.display = "block";
+
+                renderGuest();
+
+            });
+
+            /* ---------------- DATE PICKER ---------------- */
+
+            const dateBox = document.getElementById("dateBox");
+            const dateDisplay = document.getElementById("dateDisplay");
+            const calendarInput = document.getElementById("dateInput");
+
+            dateBox.addEventListener("click", () => {
+                calendarInput.focus();
+                calendarInput.showPicker?.();
+            });
+
+            calendarInput.addEventListener("change", () => {
+
+                const date = new Date(calendarInput.value);
+
+                const day = String(date.getDate()).padStart(2,"0");
+                const month = String(date.getMonth()+1).padStart(2,"0");
+                const year = date.getFullYear();
+
+                dateDisplay.value = `${day}-${month}-${year}`;
+
+            });
+
+            /* ---------------- HOTEL DATA ---------------- */
+
+            const hotels = {
+
+                Manali:[
+                    {name:"RiverNest Adventure Resort",type:"Resort",link:"resortPage.html#rdSection",img:"https://cf.bstatic.com/xdata/images/hotel/max1024x768/595394706.jpg?k=6cc764eef196b806e7430a69498a3c849a6140ba9665285182269324c46be1ef&o=&hp=1"},
+                    {name:"Snowcrest Retreat - Luxury Mountain View Villa",type:"Villa",link:"villaPage.html#srSection",img:"https://a0.muscache.com/im/pictures/miso/Hosting-894554679684871132/original/294414e6-f086-442e-8da4-8393b7b77529.jpeg?im_w=720"},
+                    {name:"Himalayan Pet Chalet Hotel",type:"Hotel",link:"pfPage.html#hpcSection",img:"https://img.vistarooms.com/space/zseaNd6So15QnGRkRkFyL0S5FVLpWEWeFQKF8EAv.jpeg"},
+                    {name:"SkyVista Mountain Hotel",type:"Hotel",link:"mvPage.html#svmSection",img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/c7/aa/a1/caption.jpg?w=700&h=-1&s=1"},
+                    {name:"Summit Heights Mountain Apartment ",type:"Apartment",link:"apraPage.html#shmSection",img:"https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201903051131048145-546ac8e65ac411e981a20242ac110007.jpg?&output-quality=75&downsize=910:612&crop=910:612;4,0&output-format=jpg"}
+                ],
+
+                Jaipur:[
+                    {name:"Pink Harmony Heritage Apartment",type:"Apartment",link:"apraPage.html#phhSection",img:"https://tourismquest.com/wp-content/uploads/2023/03/BEDROOM-1.jpg"},
+                    {name:"The Pink Royal Heritage Villa",type:"Villa",link:"villaPage.html#tprhSection",img:"https://www.ambujaneotia.com/storage/app/images/media/gallerydata/content_image/367492373660d57127a4e94.1617520417121502905.webp"},
+                    {name:"HeritageHaveli Royal Hotel",type:"Hotels",link:"hotelPage.html#hhrSection",img:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/cb/bb/af/royal-heritage-haveli.jpg?w=1400&h=-1&s=1"},
+                    {name:"The Furry Oasis - Jaipur",type:"Hotel",link:"pfPage.html#tfoSection",img:"https://a0.muscache.com/im/pictures/hosting/Hosting-1108489396730276428/original/2129a772-33ea-48be-a7e6-0ef2d7f00c7c.jpeg"},
+                    {name:"RoyalMaharana Palace Resort",type:"Resort",link:"resortPage.html#rmpSection",img:"https://tse4.mm.bing.net/th/id/OIP.oMbjWeZ4hiR3lCghsxsaCQHaE8?w=768&h=513&rs=1&pid=ImgDetMain&o=7&rm=3"}
+                ],
+
+                Goa:[
+                    {name:"ShoreLine Serenity Beach Resort",type:"Resort",link:"resortPage.html#slsbSection",img:"https://th.bing.com/th/id/R.484bd526ea67bbdb42dcdbc84674af08?rik=BkKUy1JtQlk1Bg&riu=http%3a%2f%2fpix2.agoda.net%2fhotelimages%2f173%2f1731582%2f1731582_17060917220053578453.jpg%3fs%3d1200x%26ca%3d6%26ce%3d1&ehk=pGelcrCF5%2bOmtQs2hTUJP2Uy5Ec0PHXjug3UDHLJIc8%3d&risl=&pid=ImgRaw&r=0"},
+                    {name:"Mandovi River Oceanic Houseboat",type:"HouseBoat",link:"hbPage.html#mvroSection",img:"https://goaboatcruise.com/wp-content/uploads/2018/06/mandovi-river-overnight-cruise-in-goa.jpg"},
+                    {name:"Sunset Royale Cruise Houseboat",type:"HouseBoat",link:"srcSection",img:"https://tse2.mm.bing.net/th/id/OIP.78VBPRmXdCtTHDxhGM8riAHaE8?w=750&h=500&rs=1&pid=ImgDetMain&o=7&rm=3"},
+                    {name:"Purr & Woof Seaside Stay",type:"Hotel",link:"pfPage.html#pwssSection",img:"https://www.global-gallivanting.com/wp-content/uploads/2022/01/Seashell-Beach-Suites-Goa-01-690x460.jpg"},
+                    {name:"Ocean Crest Bayfront Hotel",type:"Hotel",link:"svPage.html#ocbSection",img:"https://tse1.mm.bing.net/th/id/OIP.alo1epjOrfH-EOpQvfhnqQHaFJ?cb=ucfimg2&ucfimg=1&w=720&h=500&rs=1&pid=ImgDetMain&o=7&rm=3"}
+                ],
+
+                Ooty:[
+                    {name:"MistyHeights Valley Resort",type:"Resort",link:"resortPage.html#mhvSection",img:"https://cf.bstatic.com/xdata/images/hotel/max1280x900/401116948.jpg?k=92d9c71c073f5fd342db9fc8ddf55a5d87d0a50d74275c720891a53fc722f78d&o=&hp=1"},
+                    {name:"Hilltop Misty Meadows Villa",type:"Villa",link:"villaPage.html#hmmSection",img:"https://img.vistarooms.com/gallery/orions-crest-7de227.jpg"},
+                    {name:"WoofWood Forest Stay",type:"Retreat",link:"pfPage.html#wwfsSection",img:"https://img.vistarooms.com/gallery/villa-misty-oaks-85bf98.jpg"},
+                    {name:"EarthHaven HillEco Resort",type:"Resort",link:"nfPage.html#ehheSection",img:"https://res.cloudinary.com/voyehomes/image/upload/v1704352568/property/95/image/8bf12f12-4d2c-4d81-a435-0cc0dd51d2a6.jpg"}
+                ],
+
+                Lonavala:[
+                    {name:"SkyVista Mountain Resort",type:"Resort",link:"resortPage.html#svmSection",img:"https://media.holidify.com/images/cmsuploads/compressed/608843626_20250120223146.jpg"},
+                    {name:"Green Valley Pool Villa",type:"Villa",link:"villaPage.html#gvpSection",img:"https://images.adsttc.com/media/images/62b3/1824/74db/377e/f7d7/5ced/newsletter/lakeshore-residence-atelier-landschaft_2.jpg?1655904336"},
+                    {name:"Green Paws Eco Resort",type:"Resort",link:"pfPage.html#lonavalaSection",img:"https://cf.bstatic.com/xdata/images/hotel/max1024x768/114062096.jpg?k=4691aaec36c0ed9d014abc899a1257ba4bd986cacd02595bd4f7bfa42dd989e5&o="}
+                ]
+            };
+
+            /* ---------------- SEARCH ---------------- */
+
+            searchBtn.addEventListener("click", () => {
+
+                const city = cityInput.value;
+
+                resultsBox.innerHTML = "";
+                resultsBox.style.display = "block";
+
+                const cityHotels = hotels[city];
+
+                if(!cityHotels){
+                    resultsBox.innerHTML="<p style='color:white;padding:10px;'>No hotels found</p>";
+                    return;
+                }
+
+                cityHotels.forEach(hotel => {
+
+                    const card = document.createElement("div");
+                    card.classList.add("hotel-card");
+
+                    card.innerHTML = `
+                    <img src="${hotel.img}" class="hotel-img">
+                    <div class="hotel-info">
+                    <h3>${hotel.name}</h3>
+                    <p>Type: ${hotel.type}</p>
+                    <a href="${hotel.link}">
+                        <button class="hotel-btn">View Details</button>
+                    </a>
+                    </div>
+                    `;
+
+                    resultsBox.appendChild(card);
+
+                });
+
+            });
+
+        });
+
+        document.addEventListener("click", function(e) {
+            const resultDiv = document.getElementById("hotelResults");
+
+            if (!resultDiv.contains(e.target) && !e.target.closest("#searchBtn")) {
+                resultDiv.style.display = "none";
+            }
+        });
+    </script>
+    
+
+
+    <!-- feedback section -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const feedbackSection = document.querySelector(".feedback");
+            const addBtn = feedbackSection.querySelector(".FButtoN");
+
+            // Create track
+            const track = document.createElement("div");
+            track.className = "feedback-track";
+            feedbackSection.insertBefore(track, addBtn);
+            feedbackSection.style.overflow = "hidden";
+
+            // FETCH EXISTING FEEDBACKS FROM DB 
+            fetch('feedback.php?action=fetch') 
+                .then(res => res.json())
+                .then(data => {
+                    data.forEach(fb => {
+                        const card = document.createElement("div");
+                        card.className = "TF";
+                        card.innerHTML = `
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.HHVUf3TYqncgpJXyCMmxyAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="TFimage">
+                            <p>${fb.feedback.replace(/\n/g,'<br>')}</p>
+                        `;
+                        track.appendChild(card);
+                    });
+
+                    // Duplicate initial cards for infinite scroll
+                    const initialCards = Array.from(track.children);
+                    initialCards.forEach(card => {
+                        const clone = card.cloneNode(true);
+                        track.appendChild(clone);
+                    });
+                })
+                .catch(err => console.error("Error fetching feedbacks:", err));
+
+            // Pause on hover
+            track.addEventListener("mouseenter", () => track.style.animationPlayState = "paused");
+            track.addEventListener("mouseleave", () => track.style.animationPlayState = "running");
+
+            // ADD FEEDBACK MODAL 
+            const modalHTML = `
+                <div id="feedbackModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;">
+                    <div style="background:#fff;padding:20px;border-radius:10px;width:400px;max-width:90%;text-align:center;position:relative;">
+                        <span id="closeModal" style="position:absolute;right:20px;top:15px;font-size:24px;cursor:pointer;">&times;</span>
+                        <h2>Write Your Feedback</h2>
+                        <textarea id="feedbackText" placeholder="Type your feedback here..." style="width:90%;height:100px;margin-bottom:10px;padding:10px;font-size:16px;"></textarea>
+                        <button id="submitFeedback" style="padding:8px 15px;cursor:pointer;border:none;background:#4CAF50;color:#fff;border-radius:5px;">Submit</button>
+                    </div>
+                </div>`;
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+            const modal = document.getElementById("feedbackModal");
+            const closeModal = document.getElementById("closeModal");
+            const submitFeedback = document.getElementById("submitFeedback");
+            const feedbackText = document.getElementById("feedbackText");
+
+            // Open modal
+            addBtn.addEventListener("click", () => {
+                modal.style.display = "flex";
+                track.style.animationPlayState = "paused";
+            });
+
+            // Close modal
+            closeModal.addEventListener("click", () => {
+                modal.style.display = "none";
+                track.style.animationPlayState = "running";
+            });
+            window.addEventListener("click", e => {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                    track.style.animationPlayState = "running";
+                }
+            });
+
+            //  SUBMIT NEW FEEDBACK 
+            submitFeedback.addEventListener("click", () => {
+                const feedback = feedbackText.value.trim();
+                if (feedback === "") { alert("Please write something!"); return; }
+
+                fetch('feedback.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: `feedback=${encodeURIComponent(feedback)}`
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        modal.style.display = "none";
+                        feedbackText.value = "";
+                        track.style.animationPlayState = "running";
+
+                        // Add new card dynamically (no clone)
+                        const newCard = document.createElement("div");
+                        newCard.className = "TF";
+                        newCard.innerHTML = `
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.HHVUf3TYqncgpJXyCMmxyAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="TFimage">
+                            <p>${data.feedback.replace(/\n/g,'<br>')}</p>
+                        `;
+                        track.appendChild(newCard);
+                    } else alert("Something went wrong!");
+                })
+                .catch(err => { console.error(err); alert("Error submitting feedback!"); track.style.animationPlayState = "running"; });
+            });
+        });
+    </script>
+
+
+
+    <!-- subscription -->
+    <script>
+        const subBtn = document.querySelector(".subButton");
+        const emailInput = document.querySelector("input[name='userEmail']");
+        const planSelect = document.querySelector("select[name='subscription']"); // ✅ NEW
+
+        subBtn.addEventListener("click", function(){
+
+            const email = emailInput.value.trim();
+            const plan = planSelect.value; 
+
+            if(email === ""){
+                alert("Please enter your email");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("email", email);
+            formData.append("subscription", plan);
+
+            fetch("subscribe.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(res => res.json()) 
+            .then(data => {
+
+                if(data.status === "success"){
+
+                    const overlay = document.createElement("div");
+                    overlay.style.position = "fixed";
+                    overlay.style.top = "0";
+                    overlay.style.left = "0";
+                    overlay.style.width = "100%";
+                    overlay.style.height = "100%";
+                    overlay.style.background = "rgba(0,0,0,0.5)";
+                    overlay.style.display = "flex";
+                    overlay.style.alignItems = "center";
+                    overlay.style.justifyContent = "center";
+                    overlay.style.zIndex = "1000";
+
+                    const popup = document.createElement("div");
+                    popup.style.background = "#fff";
+                    popup.style.padding = "30px";
+                    popup.style.borderRadius = "12px";
+                    popup.style.width = "350px";
+                    popup.style.textAlign = "center";
+                    popup.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
+
+                    popup.innerHTML = `
+                        <h2 style="color:#0b2a3a;">🎉 Subscribed!</h2>
+                        <p style="margin-top:10px;">
+                        You subscribed to our <b>City Skyline</b> (${plan.toUpperCase()}) email 🎯<br><br>
+                        Welcome aboard 💙
+                        </p>
+                        <button id="closePopup" style="
+                            margin-top:15px;
+                            padding:10px 20px;
+                            background:#ff5a5f;
+                            color:white;
+                            border:none;
+                            border-radius:6px;
+                            cursor:pointer;
+                        ">OK</button>
+                    `;
+
+                    overlay.appendChild(popup);
+                    document.body.appendChild(overlay);
+
+                    document.getElementById("closePopup").onclick = function() {
+                        overlay.remove();
+                        emailInput.value = "";
+                    };
+                }
+
+                else if(data.status === "exists"){
+                    alert("You are already subscribed ✅");
+                }
+
+                else if(data.status === "empty"){
+                    alert("Please fill all fields ❌");
+                }
+
+                else{
+                    alert(data.message || "Something went wrong ❌");
+                }
+
+            })
+            .catch(() => {
+                alert("Server error ⚠️");
+            });
+
+        });
+    </script>
+
+
+    <!-- suggetion search -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const section = document.querySelector(".suggetion");
+            const searchInput = section.querySelector("input[type='search']");
+            const ul = section.querySelector("ul");
+            const allLis = ul.querySelectorAll("li");
+
+            if (!searchInput || !ul || !allLis.length) return;
+
+            const allQuestions = Array.from(allLis).map(li => li.textContent);
+
+            /* search suggestion */
+            const suggestionBox = document.createElement("ul");
+            suggestionBox.className = "suggestion-list";
+            suggestionBox.style.display = "none";
+            searchInput.insertAdjacentElement("afterend", suggestionBox);
+
+            searchInput.addEventListener("input", () => {
+                const query = searchInput.value.toLowerCase().trim();
+                suggestionBox.innerHTML = "";
+
+                if (query === "") {
+                    suggestionBox.style.display = "none";
+                    return;
+                }
+
+                const matches = allQuestions.filter(q =>
+                    q.toLowerCase().includes(query)
+                );
+
+                if (matches.length) {
+                    matches.forEach(text => {
+                        const li = document.createElement("li");
+                        li.textContent = text;
+
+                        li.addEventListener("click", () => {
+                            searchInput.value = text;
+                            suggestionBox.style.display = "none";
+                        });
+
+                        suggestionBox.appendChild(li);
+                    });
+                    suggestionBox.style.display = "block";
+                } else {
+                    suggestionBox.style.display = "none";
+                }
+            });
+
+            document.addEventListener("click", e => {
+                if (!e.target.closest(".suggetion")) {
+                    suggestionBox.style.display = "none";
+                }
+            });
+
+            /* arrow (show sliding window of 4 items) */
+            const arrowBtn = document.createElement("button");
+            arrowBtn.innerHTML = "&#9660;";
+            arrowBtn.className = "show-more";
+            arrowBtn.style.marginBottom = "30px"
+            ul.insertAdjacentElement("afterend", arrowBtn);
+
+            let startIndex = 0;
+            const visibleCount = 4;
+
+            function updateVisibleItems() {
+                allLis.forEach((li, i) => {
+                    if (i >= startIndex && i < startIndex + visibleCount) {
+                        li.style.display = "block";
+                    } else {
+                        li.style.display = "none";
+                    }
+                });
+            }
+
+            // initial view
+            updateVisibleItems();
+
+            arrowBtn.addEventListener("click", () => {
+                if (startIndex + visibleCount < allLis.length) {
+                    startIndex++;
+                    updateVisibleItems();
+                }
+
+                arrowBtn.addEventListener("click", () => {
+                    startIndex++;
+                    if (startIndex + visibleCount > allLis.length) {
+                        startIndex = 0; // reset to start
+                    }
+                    updateVisibleItems();
+                });
+                // close
+                document.getElementById("closePopup").onclick = function() {
+                    overlay.remove(); //popup close
+                    emailInput.value = ""; //email clear
+                };
+            });
+        });
+    </script>
+
+
+
+    <!-- query search button -->
+    <script>
+        const searchBtn = document.querySelector(".sugg-btn");
+        const inputBox = document.querySelector(".suggetion input");
+        const questions = document.querySelectorAll(".suggetion ul li");
+
+        const answers = {
+            "cancel my booking": "You can cancel your booking by visiting the 'My Bookings' section and selecting cancel reservation.",
+            "change my travel date": "Yes, travel dates can be modified depending on hotel availability and policy.",
+            "payment secure": "Yes, all payments on our website are protected with secure encryption technology.",
+            "create a account": "No, creating an account is optional but it helps manage bookings easily.",
+            "booking confirmation email": "Check your spam folder first. If you still don't receive it, contact customer support.",
+            "refund": "Refund depends on the hotel's cancellation policy. Late cancellations may incur charges.",
+            "update my personal details": "You can update your details in your account dashboard after logging in.",
+            "payment fails": "If payment fails, please retry or use another payment method. No money will be deducted if the transaction fails."
+        };
+
+        function findAnswer(text) {
+            text = text.toLowerCase();
+
+            for (let key in answers) {
+                let words = key.split(" ");
+                let matchCount = 0;
+
+                words.forEach(word => {
+                    if (text.includes(word)) {
+                        matchCount++;
+                    }
+                });
+
+                if (matchCount >= words.length - 1) {
+                    return answers[key];
+                }
+            }
+
+            return "Sorry, we could not find an answer for your query.";
+        }
+
+        // answer popup
+        function showPopup(answer){
+
+            const popup = document.createElement("div");
+
+            popup.style.position = "fixed";
+            popup.style.top = "50%";
+            popup.style.left = "50%";
+            popup.style.transform = "translate(-50%, -50%)";
+            popup.style.background = "white";
+            popup.style.padding = "30px";
+            popup.style.borderRadius = "10px";
+            popup.style.width = "350px";
+            popup.style.textAlign = "center";
+            popup.style.boxShadow = "0 0 20px rgba(0,0,0,0.4)";
+            popup.style.zIndex = "9999";
+
+            popup.innerHTML = `
+                <h3>Answer</h3>
+                <p>${answer}</p>
+                <button id="closePopup" style="
+                    margin-top:15px;
+                    padding:8px 20px;
+                    border:none;
+                    background:#0f2b46;
+                    color:white;
+                    border-radius:5px;
+                    cursor:pointer;
+                ">Close</button>
+            `;
+
+            document.body.appendChild(popup);
+            document.getElementById("closePopup").onclick = function(){
+                popup.remove();
+                inputBox.value = ""; // input clear
+            };
+        }
+
+        // search button
+        searchBtn.addEventListener("click", function(){
+            const input = inputBox.value.trim();
+            if(input === ""){
+                alert("Please enter a question first.");
+                return;
+            }
+            const answer = findAnswer(input);
+            showPopup(answer);
+        });
+
+        // question click
+        questions.forEach(function(question){
+
+            question.addEventListener("click", function(){
+
+                const text = question.innerText;
+
+                inputBox.value = text;
+
+                const answer = findAnswer(text);
+                showPopup(answer);
+            });
+        });
+    </script>
+</body>
+</html>

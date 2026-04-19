@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>City Skyline Travel Guide</title>
+    <style>
+        body{
+            margin:0;
+            font-family:'Poppins',sans-serif;
+            background:linear-gradient(rgba(11,29,47,0.9),rgba(11,29,47,0.95)),
+            url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+        }
+
+        /* header */
+        header{
+            text-align:center;
+            padding:40px 20px;
+        }
+
+        .heading{
+            font-size:55px;
+            font-weight:700;
+            color:white;
+            text-transform:uppercase;
+            letter-spacing:2px;
+            text-shadow:0 0 10px #000,0 0 20px #071a54;
+        }
+
+        /* guide container */
+        .guide-container{
+            width:80%;
+            margin:auto;
+            padding:40px;
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(10px);
+            border-radius:20px;
+            box-shadow:0 10px 40px rgba(0,0,0,0.6);
+        }
+
+        /* grid */
+        .guide-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:25px;
+        }
+
+        /* card */
+        .guide-card{
+            background:rgba(255,255,255,0.08);
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 5px 20px rgba(0,0,0,0.5);
+            transition:0.3s;
+        }
+
+        .guide-card:hover{
+            transform:translateY(-6px);
+        }
+
+        .guide-card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+        }
+
+        /* text */
+        .guide-info{
+            padding:15px;
+            text-align:center;
+            color:#e8f0ff;
+        }
+
+        .guide-info h3{
+            margin:10px 0;
+            color:#ffd27a;
+        }
+
+        .guide-info p{
+            font-size:14px;
+            margin-bottom:10px;
+        }
+
+        /* button */
+        .guide-info button{
+            padding:10px 18px;
+            background:#ffd27a;
+            border:none;
+            border-radius:6px;
+            font-weight:600;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .guide-info button:hover{
+            background:#ffb84d;
+        }
+
+        /* popup */
+        .popup{
+            display:none;
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.7);
+            justify-content:center;
+            align-items:center;
+            z-index:999;
+        }
+
+        .popup-content{
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            width:350px;
+            text-align:center;
+            box-shadow:0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .close-btn{
+            float:right;
+            cursor:pointer;
+            font-size:20px;
+        }
+
+        /* popular destination container */
+        .popular{
+            text-align:center;
+            margin:60px auto;
+            width:80%;
+            color:white;
+        }
+
+        .popular h2{
+            font-size:35px;
+            margin-bottom:15px;
+            color:#ffd27a;
+        }
+
+        .popular p{
+            font-size:18px;
+            line-height:1.6;
+            color:#e6f0ff;
+        }
+
+        /* responsive */
+        @media(max-width:900px){
+            .heading{
+            font-size:40px;
+            }
+            .guide-container{
+            width:90%;
+            }
+            .popular{
+            width:90%;
+            }
+    }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="heading">🌍 Travel Guide</h1>
+    </header>
+
+    <div class="guide-container">
+        <div class="guide-grid">
+            <!-- KERALA -->
+            <div class="guide-card">
+                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944">
+                <div class="guide-info">
+                    <h3>Kerala</h3>
+                    <p>Explore peaceful backwaters, houseboats and lush green landscapes.</p>
+                    <button onclick="openGuide('kerala')">View Guide</button>
+                </div>
+            </div>
+
+            <!-- JAIPUR -->
+            <div class="guide-card">
+                <img src="https://images.unsplash.com/photo-1548013146-72479768bada">
+                <div class="guide-info">
+                    <h3>Jaipur</h3>
+                    <p>The Pink City known for forts, palaces and colorful markets.</p>
+                    <button onclick="openGuide('jaipur')">View Guide</button>
+                </div>
+            </div>
+
+            <!-- GOA -->
+            <div class="guide-card">
+                <img src="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e">
+                <div class="guide-info">
+                    <h3>Goa</h3>
+                    <p>Relax on golden beaches and enjoy vibrant nightlife.</p>
+                    <button onclick="openGuide('goa')">View Guide</button>
+                </div>
+            </div>
+
+            <!-- MANALI -->
+            <div class="guide-card">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4">
+                <div class="guide-info">
+                    <h3>Manali</h3>
+                    <p>Snowy mountains, adventure sports and scenic valleys.</p>
+                    <button onclick="openGuide('manali')">View Guide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- popular destination container -->
+    <div class="popular">
+        <h2>⭐ Our Popular Travel Destinations</h2>
+        <p>
+            These destinations are among the most loved travel spots by our visitors.
+            From the peaceful backwaters of <b>Kerala</b> to the vibrant beaches of <b>Goa</b>,
+            the royal heritage of <b>Jaipur</b>, and the breathtaking mountains of <b>Manali</b>,
+            each location offers a unique and unforgettable travel experience.
+            <br><br>
+            At <b>City Skyline</b>, we help travelers discover beautiful places and plan
+            their journeys with comfort, convenience and confidence.
+        </p>
+    </div>
+
+    <!-- popup guide -->
+    <div class="popup" id="guidePopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closeGuide()">✖</span>
+            <h2 id="guideTitle"></h2>
+            <p id="guideText"></p>
+        </div>
+    </div>
+
+
+
+    <script>
+        function openGuide(place){
+            let title=document.getElementById("guideTitle");
+            let text=document.getElementById("guideText");
+            if(place=="kerala"){
+                title.innerHTML="Kerala Travel Guide";
+                text.innerHTML="🌴 Known as God's Own Country.<br><br>🚤 Famous for backwaters and houseboats.<br><br>🌿 Visit Munnar, Alleppey and Kochi.<br><br>🥥 Enjoy peaceful nature and local cuisine.";
+            }
+            if(place=="jaipur"){
+                title.innerHTML="Jaipur Travel Guide";
+                text.innerHTML="🏰 Visit Amber Fort and Hawa Mahal.<br><br>🛍 Explore colorful markets.<br><br>🍛 Try authentic Rajasthani cuisine.";
+            }
+            if(place=="goa"){
+                title.innerHTML="Goa Travel Guide";
+                text.innerHTML="🏖 Famous beaches and nightlife.<br><br>🚤 Enjoy water sports.<br><br>🍹 Taste delicious seafood.";
+            }
+            if(place=="manali"){
+                title.innerHTML="Manali Travel Guide";
+                text.innerHTML="🏔 Perfect hill station for adventure lovers.<br><br>🎿 Try skiing and paragliding.<br><br>🌲 Visit Solang Valley and Rohtang Pass.";
+            }
+            document.getElementById("guidePopup").style.display="flex";
+        }
+        function closeGuide(){
+            document.getElementById("guidePopup").style.display="none";
+        }
+    </script>
+
+</body>
+</html>

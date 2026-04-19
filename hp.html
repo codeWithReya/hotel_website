@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            background: #dcd9d9;
+        }
+
+        /* header */
+        .header{
+            text-align:center;
+            padding:30px 0;
+            background:#0f2b46;
+            color:white;
+            letter-spacing:3px;
+        }
+
+        .header h1{
+            font-size:38px;
+        }
+
+        /* image grid */
+        .img-div{
+            display:flex;
+            flex-wrap:wrap;
+            gap:18px;
+            justify-content:center;  /* center last row */
+            padding:30px;
+        }
+
+        .img-div img{
+            width:20%;
+            height:200px;
+            object-fit:cover;
+            border-radius:16px;
+        }
+
+        /* hover effect */
+        .img-div img:hover{
+            transform:scale(1.06);
+            box-shadow:0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        /* FIRST IMAGE (FEATURED LOOK) */
+        .img-div img:first-child{
+            grid-column: span 2;
+            height:200px;
+        }
+
+        /* OPTIONAL: MAKE LAST ROW CENTERED */
+        .img-div::after{
+            content:"";
+        }
+
+        /* description section */
+        .manali-pg{
+            display:flex;
+            align-items:flex-start;
+            padding:40px;
+            gap:30px;
+            text-align: center;
+            color: #333;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .manali-pg p{
+            line-height:1.7;
+            font-size:16px;
+            font-weight: bold;
+            color:#444;
+        }
+
+        /* side card */
+        .previous-page,
+        .next-page{
+            flex:1;
+            text-align:center;
+            background:#f9f9f9;
+            padding:15px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+            transition:0.3s;
+            margin-top: 7%;
+        }
+
+        .previous-page:hover,
+        .next-page:hover{
+            transform:translateY(-5px);
+        }
+
+        .pp-img,
+        .np-img{
+            border: 1px solid #000;
+            width:100%;
+            height:300px;
+            object-fit:cover;
+            border-radius:10px;
+            margin:10px 0;
+        }
+
+        .pp-button,
+        .np-button{
+            padding:8px 18px;
+            border:none;
+            background:#0071c2;
+            color:white;
+            border-radius:6px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .pp-button:hover,
+        .np-button:hover{
+            background:#005b99;
+        }
+
+        /* destination card */
+        .first-destination,
+        .second-destination,
+        .third-destination,
+        .fourth-destination{
+            width:22%;
+            display:inline-block;
+            margin:20px 1%;
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 5px 20px rgba(0,0,0,0.15);
+            transition:0.3s;
+        }
+
+        .first-destination:hover,
+        .second-destination:hover,
+        .third-destination:hover,
+        .fourth-destination:hover{
+            transform:translateY(-10px);
+        }
+
+        /* image */
+        .fd-img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+        }
+
+        /* title */
+        .fd-h2{
+            text-align:center;
+            padding:10px;
+            font-size:18px;
+        }
+
+        /* button */
+        .desti-button-1,
+        .desti-button-2,
+        .desti-button-3,
+        .desti-button-4{
+            display:block;
+            margin:10px auto 20px;
+            padding:8px 18px;
+            border:none;
+            background:#0f2b46;
+            color:white;
+            border-radius:6px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .desti-button-1:hover,
+        .desti-button-2:hover,
+        .desti-button-3:hover,
+        .desti-button-4:hover{
+            background:#0071c2;
+        }
+
+        /* respnsive */
+        @media(max-width:900px){
+            .manali-pg{
+                flex-direction:column;
+            }
+
+            .first-destination,
+            .second-destination,
+            .third-destination,
+            .fourth-destination{
+                width:90%;
+                margin:auto;
+                display:block;
+            }
+        }
+    </style>
+    <title>Manali exploration</title>
+</head>
+<body>
+    <div class="header">
+        <h1>MANALI EXPLORATION</h1>
+    </div>
+
+    <div class="img-div">
+        <img src="https://storage.googleapis.com/stateless-www-justwravel-com/2024/09/dd5f41a7-places-to-visit-in-manali-.png" class="img-1">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/b2/79/37/solang-valley-manali.jpg?w=1200&h=-1&s=1" class="img-2">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.8YiDlLqsxgH1bVs4UIa6DAHaEK?w=768&h=432&rs=1&pid=ImgDetMain&o=7&rm=3" class="img-3">
+        <img src="https://www.tourism-of-india.com/blog/wp-content/uploads/2021/10/hadimba-temple.jpg" class="img-4">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.QLesUaIHdmKiMAiL99vkYgHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3" class="img-5">
+        <img src="https://www.indiatourismpackage.com/assets/images/temples/hadimba-temple-4.webp" class="img-6">
+        <img src="https://1.bp.blogspot.com/-c-m0f1DOWUs/XfIu7ua2M0I/AAAAAAABcqA/yHE0KE89NKQuAOPvzVvJaoKiMuyAL9QkwCLcBGAsYHQ/s640/FB_IMG_1552491544658.jpg" class="img-7">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.MSYNZNbFUqrxL23eelH1ygHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3" class="img-8">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll(".img-div img");
+        let currentIndex = 0;
+        let overlay;
+
+        images.forEach((img, index) => {
+            img.addEventListener("click", function() {
+                currentIndex = index;
+                openGallery();
+            });
+        });
+
+        function openGallery() {
+
+            overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.9)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.zIndex = "100000";
+
+            overlay.innerHTML = `
+                <div style="position:relative; text-align:center;">
+                    
+                    <span id="closeBtn" style="
+                        position:absolute;
+                        top:-50px;
+                        right:0;
+                        font-size:30px;
+                        color:white;
+                        cursor:pointer;
+                    ">✖</span>
+
+                    <span id="prevBtn" style="
+                        position:absolute;
+                        left:-60px;
+                        top:50%;
+                        transform:translateY(-50%);
+                        font-size:40px;
+                        color:white;
+                        cursor:pointer;
+                    ">⟪</span>
+
+                    <img id="galleryImage"
+                        src="${images[currentIndex].src}"
+                        style="max-width:80vw; max-height:80vh; border-radius:10px;">
+
+                    <span id="nextBtn" style="
+                        position:absolute;
+                        right:-60px;
+                        top:50%;
+                        transform:translateY(-50%);
+                        font-size:40px;
+                        color:white;
+                        cursor:pointer;
+                    ">⟫</span>
+
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            const galleryImage = document.getElementById("galleryImage");
+
+            function showImage() {
+                galleryImage.src = images[currentIndex].src;
+            }
+
+            function nextImage() {
+                currentIndex++;
+                if (currentIndex >= images.length) currentIndex = 0;
+                showImage();
+            }
+
+            function prevImage() {
+                currentIndex--;
+                if (currentIndex < 0) currentIndex = images.length - 1;
+                showImage();
+            }
+
+            document.getElementById("nextBtn").onclick = nextImage;
+            document.getElementById("prevBtn").onclick = prevImage;
+
+            document.getElementById("closeBtn").onclick = closeGallery;
+
+            overlay.addEventListener("click", function(e) {
+                if (e.target === overlay) {
+                    closeGallery();
+                }
+            });
+
+            // KEYBOARD SUPPORT
+            document.addEventListener("keydown", function(e) {
+                if (!overlay) return;
+
+                if (e.key === "ArrowRight") {
+                    nextImage();
+                }
+                else if (e.key === "ArrowLeft") {
+                    prevImage();
+                }
+                else if (e.key === "Escape") {
+                    closeGallery();
+                }
+            });
+
+            function closeGallery() {
+                document.body.removeChild(overlay);
+                overlay = null;
+            }
+        }
+    </script>
+
+    
+
+    <div class="manali-pg">
+        <div class="previous-page">
+            <h2 class="mp-h2">Goa, India</h2>
+            <img src="https://static.bankbazaar.com/images/india/infographic/goa.webp" class="pp-img">
+            <a href="goa.html" target="_self">
+                <button class="pp-button">⟪ PREVIOUS</button>
+            </a>
+        </div>
+
+        <p> Nestled in the heart of Himachal Pradesh, Manali is one of India's most loved hill<br>
+            destinations, known for its breathtaking Himalayn views and refreshing mountain air 🏔️<br>
+            ❄️. Surrounded by snow-capped peaks, lush valleys, and the serence Beas River 🌊, this<br>
+            charming town offers a perfect escape from the rush of city life. Whether you are planning<br>
+            a relaxing vacation or an adventurous getaway, Manali welcomes you with its natural<br>
+            beauty and peaceful atmosphere 🌿✨.<br><br>
+
+            Manali offers a unique charm in every season 🌸☀️❄️. During winter, the region turns<br>
+            into a snowy paradise, making it ideal for snow activities and cozy mountain stays ⛄🏔️.<br>
+            In summer, the pleasant weather, blooming flowers, and green landscapes create the<br>
+            perfect setting for sightseeing and outdoor exploration 🌼🌳. The cool climate<br>
+            throughout the year makes Manali a favorite destination for families, couples, and solo<br>
+            travelers alike 👨‍👩‍👧‍👦💑🎒.<br><br>
+
+            The town is also rich in culture and tradition 🛕✨. Popular attractions such as the<br>
+            Hadimba Temple, Solang Valley, and Rohtang Pass showcase both the spiritual and scenic<br>
+            beauty of the region 🌄. Visitors can explore local markets filled with handmade crafts,<br>
+            warm woolen garments 🧣🧤, and authentic Himachali cuisine 🍲. The warm hospitality<br>
+            of the locals adds to the overall travel experience, making every stay comfortable and<br>
+            memorable 🤍.<br><br>
+
+            For adventure enthusiasts, Manali offers exciting activities including paragliding 🪂, river<br>
+            rafting 🚣‍♂️, trekking 🥾, and skiing 🎿. From peaceful riverside walks 🌊 to thrilling<br>
+            mountain adventures, the destination provides something for everyone. Book your stay<br>
+            now 🏨 and experience the perfect blend of comfort, adventure, and natural beauty in the<br>
+            enchanting hills of Manali 🌄✨.<br><br><br>
+        </p>
+
+        <div class="next-page">
+            <h2 class="mp-h2">Rajasthan, India</h2>
+            <img src="https://cdn1.goibibo.com/voy_ing/t_fs/rajasthan-jaipur-148046447735o.jpeg" class="np-img">
+            <a href="rajasthan.html" target="_self">
+                <button class="np-button">NEXT⟫</button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="first-destination">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-894554679684871132/original/294414e6-f086-442e-8da4-8393b7b77529.jpeg?im_w=720" class="fd-img">
+        <h2 class="fd-h2">Snowcrest Retreat</h2>
+        <button class="desti-button-1">Vist More</button>
+    </div>
+
+    <div  class="second-destination">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/595394706.jpg?k=6cc764eef196b806e7430a69498a3c849a6140ba9665285182269324c46be1ef&o=&hp=1" class="fd-img">
+        <h2 class="fd-h2">RiverNest Adventure Resort</h2>
+        <button class="desti-button-2">Visit More</button>
+    </div>
+
+    <div class="third-destination">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.JMUZjc-VcpI7FgZPOTsfKAHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="fd-img">
+        <h2 class="fd-h2">Serenity Creek Nature Resort</h2>
+        <button class="desti-button-3">Visit More</button>
+    </div>
+
+    <div class="fourth-destination">
+        <img src="https://img.vistarooms.com/space/zseaNd6So15QnGRkRkFyL0S5FVLpWEWeFQKF8EAv.jpeg" class="fd-img">
+        <h2 class="fd-h2">Himalayan Pet Chalet</h2>
+        <button class="desti-button-4">Visit More</button>
+    </div>
+
+
+   <!-- booking form popup -->
+    <div id="bookingPopup" style="
+        display:none; 
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.5); 
+        z-index:999;
+        justify-content:center;
+        align-items:center;
+    ">
+        <div class="booking-container" style="
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            background:linear-gradient(
+                135deg,
+                #ffffff 25%,
+                #f0f0f0 50%,
+                #d6d6d6 100%   
+            );
+            border: 10px solid white;
+            color: white;
+            overflow: hidden;
+        ">
+
+            <span id="closeFormPopup" style="
+                position:absolute;
+                top:15px;
+                right:20px;
+                cursor:pointer;
+                font-size:20px;
+                font-weight:bold;
+                color:black;
+                z-index:2;
+            ">✖</span>
+
+            <h2 style="
+                text-align:center; 
+                margin-bottom:20px; 
+                font-size:40px; 
+                font-weight:bolder;
+                color:black;
+                text-shadow: 
+                    0px 1px 2px rgba(255, 255, 255, 0.6),  
+                    0px 2px 6px rgba(0, 0, 0, 0.35); 
+                letter-spacing: 2px;
+                position: relative;
+                z-index: 1;
+                text-decoration:underline;
+            ">
+                Booking Form
+            </h2>
+
+            <form id="bookingForm" style="text-align:left; position:relative; z-index:1; font-size:20px; color:black; font-weight:bolder;">
+                <label>Name:</label><br>
+                <input type="text" name="name" placeholder="Your Name" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;outline:none;" required><br>
+
+                <label>Phone Number:</label><br>
+                <input type="tel" name="phone" placeholder="Your Phone Number" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Email:</label><br>
+                <input type="email" name="email" placeholder="Your Email" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Special Request:</label><br>
+                <textarea name="request" placeholder="e.g., extra bed, late check-in..." style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;"></textarea><br>
+
+                <label>Check-in Date:</label><br>
+                <input type="date" name="checkin" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Check-out Date:</label><br>
+                <input type="date" name="checkout" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>State:</label><br>
+                <input type="text" name="state" placeholder="Your State" style="width:100%; padding:7px; margin-bottom:20px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>City:</label><br>
+                <input type="text" name="city" placeholder="Your City" style="width:100%; padding:7px; margin-bottom:20px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <button type="submit" style="
+                    width:100%;
+                    padding:12px;
+                    background:#0f2b46;
+                    color:white;
+                    border:none;
+                    border-radius:6px;
+                    font-size:18px;
+                    cursor:pointer;
+                ">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- confirmation popup -->
+    <div id="confirmationPopup" style="
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.7);
+        z-index:9999;
+        justify-content:center;
+        align-items:center;
+    ">
+        <div id="confirmationContent" style="
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            width:800px;
+            max-width:90%;
+            text-align:left;
+            position:relative;
+        ">
+            <span id="closeConfirmPopup" style="
+                position:absolute;
+                top:10px;
+                right:15px;
+                cursor:pointer;
+                font-size:20px;
+            ">✖</span>
+
+            <h2 style="text-align:center;">Booking Confirmation</h2>
+
+            <div id="confirmDetails" style="margin-top:20px;"></div>
+
+            <button onclick="printConfirmation()" style="
+                margin-top:20px;
+                width:100%;
+                padding:10px;
+                background:#0f2b46;
+                color:white;
+                border:none;
+                cursor:pointer;
+            ">Print</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.querySelector(".desti-button-1").addEventListener("click", function() {
+
+            // Create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // Popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>Snowcrest Retreat - Manali, HP</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Snowcrest Retreat is a luxury mountain stay located in the
+                        beautiful hills of Manali. Enjoy breathtaking views,
+                        peaceful surroundings, cozy rooms, and premium hospitality.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:550px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // Close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            };
+
+            // Image slider images
+            const images = [
+                "https://a0.muscache.com/im/pictures/miso/Hosting-894554679684871132/original/294414e6-f086-442e-8da4-8393b7b77529.jpeg?im_w=720",
+                "https://tse1.mm.bing.net/th/id/OIP.IgIZyJt9YzyBR5kBZPjsQQHaF_?pid=ImgDet&w=474&h=383&rs=1&o=7&rm=3",
+                "https://tse4.mm.bing.net/th/id/OIP.gRhXsO3AzpQ5FQ_6wLYfyQHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+                "https://tse2.mm.bing.net/th/id/OIP.YRAx3EChRNjfPlJ2JLPqygHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3",
+                "https://tse3.mm.bing.net/th/id/OIP.G0XxZCQHYpIU8NAh_Je7zAHaE7?pid=ImgDet&w=474&h=315&rs=1&o=7&rm=3"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+
+    <script>
+        document.querySelector(".desti-button-2").addEventListener("click", function() {
+
+            // Create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // Popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>RiverNest Adventure Resort - Manali, HP</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        RiverNest Adventure Resort offers a refreshing riverside stay in beautiful Manali.
+                        Enjoy scenic mountain views, thrilling outdoor activities, and cozy accommodations.
+                        Experience nature, adventure, and relaxation all in one unforgettable getaway.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // Close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            };
+
+            // Image slider images
+            const images = [
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/595394706.jpg?k=6cc764eef196b806e7430a69498a3c849a6140ba9665285182269324c46be1ef&o=&hp=1",
+                "https://tse4.mm.bing.net/th/id/OIP.nTy_btg_Qe1VvJDZ5nmIZAHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+                "https://tse2.mm.bing.net/th/id/OIP.VgPyCYi9PtOa-pgyZiqFUgHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+                "https://tse3.mm.bing.net/th/id/OIP.tjV4oAxLgYD9Bc7xQWokdgHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/402204326.jpg?k=8c345e340e669471336d24956a3c4e322932c4c0f5f85fdbc439380060a060c6&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/320442288.jpg?k=04af5e3d92cfc02433688e7caa7fcdf522b55a81083f47d8d0f13b18c9ce565a&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/320442313.jpg?k=05330975cdcca5618ba823f888a3c92ca4f931b5576efc3f7bf418e099c36c81&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/320442348.jpg?k=c8ceaa1016ec05cc78a42da6103c87048a6af1e7917338e993e640235d27bb0b&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/334242199.jpg?k=ee9d794a936c1235c3ed8b476ab235624c14b35219be15379c49987c6b956cd9&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/402204114.jpg?k=24aeb15c2788eb4e5b7ac016e0115be8ed443b5c02f1aa972e62957400b31f62&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/402204214.jpg?k=ff9e06116743d92006619997889a39eac5a24015a3d2c283406891660ea7425e&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/402204346.jpg?k=06c99fb2437802123cd3afdcdb06f37bbc0825734b1baa95fc138ee415c5e196&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/402205278.jpg?k=6069beb9eff26a134bf0163a5336b7ae4f3d7b916e4b965961ce606a6976b953&o=",
+                "https://tse4.mm.bing.net/th/id/OIP.BFJa3_6miotZoKka-eZTzQHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-3").addEventListener("click", function() {
+
+            // Create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // Popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>Serenity Creek Nature Resort - Manali, H.P.</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Serenity Creek Nature Resort offers a peaceful escape in the scenic beauty of Manali, Himachal Pradesh.
+                        Surrounded by lush greenery and flowing streams, it provides a calm and refreshing stay.
+                        Enjoy comfortable rooms, fresh mountain air, and a relaxing nature-filled getaway.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // Close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            };
+
+            // Image slider images
+            const images = [
+                "https://tse4.mm.bing.net/th/id/OIP.JMUZjc-VcpI7FgZPOTsfKAHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_12_fkbnac_piltj8",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Exterior_view_at_The_Highland_park_Manali_aron30_efub6b",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Exterior_view_at_The_Highland_park_Manali_aron30_efub6b",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_5_den57m_zhma5k",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_5_den57m_zhma5k",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_5_den57m_zhma5k",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_5_den57m_zhma5k",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_104,w_2000,h_1125,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Luxury_Rooms_at_The_highland_park_manali_5_oxcln8",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_137,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Superior_Deluxe_at_The_Highland_Park_Manali_9_upegbl_dgxgbz",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_12_fkbnac_piltj8",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_12_fkbnac_piltj8",
+                "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_12_fkbnac_piltj8"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-4").addEventListener("click", function() {
+
+            // Create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // Popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>Himalayan Pet Chalet - Manali, H.P.</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Himalayan Pet Chalet offers a cozy and pet-friendly stay in the beautiful hills of Manali, Himachal Pradesh.
+                        Enjoy stunning mountain views, peaceful surroundings, and warm hospitality.
+                        Experience a relaxing getaway where both you and your pets feel truly at home.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // Close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            };
+
+            // Image slider images
+            const images = [
+                "https://img.vistarooms.com/space/zseaNd6So15QnGRkRkFyL0S5FVLpWEWeFQKF8EAv.jpeg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-abc49a.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-2e1be7.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-1b9a60.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-678ac6.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-176394.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-d5074a.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-9f8192.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-8e195b.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-fcf2b8.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-53f8b5.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-3ce181.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-0beb0d.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-1f2a59.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-0f73ed.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-c7d8d2.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-25721e.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-6c0b21.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-0d9f23.jpg",
+                "https://img.vistarooms.com/gallery/himalayan-retreat-4638e5.jpg"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const bookingForm = document.getElementById("bookingForm");
+            const bookingPopup = document.getElementById("bookingPopup");
+            const confirmationPopup = document.getElementById("confirmationPopup");
+
+            // form submit
+            bookingForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const formData = new FormData(bookingForm);
+
+                fetch("goa_booking.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(data => {
+
+                    console.log("SERVER RESPONSE:", data); // debugging
+
+                    if (data.status === "success") {
+
+                        // close booking form
+                        bookingPopup.style.display = "none";
+
+                        // fill confirmation details
+                        document.getElementById("confirmDetails").innerHTML = `
+                            <p><b>Booking ID:</b> ${data.booking_id}</p>
+                            <p><b>Name:</b> ${data.name}</p>
+                            <p><b>Phone:</b> ${data.phone}</p>
+                            <p><b>Email:</b> ${data.email}</p>
+                            <p><b>Check-in:</b> ${data.checkin}</p>
+                            <p><b>Check-out:</b> ${data.checkout}</p>
+                            <p><b>State:</b> ${data.state}</p>
+                            <p><b>City:</b> ${data.city}</p>
+                            <p><b>Request:</b> ${data.request}</p>
+                        `;
+
+                        // show confirmation popup
+                        confirmationPopup.style.display = "flex";
+
+                        // reset form
+                        bookingForm.reset();
+
+                    } else {
+                        alert("❌ Error: " + data.message);
+                    }
+                })
+                .catch(err => {
+                    console.error("Fetch Error:", err);
+                    alert("⚠️ Something went wrong");
+                });
+            });
+
+            // close booking popup
+            document.getElementById("closeFormPopup").onclick = function () {
+                bookingPopup.style.display = "none";
+            };
+
+            // close confirmation popup
+            document.getElementById("closeConfirmPopup").onclick = function () {
+                confirmationPopup.style.display = "none";
+            };
+
+        });
+
+        // print function
+        function printConfirmation() {
+            const content = document.getElementById("confirmationContent").innerHTML;
+
+            const printWindow = window.open('', '', 'width=800,height=600');
+
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>Booking Receipt</title>
+                </head>
+                <body>
+                    ${content}
+                </body>
+                </html>
+            `);
+
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

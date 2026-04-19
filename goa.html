@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            background: #dcd9d9;
+        }
+
+        /* header */
+        .header{
+            text-align:center;
+            padding:30px 0;
+            background:#0f2b46;
+            color:white;
+            letter-spacing:3px;
+        }
+
+        .header h1{
+            font-size:38px;
+        }
+
+        /* image grid */
+        .img-div{
+            display:flex;
+            flex-wrap:wrap;
+            gap:18px;
+            justify-content:center;  /* center last row */
+            padding:30px;
+        }
+
+        .img-div img{
+            width:20%;
+            height:200px;
+            object-fit:cover;
+            border-radius:16px;
+        }
+
+        /* hover effect */
+        .img-div img:hover{
+            transform:scale(1.06);
+            box-shadow:0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        /* FIRST IMAGE (FEATURED LOOK) */
+        .img-div img:first-child{
+            grid-column: span 2;
+            height:200px;
+        }
+
+        /* OPTIONAL: MAKE LAST ROW CENTERED */
+        .img-div::after{
+            content:"";
+        }
+
+        /* description section */
+        .manali-pg{
+            display:flex;
+            align-items:flex-start;
+            padding:40px;
+            gap:30px;
+            text-align: center;
+            color: #333;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .manali-pg p{
+            line-height:1.7;
+            font-size:16px;
+            font-weight: bold;
+            color:#444;
+        }
+
+        /* side card */
+        .previous-page,
+        .next-page{
+            flex:1;
+            text-align:center;
+            background:#f9f9f9;
+            padding:15px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+            transition:0.3s;
+            margin-top:60px;
+        }
+
+        .previous-page:hover,
+        .next-page:hover{
+            transform:translateY(-5px);
+        }
+
+        .pp-img,
+        .np-img{
+            border: 1px solid #000;
+            width:100%;
+            height:300px;
+            object-fit:cover;
+            border-radius:10px;
+            margin:10px 0;
+        }
+
+        .pp-button,
+        .np-button{
+            padding:8px 18px;
+            border:none;
+            background:#0071c2;
+            color:white;
+            border-radius:6px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .pp-button:hover,
+        .np-button:hover{
+            background:#005b99;
+        }
+
+        /* destination card */
+        .first-destination,
+        .second-destination,
+        .third-destination,
+        .fourth-destination{
+            width:22%;
+            display:inline-block;
+            margin:20px 1%;
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 5px 20px rgba(0,0,0,0.15);
+            transition:0.3s;
+        }
+
+        .first-destination:hover,
+        .second-destination:hover,
+        .third-destination:hover,
+        .fourth-destination:hover{
+            transform:translateY(-10px);
+        }
+
+        /* image */
+        .fd-img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+        }
+
+        /* title */
+        .fd-h2{
+            text-align:center;
+            padding:10px;
+            font-size:18px;
+        }
+
+        /* button */
+        .desti-button-1,
+        .desti-button-2,
+        .desti-button-3,
+        .desti-button-4{
+            display:block;
+            margin:10px auto 20px;
+            padding:8px 18px;
+            border:none;
+            background:#0f2b46;
+            color:white;
+            border-radius:6px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .desti-button-1:hover,
+        .desti-button-2:hover,
+        .desti-button-3:hover,
+        .desti-button-4:hover{
+            background:#0071c2;
+        }
+
+        /* respnsive */
+        @media(max-width:900px){
+            .manali-pg{
+                flex-direction:column;
+            }
+
+            .first-destination,
+            .second-destination,
+            .third-destination,
+            .fourth-destination{
+                width:90%;
+                margin:auto;
+                display:block;
+            }
+        }
+    </style>
+    <title>goa exploration</title>
+</head>
+<body>
+    <div class="header">
+        <h1>GOA EXPLORATION</h1>
+    </div>
+
+    <div class="img-div">
+        <img src="https://cdn.urlaubsguru.at/wp-content/uploads/2017/10/Beach-in-Goa-India-iStock-181691319.jpg" class="img-1">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.9YQHRKcVhI6AYpXt0w2R-gHaFj?w=900&h=675&rs=1&pid=ImgDetMain&o=7&rm=3" class="img-2">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.nVkoJeqQCRXQUjhFqye2egHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-3">
+        <img src="https://www.treebo.com/blog/wp-content/uploads/2017/01/Places-to-visit-in-Goa.jpg" class="img-4">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.gU2iM5PhaeEO5JtlOUSGOQHaE7?w=1024&h=682&rs=1&pid=ImgDetMain&o=7&rm=3" class="img-5">
+        <img src="https://i.pinimg.com/originals/d1/ff/8b/d1ff8b5fe9c493360e3992795ed4003c.jpg" class="img-6">
+        <img src="https://media2.thrillophilia.com/images/photos/000/115/737/original/1516998283_0_139c88_4f6e83d3_orig.jpg?width=975&height=600" class="img-7">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.JXMh31zLhPOEUCRUaXY8kwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-8">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll(".img-div img");
+        let currentIndex = 0;
+        let overlay;
+
+        images.forEach((img, index) => {
+            img.addEventListener("click", function() {
+                currentIndex = index;
+                openGallery();
+            });
+        });
+
+        function openGallery() {
+
+            overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.9)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.zIndex = "100000";
+
+            overlay.innerHTML = `
+                <div style="position:relative; text-align:center;">
+                    
+                    <span id="closeBtn" style="
+                        position:absolute;
+                        top:-50px;
+                        right:0;
+                        font-size:30px;
+                        color:white;
+                        cursor:pointer;
+                    ">✖</span>
+
+                    <span id="prevBtn" style="
+                        position:absolute;
+                        left:-60px;
+                        top:50%;
+                        transform:translateY(-50%);
+                        font-size:40px;
+                        color:white;
+                        cursor:pointer;
+                    ">⟪</span>
+
+                    <img id="galleryImage"
+                        src="${images[currentIndex].src}"
+                        style="max-width:80vw; max-height:80vh; border-radius:10px;">
+
+                    <span id="nextBtn" style="
+                        position:absolute;
+                        right:-60px;
+                        top:50%;
+                        transform:translateY(-50%);
+                        font-size:40px;
+                        color:white;
+                        cursor:pointer;
+                    ">⟫</span>
+
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            const galleryImage = document.getElementById("galleryImage");
+
+            function showImage() {
+                galleryImage.src = images[currentIndex].src;
+            }
+
+            function nextImage() {
+                currentIndex++;
+                if (currentIndex >= images.length) currentIndex = 0;
+                showImage();
+            }
+
+            function prevImage() {
+                currentIndex--;
+                if (currentIndex < 0) currentIndex = images.length - 1;
+                showImage();
+            }
+
+            document.getElementById("nextBtn").onclick = nextImage;
+            document.getElementById("prevBtn").onclick = prevImage;
+
+            document.getElementById("closeBtn").onclick = closeGallery;
+
+            overlay.addEventListener("click", function(e) {
+                if (e.target === overlay) {
+                    closeGallery();
+                }
+            });
+
+            // KEYBOARD SUPPORT
+            document.addEventListener("keydown", function(e) {
+                if (!overlay) return;
+
+                if (e.key === "ArrowRight") {
+                    nextImage();
+                }
+                else if (e.key === "ArrowLeft") {
+                    prevImage();
+                }
+                else if (e.key === "Escape") {
+                    closeGallery();
+                }
+            });
+
+            function closeGallery() {
+                document.body.removeChild(overlay);
+                overlay = null;
+            }
+        }
+    </script>
+
+
+
+    <div class="manali-pg">
+        <div class="previous-page">
+            <h2 class="mp-h2">A & N Islands, India</h2>
+            <img src="https://www.noblehousetours.com/wp-content/uploads/2017/08/andaman-and-nicobar-islands-india.jpg" class="pp-img">
+            <a href="anIsland.html" target="_self">
+                <button class="pp-button">⟪ PREVIOUS</button>
+            </a>
+        </div>
+
+        <p> Goa, India's most famous beach destination, is a perfect blend of sun, sand, and vibrant culture 🏖️✨.<br>
+            Located along the Arabian Sea, this tropical paradise is known for its golden beaches, swaying palm trees<br>
+            🌴, and lively atmosphere. Whether you are looking for relaxation by the sea or an energetic holiday filled<br>
+            with music and adventure, Goa offers something special for every traveler.<br><br>
+
+            From the bustling shores of Baga and Calangute 🏝️ to the peaceful charm of Colva and Palolem 🌅, Goa<br>
+            presents diverse beach experiences. Visitors can explore historic Portuguese architecture 🏛️ in Old Goa,<br>
+            beautiful churches ⛪, and colorful streets filled with cafes and boutiques. The scenic coastline, stunning<br>
+            sunsets, and pleasant coastal breeze create a refreshing escape from everyday routine.<br><br>
+
+            Goa is also known for its rich culture, vibrant nightlife 🎉, and delicious seafood 🍤. Beach shacks, live music<br>
+            🎶, water sports 🚤, and local markets 🛍️ make every moment exciting and memorable. Travelers can enjoy<br>
+            parasailing 🪂, jet skiing 🏄‍♂️, dolphin spotting 🐬, and sunset cruises that add thrill to their vacation<br>
+            experience.<br><br>
+
+            Whether you are planning a romantic getaway 💑, a fun trip with friends 🧳, or a peaceful solo retreat, Goa<br>
+            perfectly balances relaxation and adventure. Stay in luxurious beachfront resorts 🏨 or cozy seaside<br>
+            cottages, and immerse yourself in the lively charm of this coastal paradise. Book your stay now ✨ and<br>
+            discover the unforgettable energy of Goa. 🌊🌴<br><br><br>
+        </p>
+
+        <div class="next-page">
+            <h2 class="mp-h2">Himachal Pradesh, India</h2>
+            <img src="https://www.ntraveladvisor.com/wp-content/uploads/2022/08/Religious-Places-in-Himachal.jpg" class="np-img">
+            <a href="hp.html" target="_self">
+                <button class="np-button">NEXT⟫</button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="first-destination">
+        <img src="https://static.vecteezy.com/system/resources/previews/029/153/120/large_2x/sea-view-bedroom-with-comfy-bed-white-wall-natural-light-tropical-plant-and-balcony-in-luxury-beach-house-or-modern-villa-home-interior-tropical-resort-concept-generative-ai-photo.jpg" class="fd-img">
+        <h2 class="fd-h2">Horizon Blue Apartment</h2>
+        <button class="desti-button-1">Vist More</button>
+    </div>
+
+    <div  class="second-destination">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.i2sDqnA8Sslj5bgwZHZSvwHaEs?rs=1&pid=ImgDetMain&o=7&rm=3" class="fd-img">
+        <h2 class="fd-h2">Mandovi River Oceanic Houseboat</h2>
+        <button class="desti-button-2">Visit More</button>
+    </div>
+
+    <div class="third-destination">
+        <img src="https://www.global-gallivanting.com/wp-content/uploads/2022/01/Seashell-Beach-Suites-Goa-01-690x460.jpg" class="fd-img">
+        <h2 class="fd-h2">Purr & Woof Seaside Stay</h2>
+        <button class="desti-button-3">Visit More</button>
+    </div>
+
+    <div class="fourth-destination">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.alo1epjOrfH-EOpQvfhnqQHaFJ?cb=ucfimg2&ucfimg=1&w=720&h=500&rs=1&pid=ImgDetMain&o=7&rm=3" class="fd-img">
+        <h2 class="fd-h2">Ocean Crest Bayfront Hotel</h2>
+        <button class="desti-button-4">Visit More</button>
+    </div>
+
+
+    <!-- booking form popup -->
+    <div id="bookingPopup" style="
+        display:none; 
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.5); 
+        z-index:999;
+        justify-content:center;
+        align-items:center;
+    ">
+        <div class="booking-container" style="
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            background:linear-gradient(
+                135deg,
+                #ffffff 25%,
+                #f0f0f0 50%,
+                #d6d6d6 100%   
+            );
+            border: 10px solid white;
+            color: white;
+            overflow: hidden;
+        ">
+
+            <span id="closeFormPopup" style="
+                position:absolute;
+                top:15px;
+                right:20px;
+                cursor:pointer;
+                font-size:20px;
+                font-weight:bold;
+                color:black;
+                z-index:2;
+            ">✖</span>
+
+            <h2 style="
+                text-align:center; 
+                margin-bottom:20px; 
+                font-size:40px; 
+                font-weight:bolder;
+                color:black;
+                text-shadow: 
+                    0px 1px 2px rgba(255, 255, 255, 0.6),  
+                    0px 2px 6px rgba(0, 0, 0, 0.35); 
+                letter-spacing: 2px;
+                position: relative;
+                z-index: 1;
+                text-decoration:underline;
+            ">
+                Booking Form
+            </h2>
+
+            <form id="bookingForm" style="text-align:left; position:relative; z-index:1; font-size:20px; color:black; font-weight:bolder;">
+                <label>Name:</label><br>
+                <input type="text" name="name" placeholder="Your Name" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;outline:none;" required><br>
+
+                <label>Phone Number:</label><br>
+                <input type="tel" name="phone" placeholder="Your Phone Number" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Email:</label><br>
+                <input type="email" name="email" placeholder="Your Email" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Special Request:</label><br>
+                <textarea name="request" placeholder="e.g., extra bed, late check-in..." style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;"></textarea><br>
+
+                <label>Check-in Date:</label><br>
+                <input type="date" name="checkin" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Check-out Date:</label><br>
+                <input type="date" name="checkout" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>State:</label><br>
+                <input type="text" name="state" placeholder="Your State" style="width:100%; padding:7px; margin-bottom:20px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>City:</label><br>
+                <input type="text" name="city" placeholder="Your City" style="width:100%; padding:7px; margin-bottom:20px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <button type="submit" style="
+                    width:100%;
+                    padding:12px;
+                    background:#0f2b46;
+                    color:white;
+                    border:none;
+                    border-radius:6px;
+                    font-size:18px;
+                    cursor:pointer;
+                ">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- confirmation popup -->
+    <div id="confirmationPopup" style="
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.7);
+        z-index:9999;
+        justify-content:center;
+        align-items:center;
+    ">
+        <div id="confirmationContent" style="
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            width:800px;
+            max-width:90%;
+            text-align:left;
+            position:relative;
+        ">
+            <span id="closeConfirmPopup" style="
+                position:absolute;
+                top:10px;
+                right:15px;
+                cursor:pointer;
+                font-size:20px;
+            ">✖</span>
+
+            <h2 style="text-align:center;">Booking Confirmation</h2>
+
+            <div id="confirmDetails" style="margin-top:20px;"></div>
+
+            <button onclick="printConfirmation()" style="
+                margin-top:20px;
+                width:100%;
+                padding:10px;
+                background:#0f2b46;
+                color:white;
+                border:none;
+                cursor:pointer;
+            ">Print</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.querySelector(".desti-button-1").addEventListener("click", function() {
+
+            //create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">    
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>Horizon Blue Beachview Apartment - Goa</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Emerald Backwater Pool Villa offers a luxurious and peaceful stay in the scenic beauty of Alleppey, Kerala.
+                        Enjoy private pool comfort, serene backwater views, and modern amenities.
+                        Experience relaxation, privacy, and a refreshing tropical getaway in nature's lap.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:overflow;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            }
+
+            // image slider images
+            const images = [
+                "https://static.vecteezy.com/system/resources/previews/029/153/120/large_2x/sea-view-bedroom-with-comfy-bed-white-wall-natural-light-tropical-plant-and-balcony-in-luxury-beach-house-or-modern-villa-home-interior-tropical-resort-concept-generative-ai-photo.jpg",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/406296822.jpg?k=409c5d1604b9fc5db1fb9c0d277de727c861c01bee7581b9f83602e549638a9a&o=&hp=1",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/188551789.jpg?k=70415cebce6b07b7991b68cc42344ca50bba5091327ffb2c46d326f7b960cc10&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/258656938.jpg?k=e4e375254ea2a8df19ed2f190a9795116d2f1a1632f4c6efc9fea159b530a193&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/258656942.jpg?k=f0148ae494d62063fa6fd9735ac961195a23c9f70220793d6b48ac9293b0b19c&o="
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-2").addEventListener("click", function() {
+
+            //create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">    
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>Mandovi River Oceanic HB - Goa</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Mandovi River Oceanic Houseboat offers a unique and scenic stay on the beautiful Mandovi River in Goa.
+                        Enjoy peaceful river views, comfortable cabins, and a relaxing cruise experience.
+                        Experience Goan hospitality, sunset views, and a refreshing waterfront getaway.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:overflow;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            }
+
+            // image slider images
+            const images = [
+                "https://tse3.mm.bing.net/th/id/OIP.i2sDqnA8Sslj5bgwZHZSvwHaEs?rs=1&pid=ImgDetMain&o=7&rm=3",
+                "https://tse2.mm.bing.net/th/id/OIP.ODpRJ-uVXeSGXs8YZqzaZQHaE8?w=1152&h=768&rs=1&pid=ImgDetMain&o=7&rm=3",
+                "https://tse2.mm.bing.net/th/id/OIP.Jbr_TQSqiLTFVfNRtL-OKgHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+                "https://www.alleppeyhouseboat.net/houseboats/alleppey/houseboats/2-bedroom/2-bedroom-houseboat1.jpg",
+                "https://tse2.mm.bing.net/th/id/OIP.7kx14jEioUeafDkK94HYFAHaEK?w=1024&h=576&rs=1&pid=ImgDetMain&o=7&rm=3",
+                "https://tse4.mm.bing.net/th/id/OIP.7ID-u8Be_kQGO7HUwwYhhQHaEK?pid=ImgDet&w=474&h=266&rs=1&o=7&rm=3"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-3").addEventListener("click", function() {
+
+            //create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">    
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>Purr & Woof Seaside Stay - Goa</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Purr & Woof Seaside Stay offers a cozy and pet-friendly retreat near the beautiful beaches of Goa.
+                        Enjoy relaxing sea views, comfortable rooms, and a welcoming atmosphere for you and your furry companions.
+                        Experience beachside vibes, warm hospitality, and a fun-filled coastal getaway.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:overflow;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            }
+
+            // image slider images
+            const images = [
+                "https://www.global-gallivanting.com/wp-content/uploads/2022/01/Seashell-Beach-Suites-Goa-01-690x460.jpg",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934174.jpg?k=d770b75cee9c2670a79809bf4b71d4ebac44facbf081ab80fb897ba2ee6c1368&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934173.jpg?k=8a3e48a4e13d847cb4fcabeb03aa489753497e1b803ea4a45c556cb9f219ae6e&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934176.jpg?k=3398891a038a7f77401a1385415b3932793fbfeb62ac0fab24e024d7ea9a9057&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934175.jpg?k=ecdd3f139bd0d18cd1c7f6eaa820eee8fdd0e1c7ff7f4bfed5702369809e799c&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934169.jpg?k=ba8e4e186ee3754ac02d54ea455ca2a8ab22882cad3564420bd494e9c73a4778&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934233.jpg?k=91174a96f1259b7f5d85212ad7325d286c167dae2a66be565059c628848a46fb&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934232.jpg?k=357104c2ec952b2ff30b64329d80564e724a45741ef79c30f8854de22fb8eb08&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934237.jpg?k=49ead34e9645d7d85c61735fadacfb20bad29ff8bd3a7b883b1f8dd9427b5e0d&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934291.jpg?k=3c3c53a2643178dee48aff7ed3f9e112b9251db7688e097519fb2fa64d2aadc2&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934292.jpg?k=ca7e51ffbe05eb8675cd044fc6bdd552899a45c81eb1502acf53bf0dd8e62c58&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934293.jpg?k=82503f938f268819f5076a7e48fe7f9a3b4a3660444fa4cbc7da549660b7cab2&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934297.jpg?k=3575967105da07cad18bf5e1cd0e5d00896ecb86fad6a8a8655869ecde3ab3ba&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934167.jpg?k=3cc38e4f9b8f98ec92073bef45ce5524abb591c9dd22b6ddd888ff0050e069d2&o="
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-4").addEventListener("click", function() {
+
+            //create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">    
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>Ocean Crest Bayfront Hotel - Goa</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Ocean Crest Bayfront Hotel offers a luxurious stay with stunning bay views in Goa.
+                        Enjoy elegant rooms, refreshing sea breezes, and modern comforts by the coast.
+                        Experience vibrant beach vibes, fine dining, and a relaxing seaside escape.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:overflow;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:30px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            }
+
+            // image slider images
+            const images = [
+                "https://tse1.mm.bing.net/th/id/OIP.alo1epjOrfH-EOpQvfhnqQHaFJ?cb=ucfimg2&ucfimg=1&w=720&h=500&rs=1&pid=ImgDetMain&o=7&rm=3",
+                "https://pix8.agoda.net/hotelImages/162/1621814/1621814_16111312300048672444.jpg?ca=6&ce=1&s=1024x",
+                "https://pix8.agoda.net/property/1621814/779628790/15005b631029fd08f82016b957fba283.jpeg?s=1024x",
+                "https://pix8.agoda.net/hotelImages/162/1621814/1621814_16111312320048672449.jpg?ca=6&ce=1&s=1024x",
+                "https://pix8.agoda.net/hotelImages/162/1621814/1621814_16111312140048672373.jpg?ca=13&ce=1&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/645287190.jpg?k=97a6cc6bb59efc69456581a8bb7be7c231014180cf9124b7869aa2395441fdef&o=&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/320245756.jpg?k=a5e4389bfefae4b64e05f3db1a78a4e70bc1f97e50ba91dd69a9e530d45c10b4&o=&s=1024x",
+                "https://pix8.agoda.net/hotelImages/162/1621814/1621814_16111312210048672415.jpg?ca=13&ce=1&s=1024x",
+                "https://pix8.agoda.net/hotelImages/162/1621814/1621814_16111312300048672443.jpg?ca=6&ce=1&s=1024x",
+                "https://pix8.agoda.net/hotelImages/162/1621814/1621814_16111312200048672411.jpg?ca=13&ce=1&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/645287220.jpg?k=65a87abb4418f99f43021ba46aded203f77bfd2d23437f95ae1bdfe0fb919525&o=&s=1024x",
+                "https://pix8.agoda.net/hotelImages/162/1621814/1621814_16111312320048672447.jpg?ca=6&ce=1&s=1024x",
+                "https://pix8.agoda.net/hotelImages/1621814/15167733/5a032e2b21d56091362b105fef73120c.jpg?ca=18&ce=1&s=1024x",
+                "https://pix8.agoda.net/property/1621814/1286558557/616032d69bb5b9e39641748c96dab596.jpeg?ce=3&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/102045840.jpg?k=26132f2819bc128397f72186aa81fb373cc1b557b2eb99c66d35f4f967ae3b18&o=&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/645287190.jpg?k=97a6cc6bb59efc69456581a8bb7be7c231014180cf9124b7869aa2395441fdef&o=&s=1024x",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/80941725.jpg?k=d5339442f29cba27b27e3f90f054b4ac7da818e4d5bae2a04ba19a4170cfb98a&o=&s=1024x"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+
+            // opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // close form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const bookingForm = document.getElementById("bookingForm");
+            const bookingPopup = document.getElementById("bookingPopup");
+            const confirmationPopup = document.getElementById("confirmationPopup");
+
+            // form submit
+            bookingForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const formData = new FormData(bookingForm);
+
+                fetch("goa_booking.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(data => {
+
+                    console.log("SERVER RESPONSE:", data); // debugging
+
+                    if (data.status === "success") {
+
+                        // close booking form
+                        bookingPopup.style.display = "none";
+
+                        // fill confirmation details
+                        document.getElementById("confirmDetails").innerHTML = `
+                            <p><b>Booking ID:</b> ${data.booking_id}</p>
+                            <p><b>Name:</b> ${data.name}</p>
+                            <p><b>Phone:</b> ${data.phone}</p>
+                            <p><b>Email:</b> ${data.email}</p>
+                            <p><b>Check-in:</b> ${data.checkin}</p>
+                            <p><b>Check-out:</b> ${data.checkout}</p>
+                            <p><b>State:</b> ${data.state}</p>
+                            <p><b>City:</b> ${data.city}</p>
+                            <p><b>Request:</b> ${data.request}</p>
+                        `;
+
+                        // show confirmation popup
+                        confirmationPopup.style.display = "flex";
+
+                        // reset form
+                        bookingForm.reset();
+
+                    } else {
+                        alert("❌ Error: " + data.message);
+                    }
+                })
+                .catch(err => {
+                    console.error("Fetch Error:", err);
+                    alert("⚠️ Something went wrong");
+                });
+            });
+
+            // close booking popup
+            document.getElementById("closeFormPopup").onclick = function () {
+                bookingPopup.style.display = "none";
+            };
+
+            // close confirmation popup
+            document.getElementById("closeConfirmPopup").onclick = function () {
+                confirmationPopup.style.display = "none";
+            };
+
+        });
+
+        // print function
+        function printConfirmation() {
+            const content = document.getElementById("confirmationContent").innerHTML;
+
+            const printWindow = window.open('', '', 'width=800,height=600');
+
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>Booking Receipt</title>
+                </head>
+                <body>
+                    ${content}
+                </body>
+                </html>
+            `);
+
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

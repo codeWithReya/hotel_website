@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Skyline | Explore Goa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Poppins',sans-serif;
+            background: #f4f7fb;
+            color: #333;
+        }
+
+        /* hero */
+        .hero{
+            height: 70vh;
+            background:
+            linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+            url("https://www.shutterstock.com/image-photo/goa-sign-on-beach-260nw-149229764.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1{
+            font-size: 60px;
+            letter-spacing: 2px;
+        }
+
+        /* container */
+        .container{
+            width: 80%;
+            margin: auto;
+            padding: 50px 0;
+        }
+
+        /* sections */
+        .section{
+            margin-bottom: 60px;
+        }
+
+        .section h2{
+            font-size: 34px;
+            color: #0b1d2f;
+            margin-bottom: 20px;
+        }
+
+        .section p{
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* image */
+        .section img{
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* food grid */
+        .food-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .food-item img{
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .food-item h4{
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        /* footer text */
+        .footer-text{
+            text-align: center;
+            padding: 40px;
+            background: #0b1d2f;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* responsive */
+        @media(max-width:900px){
+            .hero h1{
+                font-size: 40px;
+            }
+            .container{
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>🌴 Explore Goa</h1>
+    </div>
+
+    <div class="container">
+
+        <!-- about goa -->
+        <div class="section">
+            <h2>About Goa</h2>
+            <p>
+                Goa is one of India's most famous travel destinations known for its beautiful beaches,
+                vibrant nightlife, Portuguese heritage and delicious seafood.
+                Whether you want to relax by the sea, explore historic churches or enjoy exciting water sports,
+                Goa offers a perfect blend of culture, adventure and relaxation.
+            </p>
+            <img src="https://tse4.mm.bing.net/th/id/OIP.88Wse-Z3es72d_ujsoCs3QHaEO?pid=ImgDet&w=474&h=270&rs=1&o=7&rm=3">
+        </div>
+
+        <!-- popular places -->
+        <div class="section">
+            <h2>Popular Places to Visit</h2>
+            <p>
+                Some of the most popular places to visit in Goa include Baga Beach,
+                Calangute Beach, Anjuna Beach and Dudhsagar Waterfalls.
+                These destinations attract travelers from all over the world because of their
+                natural beauty, lively atmosphere and scenic views.
+            </p>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+        </div>
+
+        <!-- goan food -->
+        <div class="section">
+            <h2>Famous Goan Food</h2>
+            <p>
+                Goa is also famous for its rich and flavorful cuisine.
+                Influenced by Portuguese culture, Goan food includes delicious seafood,
+                spicy curries and unique desserts that every traveler should try.
+            </p>
+            <div class="food-grid">
+                <div class="food-item">
+                    <img src="https://blog.swiggy.com/wp-content/uploads/2024/03/Goan-Fish-Curry.jpg">
+                    <h4>Goan Fish Curry</h4>
+                </div>
+
+                <div class="food-item">
+                    <img src="https://images.unsplash.com/photo-1625943555419-56a2cb596640">
+                    <h4>Prawn Balchão</h4>
+                </div>
+
+                <div class="food-item">
+                    <img src="https://veeragroup.com/wp-content/uploads/2024/02/Chicken-Xacuti-.jpg">
+                    <h4>Chicken Xacuti</h4>
+                </div>
+
+                <div class="food-item">
+                    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7">
+                    <h4>Bebinca Dessert</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer-text">
+        Experience the beauty, culture and flavors of Goa with <b>City Skyline Travel</b>.
+        Plan your trip and create unforgettable memories.
+    </div>
+</body>
+</html>

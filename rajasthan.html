@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            background: #dcd9d9;
+        }
+
+        /* header */
+        .header{
+            text-align:center;
+            padding:30px 0;
+            background:#0f2b46;
+            color:white;
+            letter-spacing:3px;
+        }
+
+        .header h1{
+            font-size:38px;
+        }
+
+        /* image grid */
+        .img-div{
+            display:flex;
+            flex-wrap:wrap;
+            gap:18px;
+            justify-content:center;  /* center last row */
+            padding:30px;
+        }
+
+        .img-div img{
+            width:20%;
+            height:200px;
+            object-fit:cover;
+            border-radius:16px;
+        }
+
+        /* hover effect */
+        .img-div img:hover{
+            transform:scale(1.06);
+            box-shadow:0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        /* FIRST IMAGE (FEATURED LOOK) */
+        .img-div img:first-child{
+            grid-column: span 2;
+            height:200px;
+        }
+
+        /* OPTIONAL: MAKE LAST ROW CENTERED */
+        .img-div::after{
+            content:"";
+        }
+
+        /* description section */
+        .manali-pg{
+            display:flex;
+            align-items:flex-start;
+            padding:40px;
+            gap:30px;
+            text-align: center;
+            color: #333;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .manali-pg p{
+            line-height:1.7;
+            font-size:16px;
+            font-weight: bold;
+            color:#444;
+        }
+
+        /* side card */
+        .previous-page,
+        .next-page{
+            flex:1;
+            text-align:center;
+            background:#f9f9f9;
+            padding:15px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+            transition:0.3s;
+            margin-top: 7%;
+        }
+
+        .previous-page:hover,
+        .next-page:hover{
+            transform:translateY(-5px);
+        }
+
+        .pp-img,
+        .np-img{
+            border: 1px solid #000;
+            width:100%;
+            height:300px;
+            object-fit:cover;
+            border-radius:10px;
+            margin:10px 0;
+        }
+
+        .pp-button,
+        .np-button{
+            padding:8px 18px;
+            border:none;
+            background:#0071c2;
+            color:white;
+            border-radius:6px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .pp-button:hover,
+        .np-button:hover{
+            background:#005b99;
+        }
+
+        /* destination card */
+        .first-destination,
+        .second-destination,
+        .third-destination,
+        .fourth-destination{
+            width:22%;
+            display:inline-block;
+            margin:20px 1%;
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 5px 20px rgba(0,0,0,0.15);
+            transition:0.3s;
+        }
+
+        .first-destination:hover,
+        .second-destination:hover,
+        .third-destination:hover,
+        .fourth-destination:hover{
+            transform:translateY(-10px);
+        }
+
+        /* image */
+        .fd-img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+        }
+
+        /* title */
+        .fd-h2{
+            text-align:center;
+            padding:10px;
+            font-size:18px;
+        }
+
+        /* button */
+        .desti-button-1,
+        .desti-button-2,
+        .desti-button-3,
+        .desti-button-4{
+            display:block;
+            margin:10px auto 20px;
+            padding:8px 18px;
+            border:none;
+            background:#0f2b46;
+            color:white;
+            border-radius:6px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .desti-button-1:hover,
+        .desti-button-2:hover,
+        .desti-button-3:hover,
+        .desti-button-4:hover{
+            background:#0071c2;
+        }
+
+        /* respnsive */
+        @media(max-width:900px){
+            .manali-pg{
+                flex-direction:column;
+            }
+
+            .first-destination,
+            .second-destination,
+            .third-destination,
+            .fourth-destination{
+                width:90%;
+                margin:auto;
+                display:block;
+            }
+        }
+    </style>
+    <title>Rajasthan exploration</title>
+</head>
+<body>
+    <div class="header">
+        <h1>RAJASTHAN EXPLORATION</h1>
+    </div>
+
+    <div class="img-div">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.qv0eJLT-bo04E4FKnTxfOwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-1">
+        <img src="https://www.enrichingjourneys.com/wp-content/uploads/2019/09/Views-of-Jodhpur-Mehrangarh-Fort-1.jpg" class="img-2">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.bGf4M7UXVRSeZQPyvHJHlgHaEs?w=1024&h=649&rs=1&pid=ImgDetMain&o=7&rm=3" class="img-3">
+        <img src="https://www.tourmyindia.com/blog/wp-content/uploads/2019/03/Meera-Temple-Rajasthan.jpg" class="img-4">
+        <img src="https://www.tourmyindia.com/blog/wp-content/uploads/2020/11/Feature-City-Palace-Udaipur-Rajasthan.jpg" class="img-5">
+        <img src="https://tse3.mm.bing.net/th/id/OIP._oH4hRyaTtPXoL3bZLAvHgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-6">
+        <img src="https://specialplacesofindia.com/wp-content/uploads/2024/03/Laad-Bazaar.jpg" class="img-7">
+        <img src="https://myudaipurcity.com/wp-content/uploads/2017/09/Raas-Devigarh-Udaipur-840x420.jpg" class="img-8">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll(".img-div img");
+        let currentIndex = 0;
+        let overlay;
+
+        images.forEach((img, index) => {
+            img.addEventListener("click", function() {
+                currentIndex = index;
+                openGallery();
+            });
+        });
+
+        function openGallery() {
+
+            overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.9)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.zIndex = "100000";
+
+            overlay.innerHTML = `
+                <div style="position:relative; text-align:center;">
+                    
+                    <span id="closeBtn" style="
+                        position:absolute;
+                        top:-50px;
+                        right:0;
+                        font-size:30px;
+                        color:white;
+                        cursor:pointer;
+                    ">✖</span>
+
+                    <span id="prevBtn" style="
+                        position:absolute;
+                        left:-60px;
+                        top:50%;
+                        transform:translateY(-50%);
+                        font-size:40px;
+                        color:white;
+                        cursor:pointer;
+                    ">⟪</span>
+
+                    <img id="galleryImage"
+                        src="${images[currentIndex].src}"
+                        style="max-width:80vw; max-height:80vh; border-radius:10px;">
+
+                    <span id="nextBtn" style="
+                        position:absolute;
+                        right:-60px;
+                        top:50%;
+                        transform:translateY(-50%);
+                        font-size:40px;
+                        color:white;
+                        cursor:pointer;
+                    ">⟫</span>
+
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            const galleryImage = document.getElementById("galleryImage");
+
+            function showImage() {
+                galleryImage.src = images[currentIndex].src;
+            }
+
+            function nextImage() {
+                currentIndex++;
+                if (currentIndex >= images.length) currentIndex = 0;
+                showImage();
+            }
+
+            function prevImage() {
+                currentIndex--;
+                if (currentIndex < 0) currentIndex = images.length - 1;
+                showImage();
+            }
+
+            document.getElementById("nextBtn").onclick = nextImage;
+            document.getElementById("prevBtn").onclick = prevImage;
+
+            document.getElementById("closeBtn").onclick = closeGallery;
+
+            overlay.addEventListener("click", function(e) {
+                if (e.target === overlay) {
+                    closeGallery();
+                }
+            });
+
+            // KEYBOARD SUPPORT
+            document.addEventListener("keydown", function(e) {
+                if (!overlay) return;
+
+                if (e.key === "ArrowRight") {
+                    nextImage();
+                }
+                else if (e.key === "ArrowLeft") {
+                    prevImage();
+                }
+                else if (e.key === "Escape") {
+                    closeGallery();
+                }
+            });
+
+            function closeGallery() {
+                document.body.removeChild(overlay);
+                overlay = null;
+            }
+        }
+    </script>
+
+    <div class="manali-pg">
+        <div class="previous-page">
+            <h2 class="mp-h2">Himachal Pradesh, India</h2>
+            <img src="https://www.ntraveladvisor.com/wp-content/uploads/2022/08/Religious-Places-in-Himachal.jpg" class="np-img">
+            <a href="hp.html" target="_self">
+                <button class="pp-button">⟪ PREVIOUS</button>
+            </a>
+        </div>
+
+        <p> Rajasthan, known as the “Land of Kings,” is a destination where history, culture, and<br>
+            grandeur come alive 👑✨. From magnificent palaces and majestic forts to golden deserts<br>
+            and vibrant cities, Rajasthan offers an unforgettable travel experience. The rich heritage,<br>
+            colorful traditions, and architectural brilliance make it one of India’s most iconic tourist<br>
+            destinations. Whether you seek royal luxury or cultural exploration, Rajasthan promises a<br>
+            journey filled with timeless beauty.<br><br>
+
+            The state is home to stunning cities such as Jaipur 🩷, Udaipur 🌊, Jodhpur 💙, and<br>
+            Jaisalmer 🏰, each offering a unique charm. Jaipur dazzles with its pink architecture,<br>
+            Udaipur enchants visitors with its serene lakes, Jodhpur stands proudly with its blue<br>
+            houses and grand forts, while Jaisalmer mesmerizes with its golden sand dunes 🏜️. Every<br>
+            corner of Rajasthan tells a story of bravery, romance, and royal elegance.<br><br>
+
+            Rajasthan's cultural richness is reflected in its traditional music 🎶, folk dances 💃, colorful<br>
+            festivals 🎉, and delicious Rajasthani cuisine 🍛. Visitors can explore bustling local<br>
+            markets filled with handicrafts, jewelry, textiles, and souvenirs 🧵✨. The warm hospitality<br>
+            of the people adds a special touch, making travelers feel welcomed and valued<br>
+            throughout their stay.<br><br>
+
+            For adventure and unique experiences, Rajasthan offers desert safaris 🐪, hot air balloon<br>
+            rides 🎈, heritage walks 🚶, and wildlife exploration in Ranthambore National Park 🐅.<br>
+            From luxurious palace stays to peaceful desert sunsets 🌅, the destination perfectly blends<br>
+            tradition with modern comfort. Book your stay now 🏨 and immerse yourself in the royal<br>
+            elegance and vibrant spirit of Rajasthan. ✨👑<br><br><br>
+        </p>
+
+        <div class="next-page">
+            <h2 class="mp-h2">Kerela, India</h2>
+            <img src="https://assets.thehansindia.com/h-upload/2023/04/12/1346371-kerala.webp" class="np-img">
+            <a href="kerala.html" target="_self">
+                <button class="np-button">NEXT⟫</button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="first-destination">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.oMbjWeZ4hiR3lCghsxsaCQHaE8?w=768&h=513&rs=1&pid=ImgDetMain&o=7&rm=3" class="fd-img">
+        <h2 class="fd-h2">RoyalMaharana Palace Resort</h2>
+        <button class="desti-button-1">Vist More</button>
+    </div>
+
+    <div  class="second-destination">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1108489396730276428/original/2129a772-33ea-48be-a7e6-0ef2d7f00c7c.jpeg" class="fd-img">
+        <h2 class="fd-h2">The Furry Oasis</h2>
+        <button class="desti-button-2">Visit More</button>
+    </div>
+
+    <div class="third-destination">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/3a/49/e1/suite.jpg?w=1200&h=-1&s=1" class="fd-img">
+        <h2 class="fd-h2">Lakefront Palace Hotel</h2>
+        <button class="desti-button-3">Visit More</button>
+    </div>
+
+    <div class="fourth-destination">
+        <img src="https://www.ambujaneotia.com/storage/app/images/media/gallerydata/content_image/367492373660d57127a4e94.1617520417121502905.webp" class="fd-img">
+        <h2 class="fd-h2">The Pink Royal Heritage Villa</h2>
+        <button class="desti-button-4">Visit More</button>
+    </div>
+
+
+    <!-- booking form popup -->
+    <div id="bookingPopup" style="
+        display:none; 
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.5); 
+        z-index:999;
+        justify-content:center;
+        align-items:center;
+    ">
+        <div class="booking-container" style="
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            background:linear-gradient(
+                135deg,
+                #ffffff 25%,
+                #f0f0f0 50%,
+                #d6d6d6 100%   
+            );
+            border: 10px solid white;
+            color: white;
+            overflow: hidden;
+        ">
+
+            <span id="closeFormPopup" style="
+                position:absolute;
+                top:15px;
+                right:20px;
+                cursor:pointer;
+                font-size:20px;
+                font-weight:bold;
+                color:black;
+                z-index:2;
+            ">✖</span>
+
+            <h2 style="
+                text-align:center; 
+                margin-bottom:20px; 
+                font-size:40px; 
+                font-weight:bolder;
+                color:black;
+                text-shadow: 
+                    0px 1px 2px rgba(255, 255, 255, 0.6),  
+                    0px 2px 6px rgba(0, 0, 0, 0.35); 
+                letter-spacing: 2px;
+                position: relative;
+                z-index: 1;
+                text-decoration:underline;
+            ">
+                Booking Form
+            </h2>
+
+            <form id="bookingForm" style="text-align:left; position:relative; z-index:1; font-size:20px; color:black; font-weight:bolder;">
+                <label>Name:</label><br>
+                <input type="text" name="name" placeholder="Your Name" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;outline:none;" required><br>
+
+                <label>Phone Number:</label><br>
+                <input type="tel" name="phone" placeholder="Your Phone Number" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Email:</label><br>
+                <input type="email" name="email" placeholder="Your Email" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Special Request:</label><br>
+                <textarea name="request" placeholder="e.g., extra bed, late check-in..." style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;"></textarea><br>
+
+                <label>Check-in Date:</label><br>
+                <input type="date" name="checkin" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>Check-out Date:</label><br>
+                <input type="date" name="checkout" style="width:100%; padding:7px; margin-bottom:15px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>State:</label><br>
+                <input type="text" name="state" placeholder="Your State" style="width:100%; padding:7px; margin-bottom:20px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <label>City:</label><br>
+                <input type="text" name="city" placeholder="Your City" style="width:100%; padding:7px; margin-bottom:20px; font-size: 17px; border:2px solid black; box-shadow: 3px 3px 6px rgba(0,0,0,0.6), -1px -1px 2px rgba(50,50,50,0.5);outline:none;" required><br>
+
+                <button type="submit" style="
+                    width:100%;
+                    padding:12px;
+                    background:#0f2b46;
+                    color:white;
+                    border:none;
+                    border-radius:6px;
+                    font-size:18px;
+                    cursor:pointer;
+                ">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- confirmation popup -->
+    <div id="confirmationPopup" style="
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.7);
+        z-index:9999;
+        justify-content:center;
+        align-items:center;
+    ">
+        <div id="confirmationContent" style="
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            width:800px;
+            max-width:90%;
+            text-align:left;
+            position:relative;
+        ">
+            <span id="closeConfirmPopup" style="
+                position:absolute;
+                top:10px;
+                right:15px;
+                cursor:pointer;
+                font-size:20px;
+            ">✖</span>
+
+            <h2 style="text-align:center;">Booking Confirmation</h2>
+
+            <div id="confirmDetails" style="margin-top:20px;"></div>
+
+            <button onclick="printConfirmation()" style="
+                margin-top:20px;
+                width:100%;
+                padding:10px;
+                background:#0f2b46;
+                color:white;
+                border:none;
+                cursor:pointer;
+            ">Print</button>
+        </div>
+    </div>
+
+   
+    <script>
+        document.querySelector(".desti-button-1").addEventListener("click", function() {
+
+            //create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">    
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>RoyalMaharana Palace Resort - Udaipur RH</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Royal Maharana Palace Resort offers a royal heritage experience 
+                        with luxurious suites, grand architecture, traditional hospitality, 
+                        and world-class amenities. Enjoy royal dining, scenic views, and 
+                        a peaceful royal retreat atmosphere.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:520px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:overflow;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:20px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            }
+
+            // image slider images
+            const images = [
+                "https://tse4.mm.bing.net/th/id/OIP.oMbjWeZ4hiR3lCghsxsaCQHaE8?w=768&h=513&rs=1&pid=ImgDetMain&o=7&rm=3",
+                "https://asianitinerary.com/wp-content/uploads/2018/03/JW-Marriott-Jaipur-Resort-and-Spa-Royal-Pool-Villa-600x401.jpg",
+                "https://asianitinerary.com/wp-content/uploads/2018/03/JW-Marriott-Jaipur-Resort-and-Spa-Royal-Family-Room-600x391.jpg",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/324761236.jpg?k=819e710fac57039171b848bd8cba5d30dc1a7f0d40e47ce63d8083f3f9b01689&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/408953234.jpg?k=57533ea05af0f65f518e909e5c13c34820bcc1dbaa7a5f1acfa3a86a5de681cb&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/492711890.jpg?k=51068cc11b704280dda8226763f75e6cb596b12d65f11598fc511803383fa7b1&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/492711941.jpg?k=978f14c34ca05a10d7eed435c197f4bf277ff5d9e577d505f863b78f6b94d5d2&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/499822265.jpg?k=7997176709f29c32268eec76b58f006ebcf349063d3b4ce05c726c13eadf7a86&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/547074926.jpg?k=c9407af0330f0e2b93bac0ead6f999f25d3fa151eac2cc07931667e53ac2433c&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/186562870.jpg?k=2c41ac6d1558e63949f3b54b2e0674834f054baae0710fd34951b3cbfe8c74e9&o="
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-2").addEventListener("click", function() {
+
+            //create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">    
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>The Furry Oasis - Jaipur, Rajasthan</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        Lakefront Palace Hotel offers a luxurious stay with breathtaking views of Udaipur’s serene lakes.
+                        Experience royal comfort, elegant rooms, and traditional Rajasthani hospitality.
+                        Enjoy peaceful surroundings, fine dining, and a memorable lakeside getaway.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:530px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:overflow;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:20px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            }
+
+            // image slider images
+            const images = [
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1108489396730276428/original/2129a772-33ea-48be-a7e6-0ef2d7f00c7c.jpeg",
+                "https://tse2.mm.bing.net/th/id/OIP.LJnWnvX3NA9yj6cuAbVy9QHaLI?pid=ImgDet&w=474&h=712&rs=1&o=7&rm=3",
+                "https://tse3.mm.bing.net/th/id/OIP.CiKAAigRHEVBEnT17orWJAHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+                "https://tse3.mm.bing.net/th/id/OIP.4OTxAC9tFgQiSiqi4FXPqwHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3",
+                "https://tse4.mm.bing.net/th/id/OIP.qbj2bukmh7mvOOGZ1NsvIAHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/01ed926f-42de-4adb-87aa-4f9875290e9d.jpeg?im_w=1200",
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/f51c5314-ef97-4a34-9c00-24ee7213a01f.jpeg?im_w=720",
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/e90ebc8f-06f2-46d1-972d-a281a2d22177.jpeg?im_w=720",
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/e90ebc8f-06f2-46d1-972d-a281a2d22177.jpeg?im_w=720",
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/e90ebc8f-06f2-46d1-972d-a281a2d22177.jpeg?im_w=720",
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/e8f0817c-7430-4558-8213-9cc54d16a4ea.jpeg?im_w=720",
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/e8f0817c-7430-4558-8213-9cc54d16a4ea.jpeg?im_w=720",
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/a2770535-f68c-4172-95a7-e88c923dbf39.jpeg?im_w=720",
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/a817e4c3-6ec8-4a03-b316-b452d15e73bf.jpeg?im_w=720",
+                "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/57e1dcac-2a27-4059-8fa4-7c4c0c39dbc6.jpeg?im_w=720"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-3").addEventListener("click", function() {
+
+            //create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            // popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">    
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>Lakefront Palace Hotel - Udaipur, RH</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        The Furry Oasis offers a peaceful and pet-friendly stay in the heart of Jaipur, Rajasthan.
+                        Enjoy comfortable rooms, open spaces for your furry friends, and warm hospitality.
+                        Experience a relaxing getaway where both you and your pets feel at home.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:530px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:overflow;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:20px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            }
+
+            // image slider images
+            const images = [
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/3a/49/e1/suite.jpg?w=1200&h=-1&s=1",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/41454538.jpg?k=1f307def03341b41b296532f4ed557df07ce14d7df13049dc1a2caf805495f08&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/714560618.jpg?k=4ccf2dd6e54bcfe4142b0510dfc327627e0f870df3b0cbeda4399db6e46e761f&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/682852767.jpg?k=818d8c519768e1a499b9c26a9f7fa3216ee6cd44bdb9c4efde68769c023736eb&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/219626319.jpg?k=43c016d849594f577f32d6f5945c4e8533325da7ccb3814a405f68794c7c107d&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/219625804.jpg?k=2ecec9cb24573f13c85b6c4f415fa8b605cc27b66d6e98fbf4039f393bba11f6&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/219625797.jpg?k=404d4a58a724228b47da969ac5ebf1b323580f76878ef9bd6e300cb937b676b6&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/113062232.jpg?k=af4687daf774b1aa7213b7f2d69f11804676fc5b460778e347c7742a6597cb56&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/17072016.jpg?k=0ea66ce6fe66ef770569e405c73b291b197d25aae2f32a780711e1ed852efb07&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/17071989.jpg?k=911b16536b038c6be04180c1f1a63ebda66659a78921980d45807252ffedfb66&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/41453816.jpg?k=38d2445ca9072bd1ef082341f3bb454e0b5724b6852cf5b974ff54f62476a1ba&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/41453923.jpg?k=a6c8cb69302bf694e9e6d497c4b02cf19a0cc9d541e86af3b9e66ace766bea7e&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/682852782.jpg?k=a9ee19b012ecc2805e3758b4cecc3227189103dde0968c49f8fb5f6b0c22d195&o=",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/682852961.jpg?k=af68501bb699946071fc133e915113f637a2fc62de064c35f0ea9d8349da61e5&o="
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.querySelector(".desti-button-4").addEventListener("click", function() {
+
+            //create overlay
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(0,0,0,0.7)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.zIndex = "9999";
+
+            // popup content
+            overlay.innerHTML = `
+                <div style="
+                    width: 90%;
+                    max-width: 1000px;
+                    height: 90%;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                ">    
+                    <span id="closePopup" style="
+                        position:absolute;
+                        top:15px;
+                        right:20px;
+                        cursor:pointer;
+                        font-size:20px;
+                        font-weight:bold;
+                    ">✖</span>
+
+                    <h1>The Pink Royal Heritage Villa - Jaipur</h1>
+
+                    <p style="margin:15px 0; color:#555; font-weight:600; font-size:20px;">
+                        The Pink Royal Heritage Villa offers a charming and royal stay in the heart of Jaipur.
+                        Experience traditional Rajasthani architecture blended with modern comfort and elegance.
+                        Enjoy peaceful surroundings, warm hospitality, and a truly heritage-inspired getaway.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:530px; overflow:hidden; border-radius:10px; margin-top:40px;">
+                        <img id="sliderImage" src="" style="width:100%; height:100%; object-fit:overflow;">
+                    </div>
+
+                    <button id="bookNowBtn" style="
+                        margin-top:20px;
+                        padding:10px 25px;
+                        border:none;
+                        background:#0f2b46;
+                        color:white;
+                        border-radius:6px;
+                        cursor:pointer;
+                        font-size:16px;
+                    ">Book Now</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            // close popup
+            document.getElementById("closePopup").onclick = function() {
+                document.body.removeChild(overlay);
+            }
+
+            // image slider images
+            const images = [
+                "https://www.ambujaneotia.com/storage/app/images/media/gallerydata/content_image/367492373660d57127a4e94.1617520417121502905.webp",
+                "https://tse3.mm.bing.net/th/id/OIP.8OXHwmmQFMUZGZPTrGEI_QHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3",
+                "https://tse2.mm.bing.net/th/id/OIP._afq1jM1P_VyvJEG_mDqhwHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3",
+                "https://tse2.mm.bing.net/th/id/OIP.U20tXuaUMAjnfOcJ6-NlTQHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3",
+                "https://tse4.mm.bing.net/th/id/OIP.Cx1pZZl_btNDE3_j0Os7rgHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3"
+            ];
+
+            let index = 0;
+            const slider = document.getElementById("sliderImage");
+            slider.src = images[index];
+            let sliderInterval = setInterval(() => {
+                index++;
+                if (index >= images.length) index = 0;
+                slider.src = images[index];
+            }, 1000);
+            // Book Now button opens booking form
+            const bookingPopup = document.getElementById("bookingPopup");
+            document.getElementById("bookNowBtn").onclick = function() {
+                bookingPopup.style.display = "flex"; // show booking form
+            };
+        });
+
+        // Close booking form
+        document.getElementById("closeFormPopup").onclick = function() {
+            document.getElementById("bookingPopup").style.display = "none";
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const bookingForm = document.getElementById("bookingForm");
+            const bookingPopup = document.getElementById("bookingPopup");
+            const confirmationPopup = document.getElementById("confirmationPopup");
+
+            // form submit
+            bookingForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const formData = new FormData(bookingForm);
+
+                fetch("goa_booking.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(data => {
+
+                    console.log("SERVER RESPONSE:", data); // debugging
+
+                    if (data.status === "success") {
+
+                        // close booking form
+                        bookingPopup.style.display = "none";
+
+                        // fill confirmation details
+                        document.getElementById("confirmDetails").innerHTML = `
+                            <p><b>Booking ID:</b> ${data.booking_id}</p>
+                            <p><b>Name:</b> ${data.name}</p>
+                            <p><b>Phone:</b> ${data.phone}</p>
+                            <p><b>Email:</b> ${data.email}</p>
+                            <p><b>Check-in:</b> ${data.checkin}</p>
+                            <p><b>Check-out:</b> ${data.checkout}</p>
+                            <p><b>State:</b> ${data.state}</p>
+                            <p><b>City:</b> ${data.city}</p>
+                            <p><b>Request:</b> ${data.request}</p>
+                        `;
+
+                        // show confirmation popup
+                        confirmationPopup.style.display = "flex";
+
+                        // reset form
+                        bookingForm.reset();
+
+                    } else {
+                        alert("❌ Error: " + data.message);
+                    }
+                })
+                .catch(err => {
+                    console.error("Fetch Error:", err);
+                    alert("⚠️ Something went wrong");
+                });
+            });
+
+            // close booking popup
+            document.getElementById("closeFormPopup").onclick = function () {
+                bookingPopup.style.display = "none";
+            };
+
+            // close confirmation popup
+            document.getElementById("closeConfirmPopup").onclick = function () {
+                confirmationPopup.style.display = "none";
+            };
+
+        });
+
+        // print function
+        function printConfirmation() {
+            const content = document.getElementById("confirmationContent").innerHTML;
+
+            const printWindow = window.open('', '', 'width=800,height=600');
+
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>Booking Receipt</title>
+                </head>
+                <body>
+                    ${content}
+                </body>
+                </html>
+            `);
+
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

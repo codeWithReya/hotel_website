@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_12.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pet-friendly</title>
+</head>
+<body>
+    <header>
+        <img src="https://www.lakedistricthotels.net/assets/core/images/innonthesquare/dog-friendly.jpg" class="headerImg">
+        <h1 class="heading">Explore PetFriendly</h1>
+    </header>
+
+    <section class="first">
+        <img src="https://pix10.agoda.net/property/34736334/0/3b2bc5e04ef903d8618d6328a0ad66db.jpeg?ce=0&s=1024x">
+        <p class="firstText">
+            <h3>The Paw Haven Retreat - Bangalore, Karnataka</h3>
+            <h5>A cozy, modern hotel in Bangalore offering pet beds, open play areas, and an in-house pet café. Perfect <br>for travelers who want comfort without leaving their furry friends behind🔸<br>
+                Price Range: ₹3,500 - ₹8,000 per night<br>
+                Ideal For: Pet families • Weekenders • Business travelers with pets<br>
+                <b>🔍Pet play zone🔍Pet café🔍Private balcony rooms🔍Grooming services</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="second" id="lonavalaSection">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/114062096.jpg?k=4691aaec36c0ed9d014abc899a1257ba4bd986cacd02595bd4f7bfa42dd989e5&o=">
+        <p class="firstText">
+            <h3>Green Paws Eco Resort - Lonavala, Maharashtra</h3>
+            <h5>A peaceful escape surrounded by hills, open lawns, and walking trails. Perfect for nature lovers who <br>want a relaxing space for their pets to roam freely🔸<br>
+                Price Range: ₹4,000 - ₹10,000 per night<br>
+                Ideal For: Nature lovers • Couples with pets • Families with pets<br>
+                <b>🔍Huge lawn area🔍Nature walking trails🔍Cottage-style rooms🔍Pet meals available</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+    <script>
+        window.addEventListener("load", function(){
+            if(window.location.hash === "#lonavalaSection"){
+                const section = document.getElementById("lonavalaSection");
+                section.classList.add("highlight");
+                section.scrollIntoView({
+                    behavior:"smooth"
+                });
+            }
+        });
+    </script>
+
+    <section class="third" id="pwssSection">
+        <img src="https://www.global-gallivanting.com/wp-content/uploads/2022/01/Seashell-Beach-Suites-Goa-01-690x460.jpg">
+        <p class="firstText">
+            <h3>Purr & Woof Seaside Stay - Goa</h3>
+            <h5>Just a few steps from the beach, this stay offers sea-view rooms, pet-friendly beaches, and open dining. <br>A perfect tropical escape where your pet can enjoy the sand and waves too🔸<br>
+                Price Range: ₹3,000 - ₹9,000 per night<br>
+                Ideal For: Beach lovers • Pet parents • Young couples<br>
+                <b>🔍Beach access🔍Sea-view balconies🔍Pet bathrooms🔍Outdoor dining</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="fourth" id="hpcSection">
+        <img src="https://img.vistarooms.com/space/zseaNd6So15QnGRkRkFyL0S5FVLpWEWeFQKF8EAv.jpeg">
+        <p class="firstText">
+            <h3>Himalayan Pet Chalet - Manali, Himachal Pradesh</h3>
+            <h5>A wood-style chalet in the hills of Manali with private yards, warm fireplaces, and dedicated pet zones. <br>Ideal for cold-weather lovers and peaceful mountain stays🔸<br>
+                Price Range: ₹4,500 - ₹12,000 per night<br>
+                Ideal For: Snow lovers • Families • Pet-friendly trekking trips<br>
+                <b>🔍Mountain-view rooms🔍Fireplaces🔍Private pet yard🔍Trek + pet-friendly trails</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="fifth" id="tfoSection">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1108489396730276428/original/2129a772-33ea-48be-a7e6-0ef2d7f00c7c.jpeg">
+        <p class="firstText">
+            <h3>The Furry Oasis - Jaipur, Rajasthan</h3>
+            <h5>A royal-inspired hotel offering spacious courtyards, shaded rest areas, and pet caretakers. Designed for <br>those who want a blend of heritage beauty and pet convenience🔸<br>
+                Price Range: ₹2,500 - ₹7,000 per night<br>
+                Ideal For: Heritage lovers • Families • Long weekend trips<br>
+                <b>🔍Heritage interiors🔍Large courtyard🔍Pet caretakers🔍Rooftop dining</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="sixth" id="wwfsSection">
+        <img src="https://img.vistarooms.com/gallery/villa-misty-oaks-85bf98.jpg">
+        <p class="firstText">
+            <h3>WoofWood Forest Stay - Ooty, Tamil Nadu</h3>
+            <h5>A wooden cabin property surrounded by forests and misty hills. This calm escape gives pets enough free <br>space and nature trails to enjoy🔸<br>
+                Price Range: ₹3,000 - ₹8,500 per night<br>
+                Ideal For: Nature escapes • Couples • Pet trekking<br>
+                <b>🔍Forest-view cabins🔍Pet-friendly walking paths🔍Bonfire areas🔍Indoor-outdoor lounges</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="seventh">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.a6goMYoamSxDZh2301jgqAHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3">
+        <p class="firstText">
+            <h3>Paws & Paradise Retreat - Rishikesh, Uttarakhand</h3>
+            <h5>A peaceful riverside hotel offering open grounds, pet swimming zones, and peaceful mountain views. Ideal <br>for peaceful stays and nature therapy with pets🔸<br>
+                Price Range: ₹3,800 - ₹9,500 per night<br>
+                Ideal For: Spiritual getaways • Couples • Adventure lovers<br>
+                <b>🔍Riverside deck🔍Pet swimming zone🔍Yoga lawn🔍Mountain-view rooms</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="eirth">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.KD4uzU7urdMKkE8eN5zWdgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">
+        <p class="firstText">
+            <h3>BarkBay Urban Suites - Mumbai, Maharashtra</h3>
+            <h5>Located in the heart of Mumbai, this hotel offers compact yet stylish rooms with dedicated pet areas and <br>access to a rooftop pet lounge🔸<br>
+                Price Range: ₹4,000 - ₹11,000 per night<br>
+                Ideal For: City travelers • Pet owners on business trips<br>
+                <b>🔍Rooftop pet lounge🔍Modern interiors🔍Pet food delivery🔍24/7 assistance</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="ninth">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.tnhALT8NwLwyvy20WwVZXAHaE6?pid=ImgDet&w=474&h=314&rs=1&o=7&rm=3">
+        <p class="firstText">
+            <h3>The Furry Cliff Nest - Vizag, Andhra Pradesh</h3>
+            <h5>Overlooking the Bay of Bengal, this stay offers open terraces, sea-facing rooms, and safe outdoor pacing <br>areas for pets🔸<br>
+                Price Range: ₹3,200 - ₹8,000 per night<br>
+                Ideal For: Beach lovers • Peaceful retreats • Pet-friendly getaways<br>
+                <b>🔍Sea-view rooms🔍Terrace lounge🔍Open play area🔍Coastal walking path</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="tenth">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/2a/04/c5/getlstd-property-photo.jpg?w=1400&h=-1&s=1">
+        <p class="firstText">
+            <h3>Desert Paw Camp Resort - Jaisalmer, Rajasthan</h3>
+            <h5>Experience Jaisalmer's golden dunes in luxury Swiss tents with open desert grounds for pets. Enjoy camel <br>rides, folk shows, and stunning sunsets with your fur buddy🔸<br>
+                Price Range: ₹4,000 - ₹15,000 per night<br>
+                Ideal For: Adventure lovers • Couples • Desert vacations with pets<br>
+                <b>🔍Luxury tents🔍Camel & jeep safari🔍Desert walking area🔍Cultural performances</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <div class="bookingPage" id="bookingForm" style="display: none;">
+        <form method="get" action="booking.php" id="bookingnow">
+            <h3>Book Now</h3>
+            <label>Name:</label>
+            <input type="text" name="name" required placeholder="Anajli Goninka">
+            <label>Phone Number:</label>
+            <input type="tel" name="phone" required>
+            <label>E-mail:</label>
+            <input type="email" name="email" required placeholder="abc@gmail.com">
+            <label>Special Request:</label>
+            <input type="text" name="request" placeholder="e.g., extra bed, late check-in, food preferences.">
+            <label>Check-in/Check-out Date:</label>
+            <input type="date" name="checkin" class="date" id="bookingCheckIn" required>
+            <input type="date" name="checkout" class="date2" id="bookingCheckOut" required>
+            <input type="hidden" name="accommodation" value="Pet-Friendly">
+            <label class="country">Country:</label>
+            <input type="text" name="country" required placeholder="e.g., India, Nepal, America, etc...">
+            <label>State:</label>
+            <input type="text" name="state" required placeholder="based on country...">
+            <button type="submit" id="submit">Book Now</button>
+        </form>
+    </div>
+
+    <div class="confirmPage">
+        <div class="successTick"></div>
+        <h2>Your Booking is Confirmed</h2>
+    </div>
+
+    <script>
+        document.getElementById("bookingnow").addEventListener("submit", function(e){
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            // 🔍 DEBUG
+            for (let pair of formData.entries()) {
+                console.log(pair[0] + ": " + pair[1]);
+            }
+
+            fetch("booking.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log("SERVER RESPONSE:", data);
+
+                if (data.status === "success") {
+                    setTimeout(() => {
+                        showInvoicePopup(data); // ✅ direct data pass karo
+                    }, 2700);
+                } else if (data.status === "empty") {
+                    alert("Please fill all fields ❌");
+                } else {
+                    alert("Booking failed ❌");
+                }
+
+
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Server error ⚠️");
+            });
+        });
+    </script>
+    <script>
+        function showInvoicePopup(details) {
+
+            const popup = document.createElement("div");
+
+            popup.style.position = "fixed";
+            popup.style.top = "0";
+            popup.style.left = "0";
+            popup.style.width = "100%";
+            popup.style.height = "100%";
+            popup.style.background = "rgba(0,0,0,0.7)";
+            popup.style.display = "flex";
+            popup.style.justifyContent = "center";
+            popup.style.alignItems = "center";
+            popup.style.zIndex = "999";
+
+            popup.innerHTML = `
+                <div id="invoiceContent" style="
+                    background:white;
+                    padding:25px;
+                    border-radius:12px;
+                    width:400px;
+                    font-family:Arial;
+                ">
+                    <h2 style="text-align:center;">Booking Confirmed 🎉</h2>
+                    <hr>
+
+                    <p><b>Booking ID:</b> ${details.booking_id}</p>
+                    <p><b>Name:</b> ${details.name}</p>
+                    <p><b>Phone:</b> ${details.phone}</p>
+                    <p><b>Email:</b> ${details.email}</p>
+
+                    <p><b>Accommodation:</b> Pet-Friendly</p>
+
+                    <p><b>Check-in:</b> ${details.checkin}</p>
+                    <p><b>Check-out:</b> ${details.checkout}</p>
+
+                    <p><b>Country:</b> ${details.country}</p>
+                    <p><b>State:</b> ${details.state}</p>
+
+                    <p><b>Request:</b> ${details.request || "None"}</p>
+
+                    <hr>
+                    <p style="text-align:center;">Thank you for booking 💙</p>
+
+                    <button onclick="printInvoice()" style="
+                        width:100%;
+                        padding:10px;
+                        margin-top:10px;
+                        background:#4CAF50;
+                        color:white;
+                        border:none;
+                        border-radius:8px;
+                        cursor:pointer;">
+                        Download / Print
+                    </button>
+
+                    <button onclick="this.closest('div').parentElement.remove()" style="
+                        width:100%;
+                        padding:10px;
+                        margin-top:10px;
+                        background:#ccc;
+                        border:none;
+                        border-radius:8px;
+                        cursor:pointer;">
+                        Close
+                    </button>
+                </div>
+            `;
+
+            document.body.appendChild(popup);
+        }
+        </script>
+        <script>
+            function printInvoice() {
+
+                const content = document.getElementById("invoiceContent").innerHTML;
+
+                const newWindow = window.open("", "", "width=800,height=600");
+
+                newWindow.document.write(`
+                    <html>
+                    <head>
+                        <title>Booking Invoice</title>
+                    </head>
+                    <body>
+                        ${content}
+                    </body>
+                    </html>
+                `);
+
+                newWindow.document.close();
+                newWindow.print();
+            }
+    </script>
+
+
+
+    <script>
+        function initSlider(sectionSelector, images) {
+            const section = document.querySelector(sectionSelector);
+            const img = section.querySelector("img");
+
+            img.style.objectFit = "cover";
+            img.style.width = "350px";
+            img.style.height = "230px";
+
+            let index = 0;
+
+            const leftArrow = document.createElement("div");
+            leftArrow.innerHTML = "&#10094;";
+            leftArrow.className = "slider-arrow left";
+
+            const rightArrow = document.createElement("div");
+            rightArrow.innerHTML = "&#10095;";
+            rightArrow.className = "slider-arrow right";
+
+            section.appendChild(leftArrow);
+            section.appendChild(rightArrow);
+
+            // 🔹 initial state
+            leftArrow.style.display = "none";
+            rightArrow.style.display = "block";
+
+            function updateArrows() {
+                if (index === 0) {
+                    leftArrow.style.display = "none";
+                    rightArrow.style.display = "block";
+                } 
+                else if (index === images.length - 1) {
+                    rightArrow.style.display = "none";
+                    leftArrow.style.display = "block";
+                } 
+                else {
+                    leftArrow.style.display = "block";
+                    rightArrow.style.display = "block";
+                }
+            }
+
+            rightArrow.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (index < images.length - 1) {
+                    index++;
+                    img.src = images[index];
+                    updateArrows();
+                }
+            });
+
+            leftArrow.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (index > 0) {
+                    index--;
+                    img.src = images[index];
+                    updateArrows();
+                }
+            });
+        }
+
+        initSlider(".first",[
+            "https://pix10.agoda.net/property/34736334/0/3b2bc5e04ef903d8618d6328a0ad66db.jpeg?ce=0&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/704968756.jpg?k=a2ac1eaaf126f4eab141a00481fd4aef3747fcc847a5c9e4f8677da1e9e4a81b&o=&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/704968730.jpg?k=3331f971e9f959c1801942cadb4e3c5fd14fcc78bad3776249ee1ffa862e9487&o=&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/704968750.jpg?k=a81811459702fae463bd936a6b5e7327504423a70eb60b39408b531b867e6e35&o=&s=1024x",
+            "https://pix8.agoda.net/hotelImages/34736334/-1/5321b42bc09957d992501714f1b51353.jpg?ce=0&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/398397317.jpg?k=fee6d8363b2cf83f6b16a8dbb942e446021b6832ba1a4f2ad1c744b99f3cf13b&o=&s=1024x",
+            "https://pix8.agoda.net/property/50866657/1257623640/0878d9bd6154b734a99eadbfe3074c84.jpeg?ce=2&s=1024x",
+            "https://pix8.agoda.net/property/34736334/0/e122dbe195777c9f4b68d3387650d3c2.jpeg?ce=2&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/398397267.jpg?k=01db8898596f0a6fbecbc0729686d690aef4553ddda170d199807b2998093c04&o=&s=1024x",
+            "https://pix8.agoda.net/hotelImages/34736334/0/e9d2d6a9e4a5b1dfc382d419ba9dfa13.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/34736334/-1/86017392dd7834e99c21bdf4b49eccc2.jpg?ce=0&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/605380384.jpg?k=fad231dce7ffe52a5025b1ca0d60ea0d23b68c4197dc406b3cdfae4f6c3536d8&o=&s=1024x",
+            "https://pix8.agoda.net/hotelImages/34736334/967437198/e9d7da6b072aec4d53aec4e24ce24c11.jpg?ce=0&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/403564061.jpg?k=d3fde50bc8d4559befbce84a1224406991ab20aecaac073f108ff886cd8a67f0&o=&s=1024x",
+            "https://pix8.agoda.net/hotelImages/34736334/0/c3de45f607f06036d5097376c84721bf.jpg?ce=0&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/584765719.jpg?k=410b5ee1b42d23c337d09501cd6c333be7f34c41a67a616d996ab162b0cab5e3&o=&s=1024x",
+            "https://pix8.agoda.net/hotelImages/34736334/-1/fe072c6bf701d5d7e8e60686e6f673f0.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/hotelImages/34736334/-1/e4cf291d467dd49a3fb8fc765f88ee3a.jpg?ce=0&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/584765718.jpg?k=649d95c5e3445c890506142d8602416222bb1417eb8566283ee36e38417bc7b2&o=&s=1024x",
+            "https://pix8.agoda.net/property/34736334/0/a22979eb42b561df4ff048ac4a3b7316.jpeg?ce=2&s=1024x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/398398988.jpg?k=af44401ae78923761a6c0795fc5bd3694ef88622206512bd7d59879e4d57383e&o=&s=1024x",
+            "https://pix8.agoda.net/hotelImages/34736334/-1/54020b31baf620e0f6768e6f473e44fe.jpg?ce=0&s=1024x",
+            "https://pix8.agoda.net/property/34736334/0/e122dbe195777c9f4b68d3387650d3c2.jpeg?ce=2&s=1024x"
+        ])
+
+        initSlider(".second",[
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/114062096.jpg?k=4691aaec36c0ed9d014abc899a1257ba4bd986cacd02595bd4f7bfa42dd989e5&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/141994464.jpg?k=78be6d5be59136b4adcd0a905441e6ba183c0b61fa52630215586ab2c92da50b&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/351774578.jpg?k=588a9391abaf05b16eca17a95c852d8633f842d894f2dde82829f08e2463e16e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/197561578.jpg?k=296ea8add475dce014a651b389a5baacc090af9401e17e86a1d58949941fb0fd&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/22396453.jpg?k=80a714d0485ad6aada8acc9be5b13a11224a4a9db90dddc02393ee7b28081977&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/351715962.jpg?k=0bb857616aa0b05c01dc812bfaac7ef2b667379a828c270ee68a0e6489e178b7&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/237056313.jpg?k=799adfabc4c2235fe1a6d1de4fb854c4c55bef95f974e76abba69a3dd447db9c&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/197561637.jpg?k=66c8c35baa1505ee4ed4a46261a988eaa6f510261c3690ceb9e97cd40e8e5180&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/247324749.jpg?k=5cbb0cb1257ad5d7768e9652384ee6a05d040ee6dfba58750bef5a5699a573ee&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/247326269.jpg?k=ca4dc2e17f8729f0aa2b0c4f12f9af1a934af11c61ad42c7eafe6a290689a09d&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/247326269.jpg?k=ca4dc2e17f8729f0aa2b0c4f12f9af1a934af11c61ad42c7eafe6a290689a09d&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/237056333.jpg?k=c4141a26570ae27be3260b87aaa880c9388e7085c45c6e3d7175e014979aa73f&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/247325268.jpg?k=2b59ad724cfaeba6df3dcfe1d3a02ef0c2dad98ce0f630e9b485d28e784e9af1&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/107565394.jpg?k=222fe6a2b0677fa3c42535645f14c3d4cdbd2027b86ed6fc2912a92f3fa38db4&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/205122613.jpg?k=7a5ed3db6b7af9a861879678bf549e358d2b3e9a14ba9b5dc21c7751af5697ef&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/197561143.jpg?k=b89b499d706363dbcb51c604a13f4fe9079ab1f688afb04a89717a6baf1f8905&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/106623342.jpg?k=21352580fda189c9ec3afe12d0dfad40de278516784e504a7bbc0c136e34fd9c&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/22395347.jpg?k=403765c999b1850bac4d073bb90dd02c7ed7f6da0ffd8fd7e19ab475fbbe6a79&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/114061884.jpg?k=15baf0202fbbc491a8deb027c1958b6d72c6ad2cd61a4506b17c5d97d5ee545b&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/107570096.jpg?k=102ed0599d0c06c81a0d1b4be65dfb709dda7152c257675167b9c6454eb2889e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/99331956.jpg?k=ec4e7e16eee808d0fc6f9d7be5267e30bddca11f20a8ae7f5621f5cf4bbdb1e8&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/22395877.jpg?k=073912f08cf3748ab1a0d4023b63f0fc84063eb8a449b2a3c6b41abad2212786&o="
+        ])
+
+        initSlider(".third",[
+            "https://www.global-gallivanting.com/wp-content/uploads/2022/01/Seashell-Beach-Suites-Goa-01-690x460.jpg",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934174.jpg?k=d770b75cee9c2670a79809bf4b71d4ebac44facbf081ab80fb897ba2ee6c1368&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934173.jpg?k=8a3e48a4e13d847cb4fcabeb03aa489753497e1b803ea4a45c556cb9f219ae6e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934176.jpg?k=3398891a038a7f77401a1385415b3932793fbfeb62ac0fab24e024d7ea9a9057&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934175.jpg?k=ecdd3f139bd0d18cd1c7f6eaa820eee8fdd0e1c7ff7f4bfed5702369809e799c&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934169.jpg?k=ba8e4e186ee3754ac02d54ea455ca2a8ab22882cad3564420bd494e9c73a4778&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934233.jpg?k=91174a96f1259b7f5d85212ad7325d286c167dae2a66be565059c628848a46fb&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934232.jpg?k=357104c2ec952b2ff30b64329d80564e724a45741ef79c30f8854de22fb8eb08&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934237.jpg?k=49ead34e9645d7d85c61735fadacfb20bad29ff8bd3a7b883b1f8dd9427b5e0d&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934291.jpg?k=3c3c53a2643178dee48aff7ed3f9e112b9251db7688e097519fb2fa64d2aadc2&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934292.jpg?k=ca7e51ffbe05eb8675cd044fc6bdd552899a45c81eb1502acf53bf0dd8e62c58&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934293.jpg?k=82503f938f268819f5076a7e48fe7f9a3b4a3660444fa4cbc7da549660b7cab2&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934297.jpg?k=3575967105da07cad18bf5e1cd0e5d00896ecb86fad6a8a8655869ecde3ab3ba&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/489934167.jpg?k=3cc38e4f9b8f98ec92073bef45ce5524abb591c9dd22b6ddd888ff0050e069d2&o="
+        ])
+
+        initSlider(".fourth",[
+            "https://img.vistarooms.com/space/zseaNd6So15QnGRkRkFyL0S5FVLpWEWeFQKF8EAv.jpeg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-abc49a.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-2e1be7.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-1b9a60.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-678ac6.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-176394.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-d5074a.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-9f8192.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-8e195b.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-fcf2b8.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-53f8b5.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-3ce181.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-0beb0d.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-1f2a59.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-0f73ed.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-c7d8d2.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-25721e.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-25721e.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-6c0b21.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-6c0b21.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-0d9f23.jpg",
+            "https://img.vistarooms.com/gallery/himalayan-retreat-4638e5.jpg"
+        ])
+
+        initSlider(".fifth",[
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1108489396730276428/original/2129a772-33ea-48be-a7e6-0ef2d7f00c7c.jpeg",
+            "https://tse2.mm.bing.net/th/id/OIP.LJnWnvX3NA9yj6cuAbVy9QHaLI?pid=ImgDet&w=474&h=712&rs=1&o=7&rm=3",
+            "https://tse3.mm.bing.net/th/id/OIP.CiKAAigRHEVBEnT17orWJAHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+            "https://tse3.mm.bing.net/th/id/OIP.4OTxAC9tFgQiSiqi4FXPqwHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3",
+            "https://tse4.mm.bing.net/th/id/OIP.qbj2bukmh7mvOOGZ1NsvIAHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/01ed926f-42de-4adb-87aa-4f9875290e9d.jpeg?im_w=1200",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/f51c5314-ef97-4a34-9c00-24ee7213a01f.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/e90ebc8f-06f2-46d1-972d-a281a2d22177.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/e90ebc8f-06f2-46d1-972d-a281a2d22177.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/e90ebc8f-06f2-46d1-972d-a281a2d22177.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/e8f0817c-7430-4558-8213-9cc54d16a4ea.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/e8f0817c-7430-4558-8213-9cc54d16a4ea.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/a2770535-f68c-4172-95a7-e88c923dbf39.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/a817e4c3-6ec8-4a03-b316-b452d15e73bf.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-1070626055307876801/original/57e1dcac-2a27-4059-8fa4-7c4c0c39dbc6.jpeg?im_w=720"
+        ])
+
+        initSlider(".sixth",[
+            "https://img.vistarooms.com/gallery/villa-misty-oaks-85bf98.jpg",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521157.jpg?k=2253ec74541ed1dc14adf9ede4392f80fe5d6153de22c8c08c51fe909027c917&o=",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521152.jpg?k=bef3e9c6e7c4b6e70540251384645878c7543f3effb8b211de7ec85b2d6bc734&o=",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521156.jpg?k=0d06d3de16093e24a16abf07f1bcad143770ec96eff0585817fafe09c1e2100c&o=",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521148.jpg?k=f4d551dca36aa3dea408a113afcdf0cf0172a5815b2f92e674538e47a7e5b6dc&o=",
+            "https://photos.bringfido.com/lodging/2/4/7/2067742/2067742_90259974.jpg?size=full&density=2x",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521163.jpg?k=aa01b6131aea69a8de9b37a88b7f3154db2b1e0b9824aa6ec590ee9f1dc26318&o=",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521151.jpg?k=a6ed2c1b57063a526d6ed40b7c3b58945fd21f0ec72beb9180e4f012b5da2dd7&o=",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521160.jpg?k=a728ed938741ede13cc7c4449c313d835e309288d638ce1076b777f766ff6400&o=",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521158.jpg?k=8b930bc5285184abd6f96d21c4fdd54be621a0a444d46e8ba9cd737ec9ef9f3f&o=",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521155.jpg?k=2dcc044634e84fb5b49279d414959d62721ce893668cfd1c6c50df9fd38c0ad2&o=",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521165.jpg?k=3dbcf800567a666b08719c236e8fe8dae65a6cd4d3a0a864f07276ad38cb340f&o=",
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/449521159.jpg?k=317c7a8aab1addaf23bff45c04177583b22c9aa7b6a5931d1c320747fca69d57&o="
+        ])
+
+        initSlider(".seventh",[
+            "https://tse3.mm.bing.net/th/id/OIP.a6goMYoamSxDZh2301jgqAHaE8?pid=ImgDet&w=474&h=316&rs=1&o=7&rm=3",
+            "https://tse2.mm.bing.net/th/id/OIP._9OHsaCHm-CVg5svcfrvbwHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3",
+            "https://tse2.mm.bing.net/th/id/OIP._OVsgSXV5gzEXSeOMX3G3gHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3",
+            "https://tse1.mm.bing.net/th/id/OIP.80ktPhq76QiHxnjHl4DFcAHaEm?pid=ImgDet&w=474&h=294&rs=1&o=7&rm=3",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/547155393.jpg?k=0c2b622e61907a6b43d767fe3f618746441d863d8103ade655826df738941435&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/415859645.jpg?k=49ae73960a685d3d7d881889b8255a5bca6808a51ebf2798fbe06feb5eef2bf3&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/415860630.jpg?k=e1fdaced0e01e9809ea480096e57cc46300346dda681f5508a7a77c56913cebc&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/415859771.jpg?k=3e0a455e16d80e530dc94e6bd237a2f74cd3174bc880b2b57d0c5b0f732be730&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/547155349.jpg?k=ab9387df1fb2d617955419bfcf2301b49a14e9c82f2a6ad2d2c4d25776229104&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/168970430.jpg?k=79d88bcb01ab61c9ce295985df408fe3bf9d024760d47525606dc526f544ffb1&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/168946755.jpg?k=54e98b2c21c8266d09d22ad30f5e9a0268ae69406a8f74c94e73e818fc81668b&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/168946755.jpg?k=54e98b2c21c8266d09d22ad30f5e9a0268ae69406a8f74c94e73e818fc81668b&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/168943711.jpg?k=c00ad4a48c3c7d45ecb9a6ae09287d6c3e0c735a7739b33dfd549c282bbc65ed&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/168943039.jpg?k=512e5963a88ed36940d2fd8c3ddb438e166cebef6b0dd92e1f9374692de988ba&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/168968532.jpg?k=47a4f19503ea3108646d836fb59c4865b6179edd0dfcc6e890bbc01e2820e9d0&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/168944250.jpg?k=764bb24dd3d8cae1f5f2dd2b5f1bc40f29684a1257959b1ddacbb7bb8a775929&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/215584175.jpg?k=1a27eaef664dfa2faa1cec6589c32c8d45ecfa96e1906dd6e6728a1855fc130e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/215584175.jpg?k=1a27eaef664dfa2faa1cec6589c32c8d45ecfa96e1906dd6e6728a1855fc130e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/215584172.jpg?k=a39aea2ad575b89d1d52d56baee392bf91e77a6f13728de49ccf559755fdfb87&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/269910788.jpg?k=d31446f2ece4a851cf9b1c53044d7337387f5596a9e7c595c06219be12743642&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/269911121.jpg?k=1b5a9aa3ef4e5def6fce9d5458f3149f85bf3ff3af5741bd9d24ed8254c6896b&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/168981453.jpg?k=84c2ff4bc27639d285726b88fd2a5718cdacb9720bd5cc4e03dfe4b4e15c7282&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/168981453.jpg?k=84c2ff4bc27639d285726b88fd2a5718cdacb9720bd5cc4e03dfe4b4e15c7282&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/215583125.jpg?k=333ef01cd45646114e43cc6af357d1162c0725cd1016d1e76450363b23941d1f&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/215583620.jpg?k=5f0787575e4569c2687b47c50591501d360775a5753a50eaf4789dddf2fec34a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/415859667.jpg?k=7881c87dae57c21d474a2cb868c8db4a57dfed6d24db248f7cc3815917ccfdc1&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/674700957.jpg?k=24c3c7556f3840ddbc9bf75850475ce46fcc10306a1c4cb2e27b4e1d48b8aaf1&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/674701832.jpg?k=9c75555f8424e824b0a2b0d4a19ecef52eab0e26603e65dad8ebba375b79f18e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/674701834.jpg?k=9680b1313f09537be201d506ace29902bc7c93f8ba09dfaea753dfc6ba9f9f50&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/674701842.jpg?k=7957e078fa3b502bd11a9be3043ae69bb1b430a5076b63552e1f794e0fac9c15&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/674701846.jpg?k=b065635ed89665c5f3a2b33658030aa90d43814c925f0edadc492402e8bef645&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/674701848.jpg?k=4bdd5fddc2bf1eea1284c808a7c49f12693d51532821c2ece0153474de97f6fd&o="
+        ])
+
+        initSlider(".eirth",[
+            "https://tse4.mm.bing.net/th/id/OIP.KD4uzU7urdMKkE8eN5zWdgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403347.jpg?k=a28e7bdb645b32f5a6ef109b0382215728c9272a3266b4746737f6958f198d1a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/533693066.jpg?k=aaa4dcbe095dca2b9a9c543e845b98d9920aae80e25491387070eecdf2897520&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/550249154.jpg?k=2d296f157c541e17ef5c3768c17e99005b72384640971cc6adb118d1402d0963&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472420299.jpg?k=35b0619160aa988623aa43ac16fb2e824e59fd33c22e380e4938df8cdd527efb&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403400.jpg?k=36b78ad2d1a897a73d119c670cbba45911f789abfe50a5920ea250464c1d17a5&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403347.jpg?k=a28e7bdb645b32f5a6ef109b0382215728c9272a3266b4746737f6958f198d1a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/473358043.jpg?k=d9e5e33a12f189b6e077a62dc4226c53e5d44abcbe5498f6365aea003a718863&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403205.jpg?k=2a28c0a96d04dc078f8eaf7bebaf308e7e56a5f9d3d14a88166984e029deec5b&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403606.jpg?k=55ec6988f4c6b1ed2a5c80a101393ad34cc31fd04e0e430d7299f848d60b9cdb&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403678.jpg?k=c50368e897cbc3f99270381dea4b725c3d098893d5d59f4241a249e9cf75229a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403297.jpg?k=a95c6383829c23693fcc20cd479e054f7e6739c2b4848f953d3e600696bde581&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/380569795.jpg?k=e8e1387a2aa829c7ae6b59c99460c54f5b4dd1ff999b8926171abe36d9d7f6f4&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403369.jpg?k=270d9df4ef7791ca70a2b5b19ac6ff1a5053b4bb75436aab68460b51d10a7502&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/380576142.jpg?k=4c4d34661e2ea62ab2418ff9531d06723dee7a74a657c48316b7bd44d5e7c879&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/380576211.jpg?k=e4b1561794686632304693b5fe1ba9b9ad1a19f6216ae5496929c4f1b7214de1&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/414228321.jpg?k=04f43fd12b52c19a02992852a1f1d8feffad437ea3f0b22098827e7f518ce7f2&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/414228310.jpg?k=4a67c31ba21037f6ce31966dbaaec5d35073d95dedc60525c605278911e89cab&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/463267311.jpg?k=0678e1022446fa5fd692d661b8f721bfcd9ef91c658bbcdba59d91bc76c666a5&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/464284420.jpg?k=7b6e9e74ae61a0db71f572008dcdbafbda450cadb5560375992b223bf559dd42&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403396.jpg?k=7c4fb02bd350a57fbb0cea940e13b90472193f2f46f1c1cca013957bf93e6549&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403399.jpg?k=373b3fd18975da3ddbe2253dd3b6c394e72420b7d3e508a51d6b97c79a24a6ff&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472403810.jpg?k=c21cdb7b6b73d9cb0d2046b5950a1626f03f7ee00024fdf2665ff1382545f07a&o="
+        ])
+
+        initSlider(".ninth",[
+            "https://tse3.mm.bing.net/th/id/OIP.tnhALT8NwLwyvy20WwVZXAHaE6?pid=ImgDet&w=474&h=314&rs=1&o=7&rm=3",
+            "https://image3.mouthshut.com/images/imagesp/925733593s.jpg",
+            "https://tse3.mm.bing.net/th/id/OIP.UErnxzR9NxPBt-Xc3_Xz8AHaE8?w=1024&h=683&rs=1&pid=ImgDetMain&o=7&rm=3",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/777190332.jpg?k=81184e65c559c7e3958cb9c0ce3db9280f5a6767ad09722b5d80bc2aa5bbf55d&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/288263891.jpg?k=f44be6eb17ea32cf57f718ffe21e922d7822557753bbb34bfcd6379e96c3e5f9&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/765532693.jpg?k=d580bfbc636add811d144c52a15d4fa44e5cedb242c0e32e726af40aa50c6180&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/777190333.jpg?k=b1630582d5c34b9cd61ed38de5518df9effbf2c978713a2963b2dd6e0fe1bdc2&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/765532659.jpg?k=c1cf3d7feb69da20678b685c770bbac699e1482a31ae1b7622a279782c486466&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/796760902.jpg?k=2b99f417fdecb5730bd7376f5256fd9684b766d0b114c8ef7d776df9df2fd59e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/777190334.jpg?k=f391135ef0b4687e7576e933c3f0e73ac4af87ce3c74e2c78a976824f5e1c3b9&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/765532690.jpg?k=86d7336f8573423fba7e8aa9ab0b656dbcca4e9f1757c8b94b6a64f6c2101d9a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/796760900.jpg?k=8007c300109d377c2591738308afe9e2ce02803a26b8882530b89130a315542f&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/798164596.jpg?k=f50e746551458899169dd7d43c99470c0ac74e611fcdff62afa24294b8547b29&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/798164598.jpg?k=1fb3907fedcaae12054361f1e511e50a38138e026ebb9418214b97759d732760&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/796760904.jpg?k=1a2f3ee06049c9d38cde23370146ef0eac068de52408562665ca3278d3912f1a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/72934379.jpg?k=c8f4f2ebdce6dab24b2f3074db365739730e56ba44a03573b3e8842df4f9c12f&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/73542746.jpg?k=11c63dfaefbb44ce7217322f11c2fd20e68d524876f512f1e6f22dce8e039a08&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/73543300.jpg?k=33bc1c06430ad64f0e89cf00e10f94ac907f3f3ba5da126e6fdc3d042973eea1&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/73543079.jpg?k=267dd2dafcfbc6e3575f91cf6e251aa9fa2425942e8478a0d59229d60a264c71&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/73543198.jpg?k=e9a510d1c39198100e2bde764ee639981ef493c69fd7649ca5e77f0a735925b4&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/75300590.jpg?k=9eac280146aa1977391a580fc92332e06f10187dedebccbd95d6a83e0e36274d&o="
+        ])
+
+        initSlider(".tenth",[
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/2a/04/c5/getlstd-property-photo.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/34/95/9d/restaurant-jaisalmer.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/39/2a/ec/swimming-pool-area.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/5a/9a/63/c.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/39/2b/d5/cottages.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/39/28/e1/reception-area.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/39/2a/4e/resort-view-from-top.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/39/29/81/swish-tent-area.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/39/20/bc/dining-area.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/39/2d/8a/private-party-jaisalmer.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/39/2c/9a/dinner-on-dunes-jaisalmer.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/34/97/47/dining-area-jaisalmer.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/5a/a4/d5/c-restaurent-jaisalmer.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/5a/9a/74/c.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/b2/de/e6/if-you-want-to-enjoy.jpg?w=800&h=-1&s=1"
+        ])
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const guestInputs = document.querySelectorAll("#guest-input");
+            let activePriceInput = null;
+
+            // checkin and checkout popup
+            const stayPopup = document.createElement("div");
+            stayPopup.style.position = "fixed";
+            stayPopup.style.inset = "0";
+            stayPopup.style.background = "rgba(0,0,0,0.6)";
+            stayPopup.style.backdropFilter = "blur(4px)";
+            stayPopup.style.display = "none";
+            stayPopup.style.zIndex = "100000";
+            stayPopup.style.alignItems = "center";
+            stayPopup.style.justifyContent = "center";
+
+            stayPopup.innerHTML = `
+                <div style="background:#0b2a3a;color:#fff;padding:20px;border-radius:12px;width:400px;height:550px;border:2px solid #f5b301;">
+                    <h2 style="text-align:center;font-size:40px;font-weight:bold;text-decoration:underline">Stay Details</h2>
+
+                    <h3 style="text-align:center;padding:20px;font-size:30px;">How many nights do you want to stay ❗</h3>
+
+                    <label style="font-size:25px">Check-in</label>
+                    <input type="date" id="checkIn" style="width:100%;margin-bottom:10px;height:45px;font-size:17px;border-radius:6px;border:none;font-weight:bold;">
+
+                    <label style="font-size:25px">Check-out</label>
+                    <input type="date" id="checkOut" style="width:100%;margin-bottom:12px;height:45px;font-size:17px;border-radius:6px;border:none;font-weight:bold;">
+
+                    <div id="nightCount" style="margin-bottom:12px;font-weight:bold;font-size:27px;"></div>
+
+                    <button id="stayOk"
+                        style="width:100%;padding:14px;border:none;border-radius:6px;background:#f5b301;color:#0b2a3a;font-size:26px;font-weight:bold;cursor:pointer;">
+                        OK
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(stayPopup);
+
+            const checkInInput  = stayPopup.querySelector("#checkIn");
+            const checkOutInput = stayPopup.querySelector("#checkOut");
+            const nightCount    = stayPopup.querySelector("#nightCount");
+
+            const today = new Date().toISOString().split("T")[0];
+            checkInInput.min  = today;
+            checkOutInput.min = today;
+
+            function calculateNights() {
+                if (!checkInInput.value || !checkOutInput.value) return 0;
+                const d1 = new Date(checkInInput.value);
+                const d2 = new Date(checkOutInput.value);
+                const nights = (d2 - d1) / (1000 * 60 * 60 * 24);
+                return nights > 0 ? nights : 0;
+            }
+
+            checkInInput.addEventListener("change", () => {
+                if (checkInInput.value < today) {
+                    alert("⚠ Please choose an upcoming date!");
+                    checkInInput.value = "";
+                    checkInInput.showPicker();
+                    return;
+                }
+                checkOutInput.min = checkInInput.value;
+            });
+
+            checkOutInput.addEventListener("change", () => {
+                if (checkOutInput.value <= checkInInput.value) {
+                    alert("⚠ Check-out must be after check-in!");
+                    checkOutInput.value = "";
+                    checkOutInput.showPicker();
+                    return;
+                }
+                nightCount.textContent = `${calculateNights()} night(s)`;
+            });
+
+            stayPopup.querySelector("#stayOk").addEventListener("click", () => {
+                const nights = calculateNights();
+
+                if (!nights) {
+                    alert("Please select valid dates");
+                    checkInInput.showPicker();
+                    return;
+                }
+
+                const perNight = Number(activePriceInput.dataset.perNight || 0);
+                activePriceInput.value = `₹ ${perNight * nights} (${nights} nights)`;
+
+                // 🔥 IMPORTANT PART (data transfer)
+                if (bookingCheckIn && bookingCheckOut) {
+                    bookingCheckIn.value  = checkInInput.value;
+                    bookingCheckOut.value = checkOutInput.value;
+                }
+
+                stayPopup.style.display = "none";
+            });
+
+            // guest dropdown
+            guestInputs.forEach(guestInput => {
+
+                        const section = guestInput.closest(".search-box").parentNode;
+                        const priceInput = section.querySelector(".price-input");
+
+                        let adults = 2, children = 0, rooms = 1;
+
+                        const guestDrop = document.createElement("div");
+                        guestDrop.style.position = "absolute";
+                        guestDrop.style.background = "#0b2a3a";
+                        guestDrop.style.border = "2px solid #f5b301";
+                        guestDrop.style.borderRadius = "10px";
+                        guestDrop.style.color = "#fff";
+                        guestDrop.style.zIndex = "99999";
+                        guestDrop.style.display = "none";
+                        guestDrop.style.boxShadow = "0 8px 25px rgba(0,0,0,.45)";
+                        document.body.appendChild(guestDrop);
+
+                        function renderGuest() {
+                            guestDrop.innerHTML = `
+                                ${row("Adults", adults, "a")}
+                                ${row("Children", children, "c")}
+                                ${row("Rooms", rooms, "r")}
+                                <div style="text-align:right;padding:10px">
+                                    <button class="doneBtn">Done</button>
+                                </div>
+                            `;
+
+                            guestDrop.querySelectorAll("button").forEach(b => {
+                                b.style.background = "#102f42";
+                                b.style.border = "1px solid #f5b301";
+                                b.style.color = "#fff";
+                                b.style.width = "28px";
+                                b.style.height = "28px";
+                                b.style.cursor = "pointer";
+                            });
+
+                            guestDrop.querySelector(".doneBtn").style.background = "#f5b301";
+                            guestDrop.querySelector(".doneBtn").style.color = "#0b2a3a";
+                            guestDrop.querySelector(".doneBtn").style.width = "auto";
+                            guestDrop.querySelector(".doneBtn").style.padding = "6px 14px";
+                        }
+
+                function row(label, val, key) {
+                    return `
+                    <div style="display:flex;justify-content:space-between;padding:10px">
+                        ${label}
+                        <div>
+                            <button data-t="${key}-">−</button>
+                            <span style="margin:0 8px">${val}</span>
+                            <button data-t="${key}+">+</button>
+                        </div>
+                    </div>`;
+                }
+
+                function calculatePrice() {
+                    let adultPrice = 2000, childPrice = 1000, roomPrice = 3000;
+
+                    if (priceInput.id === "001") adultPrice = 2000;
+                    if (priceInput.id === "002") adultPrice = 2100;
+                    if (priceInput.id === "003") adultPrice = 1800;
+
+                    const perNight =
+                        adults * adultPrice +
+                        children * childPrice +
+                        rooms * roomPrice;
+
+                    priceInput.dataset.perNight = perNight;
+                    priceInput.value = `₹ ${perNight} / night`;
+                }
+
+                guestDrop.addEventListener("click", e => {
+                    e.stopPropagation();
+                    const t = e.target.dataset.t;
+
+                    if (t === "a+") adults++;
+                    if (t === "a-" && adults > 1) adults--;
+                    if (t === "c+") children++;
+                    if (t === "c-" && children > 0) children--;
+                    if (t === "r+") rooms++;
+                    if (t === "r-" && rooms > 1) rooms--;
+
+                    if (e.target.classList.contains("doneBtn")) {
+                        guestDrop.style.display = "none";
+                        guestInput.value = `${adults} adults · ${children} children · ${rooms} room`;
+                        calculatePrice();
+                        activePriceInput = priceInput;
+                        stayPopup.style.display = "flex";
+                        return;
+                    }
+                    renderGuest();
+                });
+
+                guestInput.addEventListener("click", e => {
+                    e.stopPropagation();
+                    const r = guestInput.getBoundingClientRect();
+                    guestDrop.style.top = r.bottom + window.scrollY + "px";
+                    guestDrop.style.left = r.left + window.scrollX + "px";
+                    guestDrop.style.width = r.width + "px";
+                    guestDrop.style.display = "block";
+                    renderGuest();
+                });
+
+                document.addEventListener("click", () => guestDrop.style.display = "none");
+            });
+
+        });
+    </script>
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const bookButtons = document.querySelectorAll('.bookingBtn'); 
+            const bookingPage = document.querySelector('.bookingPage');
+            const confirmPage = document.querySelector('.confirmPage');
+            const form = document.getElementById('bookingnow');
+
+            if (!bookingPage || !confirmPage || !form) {
+                console.error("Required elements not found");
+                return;
+            }
+
+            const style = document.createElement("style");
+            style.innerHTML = `
+                .confirmPage::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border: 3px solid #222;
+                    border-radius: 20px;
+                    opacity: 0; 
+                }
+                .confirmPage.active::before {
+                    animation: drawSquare 0.6s forwards;
+                }
+                @keyframes drawSquare {
+                    0% { opacity: 1; clip-path: inset(50% 50% 50% 50%); }
+                    50% { clip-path: inset(0% 50% 0% 50%); }
+                    100% { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
+                }
+
+                .successTick {
+                    width: 80px;
+                    height: 80px;
+                    background: #4CAF50;
+                    border-radius: 50%;
+                    position: relative;
+                    transform: scale(0);
+                }
+                .successTick.showCircle {
+                    animation: popCircle 0.4s forwards;
+                }
+                @keyframes popCircle {
+                    from { transform: scale(0); }
+                    to { transform: scale(1); }
+                }
+
+                .successTick::after {
+                    content: "";
+                    position: absolute;
+                    left: 24px;
+                    top: 8.5px;
+                    width: 16px;
+                    height: 28px;
+                    border-right: 4px solid white;
+                    border-bottom: 4px solid white;
+                    transform-origin: bottom left;
+                }
+                .successTick.showTick::after {
+                    animation: drawTick 0.3s forwards;
+                }
+                @keyframes drawTick {
+                    from { transform: rotate(45deg) scale(0); }
+                    to { transform: rotate(45deg) scale(1); }
+                }
+
+                .confirmPage h2 {
+                    margin-top: 15px;
+                    font-size: 18px;
+                }
+
+                input::placeholder {
+                    font-weight: 400;
+                    color: #888;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // BOOKING PAGE STYLING
+            Object.assign(bookingPage.style, {
+                display: "none",
+                position: "fixed",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+                background: "rgba(0,0,0,0.7)",
+                justifyContent: "center",
+                alignItems: "center",
+                zIndex: "9999"
+            });
+
+            const formBox = form;
+            Object.assign(formBox.style, {
+                width: "90%",
+                maxWidth: "700px",
+                padding: "25px",
+                borderRadius: "12px",
+                background: "linear-gradient(135deg, #ffffff 25%, #dcdcdc 40%, #d6d6d6 100% )",
+                border:  "10px solid white",
+                backdropFilter: "blur(15px)",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+            });
+
+            const h3 = form.querySelector("h3");
+            Object.assign(h3.style, {
+                textAlign:"center", 
+                marginBottom:"20px", 
+                fontSize:"40px", 
+                fontWeight:"bolder",
+                color:"black",
+                textShadow:"0px 1px 2px rgba(255,255,255,0.6), 0px 2px 6px rgba(0,0,0,0.35)",
+                letterSpacing: "2px",
+                textDecoration:"underline"
+            });
+
+            const labels = form.querySelectorAll("label");
+            labels.forEach(label => {
+                Object.assign(label.style, {
+                    color:"black",
+                    fontSize:"20px",
+                    fontWeight:"bold"
+                });
+            });
+
+            const inputs = form.querySelectorAll("input");
+            inputs.forEach(input => {
+                Object.assign(input.style, {
+                    width: "97%",
+                    padding: "10px",
+                    marginBottom: "15px",
+                    background: "white",
+                    border: "2px solid black",
+                    boxShadow: "0 6px 15px rgba(0,0,0,0.15)", 
+                    outline: "none",
+                    fontWeight: "400",
+                    fontSize: "17px"
+                });
+            });
+
+            const button = form.querySelector("button");
+            Object.assign(button.style, {
+                width: "100%",
+                padding: "12px",
+                border: "none",
+                borderRadius: "8px",
+                background: "linear-gradient(135deg,#1d6fdc,#0a3c8b)",
+                color: "white",
+                cursor: "pointer",
+                fontWeight: "600"
+            });
+
+            // CONFIRM PAGE
+            Object.assign(confirmPage.style, {
+                display: "none",
+                position: "fixed",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%) scale(0.5)",
+                width: "260px",         
+                height: "260px",        
+                padding: "20px",
+                background: "skyblue",
+                color: "#222",
+                borderRadius: "20px",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                boxShadow: "0 20px 60px rgba(0,0,0,0.25)",
+                zIndex: "10000",
+                opacity: "0"
+            });
+
+            // open booking
+            bookButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    bookingPage.style.display = "flex";
+                });
+            });
+
+            // outside click close
+            bookingPage.addEventListener('click', (e) => {
+                if (e.target === bookingPage) {
+                    bookingPage.style.display = "none";
+                }
+            });
+
+            // ESC close
+            document.addEventListener('keydown', (e) => {
+                if (e.key === "Escape") {
+                    bookingPage.style.display = "none";
+                    confirmPage.style.display = "none";
+                }
+            });
+
+            // CONFIRM FUNCTION
+            function showConfirm() {
+                const confirmPage = document.querySelector(".confirmPage");
+                const tick = document.querySelector(".successTick");
+
+                tick.classList.remove("showCircle","showTick");
+
+                confirmPage.style.display = "flex";
+                confirmPage.style.flexDirection = "column";
+                confirmPage.style.justifyContent = "center";
+                confirmPage.style.alignItems = "center";
+
+                void confirmPage.offsetWidth; // force reflow
+
+                confirmPage.style.opacity = "1";
+                confirmPage.style.transform = "translate(-50%, -50%) scale(1)";
+                confirmPage.classList.add("active");
+
+                setTimeout(() => { tick.classList.add("showCircle"); }, 500);
+                setTimeout(() => { tick.classList.add("showTick"); }, 800);
+
+                setTimeout(() => {
+                    confirmPage.style.opacity = "0";
+                    confirmPage.style.transform = "translate(-50%, -50%) scale(0.7)";
+                    setTimeout(() => { confirmPage.style.display = "none"; }, 400);
+                }, 2500);
+            }
+
+            // SUBMIT
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                bookingPage.style.display = "none";
+                showConfirm(); 
+            });
+
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const bookButtons = document.querySelectorAll('.bookingBtn');
+            const bookingPage = document.querySelector('.bookingPage');
+
+            bookButtons.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation(); // stop other handlers
+
+                    // Find the guest input that belongs to the same section as this button
+                    const section = btn.closest('section'); // or use a more specific container if needed
+                    const guestInput = section.querySelector("#guest-input");
+
+                    if (!guestInput || guestInput.value.trim() === "") {
+                        alert("⚠️ Please select guests before booking");
+
+                        // After alert closes, focus on the correct guest input
+                        setTimeout(() => {
+                            guestInput.focus();
+                            guestInput.click(); // useful for mobile/custom selectors
+                        }, 0);
+
+                        return; // booking page will not open
+                    }
+                    
+                    // Everything is fine
+                    bookingPage.style.display = 'flex';
+                }, true);
+            });
+        });
+    </script>
+</body>
+</html>

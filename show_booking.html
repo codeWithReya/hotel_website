@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Bookings</title>
+
+    <!-- SAME FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            margin:0;
+            font-family:'Poppins',sans-serif;
+            background:linear-gradient(rgba(11,29,47,0.9),rgba(11,29,47,0.95)),
+            url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+        }
+
+        header{
+            text-align:center;
+            padding:40px 20px;
+        }
+
+        .heading{
+            font-size:50px;
+            font-weight:700;
+            color:white;
+            text-transform:uppercase;
+            letter-spacing:2px;
+            text-shadow:
+            0 0 10px #000,
+            0 0 20px #071a54;
+        }
+
+        .container{
+            width:75%;
+            margin:auto;
+            padding:30px;
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(10px);
+            border-radius:20px;
+            box-shadow:0 10px 40px rgba(0,0,0,0.6);
+        }
+
+        .card{
+            border:1px solid rgba(255,255,255,0.2);
+            padding:20px;
+            margin:20px 0;
+            border-radius:15px;
+            color:#e8f0ff;
+            background:rgba(255,255,255,0.05);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:scale(1.02);
+            box-shadow:0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .card b{
+            color:#ffd27a;
+        }
+
+        .no-data{
+            text-align:center;
+            color:#ffd27a;
+            font-size:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 class="heading">📋 All Bookings</h1>
+</header>
+
+<div class="container">
+    <div id="bookingList"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    fetch("get_booking.php")
+    .then(res => res.json())
+    .then(data => {
+        console.log("DEBUG:", data); 
+
+        if(data.status === "not_logged_in"){
+            document.getElementById("bookingList").innerHTML =
+            "<p style='color:#ffd27a;text-align:center;'>Please login to see bookings</p>";
+            return;
+        }
+
+        if(data.status === "no_data"){
+            document.getElementById("bookingList").innerHTML =
+            "<p class='no-data'>No bookings found</p>";
+            return;
+        }
+
+        if(data.status === "success"){
+            let html = "";
+
+            data.data.forEach(item => {
+                html += `
+                    <div class="card">
+                        <p><b>Booking ID:</b> ${item.booking_id ?? item.id}</p>
+                        <p><b>Name:</b> ${item.name}</p>
+                        <p><b>Phone:</b> ${item.phone}</p>
+                        <p><b>Email:</b> ${item.email}</p>
+                        <p><b>Check-in:</b> ${item.checkin}</p>
+                        <p><b>Check-out:</b> ${item.checkout}</p>
+                        <p><b>Type:</b> ${item.source}</p>
+                    </div>
+                `;
+            });
+
+            document.getElementById("bookingList").innerHTML = html;
+        }
+
+    })
+    .catch(err => {
+        console.error("Fetch error:", err);
+    });
+
+});
+</script>
+
+</body>
+</html>

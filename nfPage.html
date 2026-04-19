@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_14.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="https://as2.ftcdn.net/v2/jpg/06/79/77/71/1000_F_679777151_8bOxM4Kmy7DRwzHar8EtGs93rjcoIZsg.jpg" class="headerImg">
+        <h1 class="heading">Explore NatureFriendly</h1>
+    </header>
+
+    <section class="first">
+        <img src="https://r1imghtlak.mmtcdn.com/e151680c475211eaa4dd0242ac110003.jpg">
+        <p class="firstText">
+            <h3>GreenLeaf Forest Retreat - Coorg, Karnataka</h3>
+            <h5>A peaceful nature resort offering wooden cottages, bird-watching spots, and a calm green environment. <br>Perfect for travellers wanting pure forest vibes and zero noise🔸<br>
+                Price Range: ₹3,500 - ₹9,000 per night<br>
+                Ideal For: Nature lovers • Couples • Peace seekers<br>
+                <b>🔍Wooden cottages🔍Nature trails🔍Bird watching🔍Organic food café</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="second" id="munnarSection">
+        <img src="https://kondodyhotels.com/images/resorts/haze-kites/haze-about-th.jpg">
+        <p class="firstText">
+            <h3>MistValley Eco Resort - Munnar, Kerala</h3>
+            <h5>An eco-conscious retreat with panoramic valley views, fresh misty mornings and relaxed natural <br>surroundings. Great for a slow, peaceful mountain escape🔸<br>
+                Price Range: ₹3,000 - ₹8,500 per night<br>
+                Ideal For: Couples • Families • Nature photography<br>
+                <b>🔍Valley-view cottages🔍Eco-friendly build🔍Tea garden walk🔍Bonfire zone</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+    <script>
+        window.addEventListener("load", function(){
+            if(window.location.hash === "#munnarSection"){
+                const section = document.getElementById("munnarSection");
+                section.classList.add("highlight");
+                section.scrollIntoView({
+                    behavior:"smooth"
+                });
+            }
+        });
+    </script>
+
+    <section class="third">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.EgT7jP8c-7Sr598Z0UH92AAAAA?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3">
+        <p class="firstText">
+            <h3>ForestNest Eco Lodge - Jim Corbett, Uttarakhand</h3>
+            <h5>A sustainable stay offering nature trails, riverside seating, and jungle ambience. Perfect for peaceful stays <br>close to wildlife and forests🔸<br>
+                Price Range: ₹4,000 - ₹12,000 per night<br>
+                Ideal For: Wildlife lovers • Adventure seekers<br>
+                <b>🔍Riverside deck🔍Jungle view rooms🔍Nature walks🔍Eco-friendly interiors</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="fourth" id="ehheSection">
+        <img src="https://res.cloudinary.com/voyehomes/image/upload/v1704352568/property/95/image/8bf12f12-4d2c-4d81-a435-0cc0dd51d2a6.jpg">
+        <p class="firstText">
+            <h3>EarthHaven HillEco Resort - Ooty, Tamil Nadu</h3>
+            <h5>A calm eco resort offering greenery, quiet surroundings, wooden interiors, and scenic viewpoints. Ideal for <br>slow, peaceful stays away from city noise🔸<br>
+                Price Range: ₹3,200 - ₹9,200 per night<br>
+                Ideal For: Nature lovers • Long stays<br>
+                <b>🔍Forest views🔍Wooden rooms🔍Meditation zone🔍Eco-constructed cottages</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="fifth">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.JMUZjc-VcpI7FgZPOTsfKAHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3">
+        <p class="firstText">
+            <h3>Serenity Creek Nature Resort - Manali, H.P.</h3>
+            <h5>A peaceful eco-friendly resort with riverside rooms, pine forests, and calm surroundings. Great for relaxation, <br>meditation, and scenic nature walks🔸<br>
+                Price Range: ₹3,800 - ₹11,000 per night<br>
+                Ideal For: Couples • Nature travellers<br>
+                <b>🔍Riverside rooms🔍Pine forest trail🔍Yoga deck🔍Bonfire + music</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="sixth">
+        <img src="https://5.imimg.com/data5/PA/HK/MY-2599162/bamboo-cottage-construction-500x500.jpg">
+        <p class="firstText">
+            <h3>BambooTrail Eco Resort - Wayanad, Kerala</h3>
+            <h5>A serene nature resort built using bamboo and natural materials. Perfect for calm vacations with fresh <br>greenery everywhere🔸<br>
+                Price Range: ₹2,800 - ₹7,000 per night<br>
+                Ideal For: Eco travellers • Families<br>
+                <b>🔍Bamboo cottages🔍Bird watching🔍Nature breakfast area🔍Eco-friendly decor</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="seventh">
+        <img src="https://media.glampinghub.com/CACHE/images/accommodations/742-0-tent-lodge/161f485fbd63fc03a1561a1973de427f.jpg">
+        <p class="firstText">
+            <h3>JungleBreeze Nature Camp - Kanha, Madhya Pradesh</h3>
+            <h5>A rustic eco camp with natural surroundings, open lawns, and forest ambience. A great choice for jungle <br>vacations and relaxation🔸<br>
+                Price Range: ₹3,000 - ₹8,000 per night<br>
+                Ideal For: Adventure lovers • Wildlife fans<br>
+                <b>🔍Nature tents + cottages🔍Outdoor seating🔍Forest views🔍Local organic meals</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="eirth">
+        <img src="https://dehradunairportcabservice.com/assets/images/rishikesh/lemon-tree-rishikesh.webp">
+        <p class="firstText">
+            <h3>Himalayan Green Escape - Rishikesh, Uttarakhand</h3>
+            <h5>A fresh, nature-surrounded stay offering Himalayan views, peaceful decks, and mountain breeze. Ideal for <br>meditation, yoga, and quiet moments🔸<br>
+                Price Range: ₹3,200 - ₹9,800 per night<br>
+                Ideal For: Yoga travellers • Peace seekers<br>
+                <b>🔍Mountain view rooms🔍Yoga deck🔍Eco-friendly build🔍Peace zones</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="ninth">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.BprZNElJCjKhwufA_xHkZQHaFC?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3">
+        <p class="firstText">
+            <h3>NatureBay Eco Resort - Andaman Islands</h3>
+            <h5>An eco stay surrounded by tropical trees and turquoise water. Offers quiet natural spaces and nature-<br>friendly wooden rooms🔸<br>
+                Price Range: ₹5,000 - ₹15,000 per night<br>
+                Ideal For: Island lovers • Couples<br>
+                <b>🔍Tropical forest view🔍Beach access🔍Wooden interiors🔍Nature breakfast area</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+
+    <section class="tenth" id="girSection">
+        <img src="https://aniportalimages.s3.amazonaws.com/media/details/ANI-20221202061223.jpg">
+        <p class="firstText">
+            <h3>Savannah Green Retreat - Gir, Gujarat</h3>
+            <h5>A simple, clean, nature-focused resort with greenery, wildlife sounds, and eco-friendly ambience. Great for <br>peaceful stays🔸<br>
+                Price Range: ₹3,500 - ₹9,500 per night<br>
+                Ideal For: Nature seekers • Long vacations<br>
+                <b>🔍Green lawns🔍Forest edge cottages🔍Nature seating deck🔍Eco-friendly rooms</b><br>
+            </h5>
+            <div class="search-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="2 adults · 0 children · 1 room" id="guest-input">
+            </div>
+            <button class="bookingBtn" id="booknow">Book Now</button>
+            <h6>No hidden charges 💠 Free cancellation*</h6>
+            <h4>Room Price<br>
+                <input type="text" placeholder="total price" class="price-input" readonly>
+            </h4>
+        </p>
+    </section>
+    <script>
+        window.addEventListener("load", function(){
+            if(window.location.hash === "#girSection"){
+                const section = document.getElementById("girSection");
+                section.classList.add("highlight");
+                section.scrollIntoView({
+                    behavior:"smooth"
+                });
+            }
+        });
+    </script>
+
+    <div class="bookingPage" id="bookingForm" style="display: none;">
+        <form method="get" action="booking.php" id="bookingnow">
+            <h3>Book Now</h3>
+            <label>Name:</label>
+            <input type="text" name="name" required placeholder="Anajli Goninka">
+            <label>Phone Number:</label>
+            <input type="tel" name="phone" required>
+            <label>E-mail:</label>
+            <input type="email" name="email" required placeholder="abc@gmail.com">
+            <label>Special Request:</label>
+            <input type="text" name="request" placeholder="e.g., extra bed, late check-in, food preferences.">
+            <label>Check-in/Check-out Date:</label>
+            <input type="date" name="checkin" class="date" id="bookingCheckIn" required>
+            <input type="date" name="checkout" class="date2" id="bookingCheckOut" required>
+            <input type="hidden" name="accommodation" value="Nature-friendly">
+            <label class="country">Country:</label>
+            <input type="text" name="country" required placeholder="e.g., India, Nepal, America, etc...">
+            <label>State:</label>
+            <input type="text" name="state" required placeholder="based on country...">
+            <button type="submit" id="submit">Book Now</button>
+        </form>
+    </div>
+
+    <div class="confirmPage">
+        <div class="successTick"></div>
+        <h2>Your Booking is Confirmed</h2>
+    </div>
+
+    <script>
+        document.getElementById("bookingnow").addEventListener("submit", function(e){
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            // 🔍 DEBUG
+            for (let pair of formData.entries()) {
+                console.log(pair[0] + ": " + pair[1]);
+            }
+
+            fetch("booking.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log("SERVER RESPONSE:", data);
+
+                if (data.status === "success") {
+                    setTimeout(() => {
+                        showInvoicePopup(data); // ✅ direct data pass karo
+                    }, 2700);
+                } else if (data.status === "empty") {
+                    alert("Please fill all fields ❌");
+                } else {
+                    alert("Booking failed ❌");
+                }
+
+
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Server error ⚠️");
+            });
+        });
+    </script>
+    <script>
+        function showInvoicePopup(details) {
+
+            const popup = document.createElement("div");
+
+            popup.style.position = "fixed";
+            popup.style.top = "0";
+            popup.style.left = "0";
+            popup.style.width = "100%";
+            popup.style.height = "100%";
+            popup.style.background = "rgba(0,0,0,0.7)";
+            popup.style.display = "flex";
+            popup.style.justifyContent = "center";
+            popup.style.alignItems = "center";
+            popup.style.zIndex = "999";
+
+            popup.innerHTML = `
+                <div id="invoiceContent" style="
+                    background:white;
+                    padding:25px;
+                    border-radius:12px;
+                    width:400px;
+                    font-family:Arial;
+                ">
+                    <h2 style="text-align:center;">Booking Confirmed 🎉</h2>
+                    <hr>
+
+                    <p><b>Booking ID:</b> ${details.booking_id}</p>
+                    <p><b>Name:</b> ${details.name}</p>
+                    <p><b>Phone:</b> ${details.phone}</p>
+                    <p><b>Email:</b> ${details.email}</p>
+
+                    <p><b>Accommodation:</b> Nature-friendly</p>
+
+                    <p><b>Check-in:</b> ${details.checkin}</p>
+                    <p><b>Check-out:</b> ${details.checkout}</p>
+
+                    <p><b>Country:</b> ${details.country}</p>
+                    <p><b>State:</b> ${details.state}</p>
+
+                    <p><b>Request:</b> ${details.request || "None"}</p>
+
+                    <hr>
+                    <p style="text-align:center;">Thank you for booking 💙</p>
+
+                    <button onclick="printInvoice()" style="
+                        width:100%;
+                        padding:10px;
+                        margin-top:10px;
+                        background:#4CAF50;
+                        color:white;
+                        border:none;
+                        border-radius:8px;
+                        cursor:pointer;">
+                        Download / Print
+                    </button>
+
+                    <button onclick="this.closest('div').parentElement.remove()" style="
+                        width:100%;
+                        padding:10px;
+                        margin-top:10px;
+                        background:#ccc;
+                        border:none;
+                        border-radius:8px;
+                        cursor:pointer;">
+                        Close
+                    </button>
+                </div>
+            `;
+
+            document.body.appendChild(popup);
+        }
+        </script>
+        <script>
+            function printInvoice() {
+
+                const content = document.getElementById("invoiceContent").innerHTML;
+
+                const newWindow = window.open("", "", "width=800,height=600");
+
+                newWindow.document.write(`
+                    <html>
+                    <head>
+                        <title>Booking Invoice</title>
+                    </head>
+                    <body>
+                        ${content}
+                    </body>
+                    </html>
+                `);
+
+                newWindow.document.close();
+                newWindow.print();
+            }
+    </script>
+
+
+
+
+    <script>
+        function initSlider(sectionSelector, images) {
+            const section = document.querySelector(sectionSelector);
+            const img = section.querySelector("img");
+
+            img.style.objectFit = "cover";
+            img.style.width = "350px";
+            img.style.height = "230px";
+
+            let index = 0;
+
+            const leftArrow = document.createElement("div");
+            leftArrow.innerHTML = "&#10094;";
+            leftArrow.className = "slider-arrow left";
+
+            const rightArrow = document.createElement("div");
+            rightArrow.innerHTML = "&#10095;";
+            rightArrow.className = "slider-arrow right";
+
+            section.appendChild(leftArrow);
+            section.appendChild(rightArrow);
+
+            // 🔹 initial state
+            leftArrow.style.display = "none";
+            rightArrow.style.display = "block";
+
+            function updateArrows() {
+                if (index === 0) {
+                    leftArrow.style.display = "none";
+                    rightArrow.style.display = "block";
+                } 
+                else if (index === images.length - 1) {
+                    rightArrow.style.display = "none";
+                    leftArrow.style.display = "block";
+                } 
+                else {
+                    leftArrow.style.display = "block";
+                    rightArrow.style.display = "block";
+                }
+            }
+
+            rightArrow.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (index < images.length - 1) {
+                    index++;
+                    img.src = images[index];
+                    updateArrows();
+                }
+            });
+
+            leftArrow.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (index > 0) {
+                    index--;
+                    img.src = images[index];
+                    updateArrows();
+                }
+            });
+        }
+
+        initSlider(".first",[
+
+        ])
+
+        initSlider(".second",[
+            "https://kondodyhotels.com/images/resorts/haze-kites/haze-about-th.jpg",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/122229192.jpg?k=67262736bbd74d2f4ba55aca417a6753976d7b12b4f4f35532445042b27f278b&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/45002694.jpg?k=a6342f0e077a1ed4accd6e50f8d1d0bddac8fdc7e512a0a4196bb849f27f60a0&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/122229662.jpg?k=78aa1e51513f8d02e48cb7a4af4edf1528f702b7b18551df1f58737eb0d1cad1&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/122228961.jpg?k=7066cc57b1c9fe39932f54da7d331198d0b0dc4b42152572fe40c3b02d5127f4&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/122228961.jpg?k=7066cc57b1c9fe39932f54da7d331198d0b0dc4b42152572fe40c3b02d5127f4&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/122228961.jpg?k=7066cc57b1c9fe39932f54da7d331198d0b0dc4b42152572fe40c3b02d5127f4&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/122229140.jpg?k=50ac0bbacde73ddb534b2f4e18504e2a27ca60e323fb6ebe15dd1d91147a3fc0&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/122229629.jpg?k=dbd7fdf1992d76d5af4d7ca02b514568d85bd2acb8181dae95449699ffb77478&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/122229617.jpg?k=f4b76de7abcbe789c451cec5eb15a00303391228f6c517bfc89b42bec5ba0321&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/122229678.jpg?k=0414862984b842ca1e55066415d7d52be092a16053c26125c38fccb7c0112dd4&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/322999407.jpg?k=e034bb8160c93b4ff9f2dde6a6b1beca6bc558ff591451c86832adb9a2a17d6e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/322999408.jpg?k=e85df04fd28aad5edbd7514699da985a158219c0bd7478bfc2495b9d39a14497&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/322999435.jpg?k=4bcbd24ce53fb5a03781fec57c0cb9c74472117dceb46e6309bfcdec7b25e960&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/322999466.jpg?k=f7d32f0b63f2e96f079fa734f0880853348a8ce59dc3262a1b8d68224f36beb7&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/322999473.jpg?k=728352662964bbb860f2e2bc25b93ccd766ab36c48cce77be17450025e591643&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/322999473.jpg?k=728352662964bbb860f2e2bc25b93ccd766ab36c48cce77be17450025e591643&o="
+        ])
+
+        initSlider(".third",[
+            "https://tse3.mm.bing.net/th/id/OIP.EgT7jP8c-7Sr598Z0UH92AAAAA?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/8c/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/87/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/91/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/aa/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/9b/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/92/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/97/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/b5/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/b0/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/89/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/8e/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/a7/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/b6/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/8a/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/b1/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/a2/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/29/21/ad/caption.jpg?w=1400&h=-1&s=1"
+        ])
+
+        initSlider(".fourth",[
+            "https://res.cloudinary.com/voyehomes/image/upload/v1704352568/property/95/image/8bf12f12-4d2c-4d81-a435-0cc0dd51d2a6.jpg",
+            "https://tse4.mm.bing.net/th/id/OIP.3vty4WmCSN-yep3U9L6irwHaFN?pid=ImgDet&w=474&h=333&rs=1&o=7&rm=3",
+            "https://tse4.mm.bing.net/th/id/OIP.3vty4WmCSN-yep3U9L6irwHaFN?pid=ImgDet&w=474&h=333&rs=1&o=7&rm=3",
+            "https://tse4.mm.bing.net/th/id/OIP.5Xg_5YZR2ddHeB6GcDo3ygHaFN?pid=ImgDet&w=474&h=333&rs=1&o=7&rm=3",
+            "https://res.cloudinary.com/voyehomes/image/upload/v1704352648/property/95/image/09993349-2935-4d9d-b626-d2807943870e.jpg",
+            "https://tse4.mm.bing.net/th/id/OIP.3vty4WmCSN-yep3U9L6irwHaFN?pid=ImgDet&w=474&h=333&rs=1&o=7&rm=3",
+            "https://images.storychief.com/account_2502/60725684-2343907415821615-4403036236604768256-n_e33fee3f891b865664a8dc272d338347_800.jpg",
+            "https://res.cloudinary.com/voyehomes/image/upload/v1704352652/property/95/image/88fc1a18-5a25-4a70-a2ce-ad8e922cf0c6.jpg",
+            "https://www.holidify.com/images/cmsuploads/compressed/27937630_210907134900105500205_20231017151848.jpg"
+        ])
+
+        initSlider(".fifth",[
+            "https://tse4.mm.bing.net/th/id/OIP.JMUZjc-VcpI7FgZPOTsfKAHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_12_fkbnac_piltj8",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Exterior_view_at_The_Highland_park_Manali_aron30_efub6b",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Exterior_view_at_The_Highland_park_Manali_aron30_efub6b",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_5_den57m_zhma5k",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_5_den57m_zhma5k",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_5_den57m_zhma5k",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_5_den57m_zhma5k",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_104,w_2000,h_1125,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Luxury_Rooms_at_The_highland_park_manali_5_oxcln8",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_137,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Superior_Deluxe_at_The_Highland_Park_Manali_9_upegbl_dgxgbz",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_12_fkbnac_piltj8",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_12_fkbnac_piltj8",
+            "https://assets.simplotel.com/simplotel/image/upload/x_0,y_78,w_1500,h_843,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-highland-park-manali/Main_Cover_slider_pics_at_The_Highland_Park_Manali_12_fkbnac_piltj8"
+        ])
+
+        initSlider(".sixth",[
+            "https://5.imimg.com/data5/PA/HK/MY-2599162/bamboo-cottage-construction-500x500.jpg",
+            "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyb-TETlkNxgW1JF9vvWUf4H8u6p2sG_XQHtFcKNvytVWk_W4M7HzF1noijHV9wVxilw2B7l3rFh1n_9FWD3aNZIJ7Ih1VpRowQAV_rNNHqV0c7nOmg2akqoqvCoxqz_RtffMLBFmDVgo/s640/camiguin+guesthouse+7.jpg",
+            "https://www.journeyera.com/wp-content/uploads/2019/01/where-to-stay-on-lombok-115793106.jpg",
+            "https://www.journeyera.com/wp-content/uploads/2019/01/where-to-stay-on-lombok-186509370.jpg",
+            "https://www.journeyera.com/wp-content/uploads/2019/01/where-to-stay-on-lombok-62369695.jpg",
+            "https://www.journeyera.com/wp-content/uploads/2019/01/where-to-stay-on-lombok-175101536.jpg",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/714553649.jpg?k=a8e5d77758201fb5aea6280e10fee3f6ccce41b0ec38947e9e34afa36d7c134e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/714554972.jpg?k=a4d02c43bed1412bcb5f2ded0278b29a40c5d3d2971e5c2c33cb324b67b6f0bb&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/688198113.jpg?k=bc13efe435f56726e009f26bc1cf912e5250eca0a4f552b43b7a418963065247&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/688198113.jpg?k=bc13efe435f56726e009f26bc1cf912e5250eca0a4f552b43b7a418963065247&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/688198113.jpg?k=bc13efe435f56726e009f26bc1cf912e5250eca0a4f552b43b7a418963065247&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/721483476.jpg?k=0e9c24aa7141facc2b353eccbc8496a7268351fe817b2927f59e723c35286a9a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/714561621.jpg?k=fa3e7b68f5118084372cfdf692b527809f3dcedd59a735f30bfec0f315e489d5&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/714560788.jpg?k=293c979e6bc163ee2946831bf54bb41710576e1fe139b0aca36241b49aab8036&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/714560788.jpg?k=293c979e6bc163ee2946831bf54bb41710576e1fe139b0aca36241b49aab8036&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/714560788.jpg?k=293c979e6bc163ee2946831bf54bb41710576e1fe139b0aca36241b49aab8036&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/698025170.jpg?k=11c7d92c93e51dca46a7e59881c9446c8ca7e61d58337b252f7c2e7cfb1ee9e6&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/451980587.jpg?k=2b0e8442f8e52e9fc65a675f156d492ecc5af589dce8b642848628fb1d58f531&o="
+        ])
+
+        initSlider(".seventh",[
+            "https://media.glampinghub.com/CACHE/images/accommodations/742-0-tent-lodge/161f485fbd63fc03a1561a1973de427f.jpg",
+            "https://media.glampinghub.com/CACHE/images/accommodations/indian-mountain-retreat-in-deluxe-swiss-tents-uttarakhand-india-1522061495732/5ead6073acc4e7cc87ce8a14cffd30bd.jpg",
+            "https://media.glampinghub.com/CACHE/images/accommodations/indian-mountain-retreat-in-deluxe-swiss-tents-uttarakhand-india-1522061495572/144402f344a8bdecba0f3d19befc9eac.jpg",
+            "https://media.glampinghub.com/CACHE/images/accommodations/indian-mountain-retreat-in-deluxe-swiss-tents-uttarakhand-india-1522061495473/9c678a18fc63342944170540bfdaf815.jpg",
+            "https://media.glampinghub.com/CACHE/images/accommodations/indian-mountain-retreat-in-deluxe-swiss-tents-uttarakhand-india-1522061495521/dd52b6c7b71e9663a7d55378711cbbf9.jpg",
+            "https://media.glampinghub.com/CACHE/images/accommodations/indian-mountain-retreat-in-deluxe-swiss-tents-uttarakhand-india-1522061495599/1129b36dbffcd77a5b8142f2c025b007.jpg",
+            "https://media.glampinghub.com/CACHE/images/accommodations/indian-mountain-retreat-in-deluxe-swiss-tents-uttarakhand-india-1522061495705/5dc44ad84a188249b868ed9d26f9a89c.jpg",
+            "https://media.glampinghub.com/CACHE/images/accommodations/indian-mountain-retreat-in-deluxe-swiss-tents-uttarakhand-india-1522061495549/9e3f5f0721e04cff9ccc88b02fdf5c51.jpg"
+        ])
+
+        initSlider(".eirth",[
+            "https://dehradunairportcabservice.com/assets/images/rishikesh/lemon-tree-rishikesh.webp",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/1c/17/53/swimming-pool-at-aranyam.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/a3/fa/ca/star-studded-sky-river.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/15/36/eb/aranyam-river-retreat.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/15/36/eb/aranyam-river-retreat.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/93/8d/d9/luxury-room.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/56/66/e7/aranyam-river-retreat.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/56/66/e7/aranyam-river-retreat.jpg?w=2000&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/49/f2/b4/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/9d/ae/12/caption.jpg?w=1100&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/9d/ae/10/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/9d/ae/0e/caption.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/bf/92/a6/view-from-room-riverside.jpg?w=1400&h=-1&s=1"
+        ])
+
+        initSlider(".ninth",[
+            "https://tse2.mm.bing.net/th/id/OIP.BprZNElJCjKhwufA_xHkZQHaFC?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/03/0b/4e/all-rooms-are-pool-facing.jpg?w=1400&h=-1&s=1",
+            "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225045918-newroomphotos5.webp",
+            "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225045921-washroom1.webp",
+            "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225045920-newroomphotos4.webp",
+            "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225045918-newroompicture2.webp",
+            "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225050933-01-copy-2-1.webp",
+            "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225050932-dsc07575copy.webp",
+            "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225050732-deluxe16-1.webp",
+            "https://www.andamanisland.in/storage/accommodation_rooms/thumb/120225050714-washroom.webp",
+            "https://www.andamanisland.in/storage/accommodation_rooms/thumb/5f9767fb35c4b146_luxury_suite_sea_facing_cottage_hibr.jpg",
+            "https://www.andamanisland.in/storage/accommodation_rooms/thumb/5f976877dd9c899_family-suite-room-at-havelock-island-beach-resort-01-818x460_-_copy.jpg"
+        ])
+
+        initSlider(".tenth",[
+            "https://aniportalimages.s3.amazonaws.com/media/details/ANI-20221202061223.jpg",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264717109.jpg?k=f0a66a55e4138f4463c1f45f39edcec9805fbbe63ed5e6d65d9a5428075f0f72&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264719273.jpg?k=284d5af6962596fba6acfb0786e2c2eaa11bb0d6eed5f23291eab968554f23b6&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264721364.jpg?k=462850f38be5156e9183914ff4df071679581df447d041e40517b663479da433&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264726322.jpg?k=7eb76ea2b9c37fafe000caafd990ec9738a7d6374eb4e351f3a084176e1eb34f&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264726322.jpg?k=7eb76ea2b9c37fafe000caafd990ec9738a7d6374eb4e351f3a084176e1eb34f&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/694506414.jpg?k=8f08e4531c04a0ec7c4f5da7ea0fad58cdc83ab1c117ee67532121413d29db6e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/694506414.jpg?k=8f08e4531c04a0ec7c4f5da7ea0fad58cdc83ab1c117ee67532121413d29db6e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264720027.jpg?k=781abf672a3a848cded0fbef195009f8b201031dc33e98b842cd935201547975&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264720027.jpg?k=781abf672a3a848cded0fbef195009f8b201031dc33e98b842cd935201547975&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264720027.jpg?k=781abf672a3a848cded0fbef195009f8b201031dc33e98b842cd935201547975&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264728055.jpg?k=8958e467a9b9288506bfe8d011b1bf334d539fc40cb67acca0d71f3037a0a6b2&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264728055.jpg?k=8958e467a9b9288506bfe8d011b1bf334d539fc40cb67acca0d71f3037a0a6b2&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264728055.jpg?k=8958e467a9b9288506bfe8d011b1bf334d539fc40cb67acca0d71f3037a0a6b2&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264721504.jpg?k=cc1e27595fba6942ffce5f531d6fe8dfbd2ab4fb4a684aa76e9a4940885a8de5&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264721504.jpg?k=cc1e27595fba6942ffce5f531d6fe8dfbd2ab4fb4a684aa76e9a4940885a8de5&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264721505.jpg?k=2dc9cb1d43c2294b39678a69f0e9cb050633293903b1fd859a6b06ad120354a1&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264721406.jpg?k=2e93efb6de966f080d4cf66066389a9415ca33d828bc54c0cbccf74fafe3e7bd&o="
+        ])
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const guestInputs = document.querySelectorAll("#guest-input");
+            let activePriceInput = null;
+
+            // checkin and checkout popup
+            const stayPopup = document.createElement("div");
+            stayPopup.style.position = "fixed";
+            stayPopup.style.inset = "0";
+            stayPopup.style.background = "rgba(0,0,0,0.6)";
+            stayPopup.style.backdropFilter = "blur(4px)";
+            stayPopup.style.display = "none";
+            stayPopup.style.zIndex = "100000";
+            stayPopup.style.alignItems = "center";
+            stayPopup.style.justifyContent = "center";
+
+            stayPopup.innerHTML = `
+                <div style="background:#0b2a3a;color:#fff;padding:20px;border-radius:12px;width:400px;height:550px;border:2px solid #f5b301;">
+                    <h2 style="text-align:center;font-size:40px;font-weight:bold;text-decoration:underline">Stay Details</h2>
+
+                    <h3 style="text-align:center;padding:20px;font-size:30px;">How many nights do you want to stay ❗</h3>
+
+                    <label style="font-size:25px">Check-in</label>
+                    <input type="date" id="checkIn" style="width:100%;margin-bottom:10px;height:45px;font-size:17px;border-radius:6px;border:none;font-weight:bold;">
+
+                    <label style="font-size:25px">Check-out</label>
+                    <input type="date" id="checkOut" style="width:100%;margin-bottom:12px;height:45px;font-size:17px;border-radius:6px;border:none;font-weight:bold;">
+
+                    <div id="nightCount" style="margin-bottom:12px;font-weight:bold;font-size:27px;"></div>
+
+                    <button id="stayOk"
+                        style="width:100%;padding:14px;border:none;border-radius:6px;background:#f5b301;color:#0b2a3a;font-size:26px;font-weight:bold;cursor:pointer;">
+                        OK
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(stayPopup);
+
+            const checkInInput  = stayPopup.querySelector("#checkIn");
+            const checkOutInput = stayPopup.querySelector("#checkOut");
+            const nightCount    = stayPopup.querySelector("#nightCount");
+
+            const today = new Date().toISOString().split("T")[0];
+            checkInInput.min  = today;
+            checkOutInput.min = today;
+
+            function calculateNights() {
+                if (!checkInInput.value || !checkOutInput.value) return 0;
+                const d1 = new Date(checkInInput.value);
+                const d2 = new Date(checkOutInput.value);
+                const nights = (d2 - d1) / (1000 * 60 * 60 * 24);
+                return nights > 0 ? nights : 0;
+            }
+
+            checkInInput.addEventListener("change", () => {
+                if (checkInInput.value < today) {
+                    alert("⚠ Please choose an upcoming date!");
+                    checkInInput.value = "";
+                    checkInInput.showPicker();
+                    return;
+                }
+                checkOutInput.min = checkInInput.value;
+            });
+
+            checkOutInput.addEventListener("change", () => {
+                if (checkOutInput.value <= checkInInput.value) {
+                    alert("⚠ Check-out must be after check-in!");
+                    checkOutInput.value = "";
+                    checkOutInput.showPicker();
+                    return;
+                }
+                nightCount.textContent = `${calculateNights()} night(s)`;
+            });
+
+            stayPopup.querySelector("#stayOk").addEventListener("click", () => {
+                const nights = calculateNights();
+
+                if (!nights) {
+                    alert("Please select valid dates");
+                    checkInInput.showPicker();
+                    return;
+                }
+
+                const perNight = Number(activePriceInput.dataset.perNight || 0);
+                activePriceInput.value = `₹ ${perNight * nights} (${nights} nights)`;
+
+                // 🔥 IMPORTANT PART (data transfer)
+                if (bookingCheckIn && bookingCheckOut) {
+                    bookingCheckIn.value  = checkInInput.value;
+                    bookingCheckOut.value = checkOutInput.value;
+                }
+
+                stayPopup.style.display = "none";
+            });
+
+            // guest dropdown
+            guestInputs.forEach(guestInput => {
+
+                        const section = guestInput.closest(".search-box").parentNode;
+                        const priceInput = section.querySelector(".price-input");
+
+                        let adults = 2, children = 0, rooms = 1;
+
+                        const guestDrop = document.createElement("div");
+                        guestDrop.style.position = "absolute";
+                        guestDrop.style.background = "#0b2a3a";
+                        guestDrop.style.border = "2px solid #f5b301";
+                        guestDrop.style.borderRadius = "10px";
+                        guestDrop.style.color = "#fff";
+                        guestDrop.style.zIndex = "99999";
+                        guestDrop.style.display = "none";
+                        guestDrop.style.boxShadow = "0 8px 25px rgba(0,0,0,.45)";
+                        document.body.appendChild(guestDrop);
+
+                        function renderGuest() {
+                            guestDrop.innerHTML = `
+                                ${row("Adults", adults, "a")}
+                                ${row("Children", children, "c")}
+                                ${row("Rooms", rooms, "r")}
+                                <div style="text-align:right;padding:10px">
+                                    <button class="doneBtn">Done</button>
+                                </div>
+                            `;
+
+                            guestDrop.querySelectorAll("button").forEach(b => {
+                                b.style.background = "#102f42";
+                                b.style.border = "1px solid #f5b301";
+                                b.style.color = "#fff";
+                                b.style.width = "28px";
+                                b.style.height = "28px";
+                                b.style.cursor = "pointer";
+                            });
+
+                            guestDrop.querySelector(".doneBtn").style.background = "#f5b301";
+                            guestDrop.querySelector(".doneBtn").style.color = "#0b2a3a";
+                            guestDrop.querySelector(".doneBtn").style.width = "auto";
+                            guestDrop.querySelector(".doneBtn").style.padding = "6px 14px";
+                        }
+
+                function row(label, val, key) {
+                    return `
+                    <div style="display:flex;justify-content:space-between;padding:10px">
+                        ${label}
+                        <div>
+                            <button data-t="${key}-">−</button>
+                            <span style="margin:0 8px">${val}</span>
+                            <button data-t="${key}+">+</button>
+                        </div>
+                    </div>`;
+                }
+
+                function calculatePrice() {
+                    let adultPrice = 2000, childPrice = 1000, roomPrice = 3000;
+
+                    if (priceInput.id === "001") adultPrice = 2000;
+                    if (priceInput.id === "002") adultPrice = 2100;
+                    if (priceInput.id === "003") adultPrice = 1800;
+
+                    const perNight =
+                        adults * adultPrice +
+                        children * childPrice +
+                        rooms * roomPrice;
+
+                    priceInput.dataset.perNight = perNight;
+                    priceInput.value = `₹ ${perNight} / night`;
+                }
+
+                guestDrop.addEventListener("click", e => {
+                    e.stopPropagation();
+                    const t = e.target.dataset.t;
+
+                    if (t === "a+") adults++;
+                    if (t === "a-" && adults > 1) adults--;
+                    if (t === "c+") children++;
+                    if (t === "c-" && children > 0) children--;
+                    if (t === "r+") rooms++;
+                    if (t === "r-" && rooms > 1) rooms--;
+
+                    if (e.target.classList.contains("doneBtn")) {
+                        guestDrop.style.display = "none";
+                        guestInput.value = `${adults} adults · ${children} children · ${rooms} room`;
+                        calculatePrice();
+                        activePriceInput = priceInput;
+                        stayPopup.style.display = "flex";
+                        return;
+                    }
+                    renderGuest();
+                });
+
+                guestInput.addEventListener("click", e => {
+                    e.stopPropagation();
+                    const r = guestInput.getBoundingClientRect();
+                    guestDrop.style.top = r.bottom + window.scrollY + "px";
+                    guestDrop.style.left = r.left + window.scrollX + "px";
+                    guestDrop.style.width = r.width + "px";
+                    guestDrop.style.display = "block";
+                    renderGuest();
+                });
+
+                document.addEventListener("click", () => guestDrop.style.display = "none");
+            });
+
+        });
+    </script>
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const bookButtons = document.querySelectorAll('.bookingBtn'); 
+            const bookingPage = document.querySelector('.bookingPage');
+            const confirmPage = document.querySelector('.confirmPage');
+            const form = document.getElementById('bookingnow');
+
+            if (!bookingPage || !confirmPage || !form) {
+                console.error("Required elements not found");
+                return;
+            }
+
+            const style = document.createElement("style");
+            style.innerHTML = `
+                .confirmPage::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border: 3px solid #222;
+                    border-radius: 20px;
+                    opacity: 0; 
+                }
+                .confirmPage.active::before {
+                    animation: drawSquare 0.6s forwards;
+                }
+                @keyframes drawSquare {
+                    0% { opacity: 1; clip-path: inset(50% 50% 50% 50%); }
+                    50% { clip-path: inset(0% 50% 0% 50%); }
+                    100% { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
+                }
+
+                .successTick {
+                    width: 80px;
+                    height: 80px;
+                    background: #4CAF50;
+                    border-radius: 50%;
+                    position: relative;
+                    transform: scale(0);
+                }
+                .successTick.showCircle {
+                    animation: popCircle 0.4s forwards;
+                }
+                @keyframes popCircle {
+                    from { transform: scale(0); }
+                    to { transform: scale(1); }
+                }
+
+                .successTick::after {
+                    content: "";
+                    position: absolute;
+                    left: 24px;
+                    top: 8.5px;
+                    width: 16px;
+                    height: 28px;
+                    border-right: 4px solid white;
+                    border-bottom: 4px solid white;
+                    transform-origin: bottom left;
+                }
+                .successTick.showTick::after {
+                    animation: drawTick 0.3s forwards;
+                }
+                @keyframes drawTick {
+                    from { transform: rotate(45deg) scale(0); }
+                    to { transform: rotate(45deg) scale(1); }
+                }
+
+                .confirmPage h2 {
+                    margin-top: 15px;
+                    font-size: 18px;
+                }
+
+                input::placeholder {
+                    font-weight: 400;
+                    color: #888;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // BOOKING PAGE STYLING
+            Object.assign(bookingPage.style, {
+                display: "none",
+                position: "fixed",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+                background: "rgba(0,0,0,0.7)",
+                justifyContent: "center",
+                alignItems: "center",
+                zIndex: "9999"
+            });
+
+            const formBox = form;
+            Object.assign(formBox.style, {
+                width: "90%",
+                maxWidth: "700px",
+                padding: "25px",
+                borderRadius: "12px",
+                background: "linear-gradient(135deg, #ffffff 25%, #dcdcdc 40%, #d6d6d6 100% )",
+                border:  "10px solid white",
+                backdropFilter: "blur(15px)",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+            });
+
+            const h3 = form.querySelector("h3");
+            Object.assign(h3.style, {
+                textAlign:"center", 
+                marginBottom:"20px", 
+                fontSize:"40px", 
+                fontWeight:"bolder",
+                color:"black",
+                textShadow:"0px 1px 2px rgba(255,255,255,0.6), 0px 2px 6px rgba(0,0,0,0.35)",
+                letterSpacing: "2px",
+                textDecoration:"underline"
+            });
+
+            const labels = form.querySelectorAll("label");
+            labels.forEach(label => {
+                Object.assign(label.style, {
+                    color:"black",
+                    fontSize:"20px",
+                    fontWeight:"bold"
+                });
+            });
+
+            const inputs = form.querySelectorAll("input");
+            inputs.forEach(input => {
+                Object.assign(input.style, {
+                    width: "97%",
+                    padding: "10px",
+                    marginBottom: "15px",
+                    background: "white",
+                    border: "2px solid black",
+                    boxShadow: "0 6px 15px rgba(0,0,0,0.15)", 
+                    outline: "none",
+                    fontWeight: "400",
+                    fontSize: "17px"
+                });
+            });
+
+            const button = form.querySelector("button");
+            Object.assign(button.style, {
+                width: "100%",
+                padding: "12px",
+                border: "none",
+                borderRadius: "8px",
+                background: "linear-gradient(135deg,#1d6fdc,#0a3c8b)",
+                color: "white",
+                cursor: "pointer",
+                fontWeight: "600"
+            });
+
+            // CONFIRM PAGE
+            Object.assign(confirmPage.style, {
+                display: "none",
+                position: "fixed",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%) scale(0.5)",
+                width: "260px",         
+                height: "260px",        
+                padding: "20px",
+                background: "skyblue",
+                color: "#222",
+                borderRadius: "20px",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                boxShadow: "0 20px 60px rgba(0,0,0,0.25)",
+                zIndex: "10000",
+                opacity: "0"
+            });
+
+            // open booking
+            bookButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    bookingPage.style.display = "flex";
+                });
+            });
+
+            // outside click close
+            bookingPage.addEventListener('click', (e) => {
+                if (e.target === bookingPage) {
+                    bookingPage.style.display = "none";
+                }
+            });
+
+            // ESC close
+            document.addEventListener('keydown', (e) => {
+                if (e.key === "Escape") {
+                    bookingPage.style.display = "none";
+                    confirmPage.style.display = "none";
+                }
+            });
+
+            // CONFIRM FUNCTION
+            function showConfirm() {
+                const confirmPage = document.querySelector(".confirmPage");
+                const tick = document.querySelector(".successTick");
+
+                tick.classList.remove("showCircle","showTick");
+
+                confirmPage.style.display = "flex";
+                confirmPage.style.flexDirection = "column";
+                confirmPage.style.justifyContent = "center";
+                confirmPage.style.alignItems = "center";
+
+                void confirmPage.offsetWidth; // force reflow
+
+                confirmPage.style.opacity = "1";
+                confirmPage.style.transform = "translate(-50%, -50%) scale(1)";
+                confirmPage.classList.add("active");
+
+                setTimeout(() => { tick.classList.add("showCircle"); }, 500);
+                setTimeout(() => { tick.classList.add("showTick"); }, 800);
+
+                setTimeout(() => {
+                    confirmPage.style.opacity = "0";
+                    confirmPage.style.transform = "translate(-50%, -50%) scale(0.7)";
+                    setTimeout(() => { confirmPage.style.display = "none"; }, 400);
+                }, 2500);
+            }
+
+            // SUBMIT
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                bookingPage.style.display = "none";
+                showConfirm(); 
+            });
+
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const bookButtons = document.querySelectorAll('.bookingBtn');
+            const bookingPage = document.querySelector('.bookingPage');
+
+            bookButtons.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation(); // stop other handlers
+
+                    // Find the guest input that belongs to the same section as this button
+                    const section = btn.closest('section'); // or use a more specific container if needed
+                    const guestInput = section.querySelector("#guest-input");
+
+                    if (!guestInput || guestInput.value.trim() === "") {
+                        alert("⚠️ Please select guests before booking");
+
+                        // After alert closes, focus on the correct guest input
+                        setTimeout(() => {
+                            guestInput.focus();
+                            guestInput.click(); // useful for mobile/custom selectors
+                        }, 0);
+
+                        return; // booking page will not open
+                    }
+                    
+                    // Everything is fine
+                    bookingPage.style.display = 'flex';
+                }, true);
+            });
+        });
+    </script>
+</body>
+</html>
